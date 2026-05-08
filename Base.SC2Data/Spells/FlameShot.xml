@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectApplyBehavior id="FlameshotPlaceholderAB">
+        <EditorCategories value=""/>
+        <Behavior value="PlaceholderBehaviour"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="FlameshotUnitKnockbackAB">
+        <EditorCategories value=""/>
+        <WhichUnit Effect="FlameshotUnitKnockback"/>
+        <Behavior value="UnitKnockback"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="FlameshotOffset">
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterPoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="FlameshotLaunchMissile"/>
+        <PeriodicOffsetArray value="0,-4,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="FlameshotUnitKnockbackImpact">
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterUnit"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="FlameshotUnitKnockbackRB"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectCreateUnit id="FlameshotUnitKnockback">
+        <ValidatorArray value="IsNotRecalling"/>
+        <ValidatorArray value="NotStructure"/>
+        <EditorCategories value=""/>
+        <CreateFlags index="Birth" value="0"/>
+        <CreateFlags index="DropOff" value="0"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="Precursor" value="1"/>
+        <CreateFlags index="ProvideFood" value="0"/>
+        <CreateFlags index="TechComplete" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <CreateFlags index="NormalizeSpawnOffset" value="0"/>
+        <SpawnOwner Value="Neutral"/>
+        <SpawnEffect value="FlameshotUnitKnockbackPHset"/>
+        <SpawnRange value="3"/>
+        <SpawnOffset value="0,3"/>
+        <TypeFallbackUnit Value="Target"/>
+    </CEffectCreateUnit>
+    <CEffectDamage id="FlameshotDamage">
+        <EditorCategories value=""/>
+        <Amount value="5"/>
+        <ExcludeArray Value="Unknown"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="FlameshotLaunchMissile">
+        <EditorCategories value=""/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="FlameshotDamage"/>
+        <SearchEffect value="FlameshotSearch"/>
+        <SearchFlags index="DynamicSearchArea" value="1"/>
+        <AmmoUnit value="FlameshotMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="FlameshotUnitKnockbackplaceholderlaunchmissile">
+        <EditorCategories value=""/>
+        <LaunchLocation Effect="FlameshotUnitKnockback" Value="TargetUnit"/>
+        <ImpactEffect value="FlameshotUnitKnockbackImpact"/>
+        <Flags index="2D" value="1"/>
+        <Movers Link="FlameshotUnitKnockbackMover"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectRemoveBehavior id="FlameshotUnitKnockbackRB">
+        <EditorCategories value=""/>
+        <WhichUnit Effect="FlameshotUnitKnockback"/>
+        <BehaviorLink value="UnitKnockback"/>
+        <Count value="1"/>
+    </CEffectRemoveBehavior>
+    <CEffectEnumArea id="FlameshotSearch">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Ground;Player,Ally,Neutral,Missile,Item,Hidden,Invulnerable"/>
+        <AreaArray RectangleWidth="0.8" Effect="FlameshotData"/>
+    </CEffectEnumArea>
+    <CEffectSet id="FlameshotSet">
+        <EditorCategories value=""/>
+        <EffectArray value="FlameshotDamage"/>
+        <EffectArray value="FlameshotUnitKnockback"/>
+    </CEffectSet>
+    <CEffectSet id="FlameshotUnitKnockbackPHset">
+        <EditorCategories value=""/>
+        <EffectArray value="PrecursorUnitKnockbackAB"/>
+        <EffectArray value="FlameshotUnitKnockbackAB"/>
+        <EffectArray value="FlameshotUnitKnockbackplaceholderlaunchmissile"/>
+    </CEffectSet>
+    <CEffectUserData id="FlameshotData">
+        <ValidatorArray value="noMarkers"/>
+        <EditorCategories value=""/>
+        <ValidateMax value="15"/>
+        <EffectSuccess value="FlameshotSet"/>
+    </CEffectUserData>
+    <CAbilEffectTarget id="Flameshot">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="FlameshotOffset"/>
+        <Cost>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <Range value="4"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Flameshot"/>
+    </CAbilEffectTarget>
+    <CValidatorUnitCompareBehaviorCount id="DoesNotHavePlaceholderBehaviour">
+        <Compare value="NE"/>
+        <Value value="1"/>
+        <Behavior value="PlaceholderBehaviour"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CButton id="Flameshot">
+        <Icon value="Assets\Icons\Dow2\Imperium\BTNassault_jump.dds"/>
+    </CButton>
+    <CActorAction id="FlameshotAttack" parent="GenericAttack">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FlameshotLaunchMissile.Start; At Caster" Send="Create"/>
+        <LaunchSiteOps Ops="SOpAttachHarness SOpMoveByDot5"/>
+        <LaunchAttachQuery Methods="Center 0"/>
+        <Missile value="FlameshotMissile"/>
+    </CActorAction>
+    <CActorModel id="FlameshotImpact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FlameshotDamage.Start" Send="Create"/>
+        <Model value="FlameshotImpactModel"/>
+    </CActorModel>
+    <CActorSound id="FlameshotImpactSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.FlameshotDamage.Start" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="FlameshotLaunch" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Abil.Flameshot.TargetCastStart" Send="Create"/>
+        <Model value="FlameshotLaunchModel"/>
+    </CActorModel>
+    <CActorMissile id="FlameshotMissile" parent="GenericAttackMissile" unitName="FlameshotMissile">
+        <Remove Terms="ActorCreation" Send="ModelSwap DarkStalkerWeapon"/>
+        <Model value="FlameshotModel"/>
+    </CActorMissile>
+    <CModel id="FlameshotImpactModel" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\FirebatHitSprite\FirebatHitSprite.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+        <SelectionRadius value="0.714000"/>
+        <ShadowRadius value="0.714000"/>
+    </CModel>
+    <CModel id="FlameshotLaunchModel" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\FirebatBunkeredLaunch\FirebatBunkeredLaunch.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+        <SelectionRadius value="0.714000"/>
+        <ShadowRadius value="0.714000"/>
+    </CModel>
+    <CModel id="FlameshotModel" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+        <SelectionRadius value="0.714000"/>
+        <ShadowRadius value="0.714000"/>
+    </CModel>
+    <CMoverMissile id="FlameshotMover">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="18.75"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+        <MotionPhases YawPitchRoll="MAX"/>
+    </CMoverMissile>
+    <CSound id="FlameshotImpactSound">
+        <AssetArray File="Assets\Sounds\Terran\Firebat\Firebat_AttackLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Firebat\Firebat_AttackLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Firebat\Firebat_AttackLaunch2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Firebat\Firebat_AttackLaunch3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Firebat\Firebat_AttackLaunch4.wav" FacialGroup=""/>
+        <Category value="Spell"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CUnit id="FlameshotMissile" parent="MISSILE">
+        <Race value="Prot"/>
+        <Mover value="FlameshotMover"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CBehaviorBuff id="PlaceholderBehaviour">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+    </CBehaviorBuff>
+</Catalog>

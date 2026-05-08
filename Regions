@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Regions>
+    <region id="1">
+        <name value="Buzra dum"/>
+        <shape type="circle">
+            <center value="31.3593,107.2077"/>
+            <radius value="1.7307"/>
+        </shape>
+    </region>
+    <region id="2">
+        <name value="Evil Minhiarth"/>
+        <shape type="circle">
+            <center value="61.6445,86.962"/>
+            <radius value="2.396"/>
+        </shape>
+    </region>
+    <region id="3">
+        <name value="Litash"/>
+        <shape type="circle">
+            <center value="99.6196,231.0913"/>
+            <radius value="1.8518"/>
+        </shape>
+    </region>
+    <region id="4">
+        <name value="Clear Minhiarth Cannons"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="54.9462,91.0998,77.8945,113.6245"/>
+        </shape>
+    </region>
+    <region id="5">
+        <name value="Evil Rhuadur"/>
+        <shape type="circle">
+            <center value="87.4223,210.2148"/>
+            <radius value="3.1936"/>
+        </shape>
+    </region>
+    <region id="6">
+        <name value="Tolfalas"/>
+        <shape type="circle">
+            <center value="173.1894,14.0437"/>
+            <radius value="1.751"/>
+        </shape>
+    </region>
+    <region id="7">
+        <name value="Forlond"/>
+        <shape type="circle">
+            <center value="10.0473,133.7626"/>
+            <radius value="3.4973"/>
+        </shape>
+    </region>
+    <region id="8">
+        <name value="Libnir"/>
+        <shape type="circle">
+            <center value="141.5,11.75"/>
+            <radius value="1.6005"/>
+        </shape>
+    </region>
+    <region id="9">
+        <name value="Alatar"/>
+        <shape type="circle">
+            <center value="196.362,7.372"/>
+            <radius value="1.25"/>
+        </shape>
+    </region>
+    <region id="10">
+        <name value="Clear Amon Lanc Cannonas"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="162.5,116.25"/>
+            <radius value="17.0605"/>
+        </shape>
+    </region>
+    <region id="11">
+        <name value="East Bight"/>
+        <shape type="circle">
+            <center value="175,150.5"/>
+            <radius value="2.5"/>
+        </shape>
+    </region>
+    <region id="12">
+        <name value="Devregion"/>
+        <shape type="circle">
+            <center value="234.2946,225.5546"/>
+            <radius value="2.3583"/>
+        </shape>
+    </region>
+    <region id="13">
+        <name value="Scatha"/>
+        <shape type="circle">
+            <center value="155.5,229.25"/>
+            <radius value="1.9523"/>
+        </shape>
+    </region>
+    <region id="14">
+        <name value="Clear Greenwood Cannons"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="140,139.5,179,184.5"/>
+        </shape>
+    </region>
+    <region id="15">
+        <name value="Mirkwood"/>
+        <shape type="circle">
+            <center value="157.1877,151.4604"/>
+            <radius value="2.121"/>
+        </shape>
+    </region>
+    <region id="16">
+        <name value="Black Vale"/>
+        <shape type="circle">
+            <center value="120,47.25"/>
+            <radius value="1.6005"/>
+        </shape>
+    </region>
+    <region id="17">
+        <name value="Anduin Camp"/>
+        <shape type="circle">
+            <center value="183.5,83.5"/>
+            <radius value="1.8027"/>
+        </shape>
+    </region>
+    <region id="18">
+        <name value="Clear Orthanc Cannons"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="106.5,73.5,134.5,98.5"/>
+        </shape>
+    </region>
+    <region id="19">
+        <name value="Evil Orthanc"/>
+        <shape type="circle">
+            <center value="117.25,90.5"/>
+            <radius value="2.704"/>
+        </shape>
+    </region>
+    <region id="20">
+        <name value="Nan Laeglin"/>
+        <shape type="circle">
+            <center value="94.5,111.25"/>
+            <radius value="1.6005"/>
+        </shape>
+    </region>
+    <region id="21">
+        <name value="Clear Evil Lefnui Cannons"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="56,11.5,86,45"/>
+        </shape>
+    </region>
+    <region id="22">
+        <name value="Evil Lefnui"/>
+        <shape type="circle">
+            <center value="78,25.5"/>
+            <radius value="2.121"/>
+        </shape>
+    </region>
+    <region id="23">
+        <name value="Celebrandt"/>
+        <shape type="circle">
+            <center value="142.9616,98.4943"/>
+            <radius value="1.9523"/>
+        </shape>
+    </region>
+    <region id="24">
+        <name value="Rhosgobel"/>
+        <shape type="circle">
+            <center value="144,145"/>
+            <radius value="1.8027"/>
+        </shape>
+    </region>
+    <region id="25">
+        <name value="Carn Dum"/>
+        <shape type="circle">
+            <center value="72.3801,248.3002"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="27">
+        <name value="Burn Gardens"/>
+        <shape type="circle">
+            <center value="190.75,87.75"/>
+            <radius value="2.1503"/>
+        </shape>
+    </region>
+    <region id="28">
+        <name value="Shelob"/>
+        <shape type="circle">
+            <center value="217.2497,48.814"/>
+            <radius value="1.6005"/>
+        </shape>
+    </region>
+    <region id="29">
+        <name value="Northern Wastes"/>
+        <shape type="circle">
+            <center value="176.5,230.75"/>
+            <radius value="1.6005"/>
+        </shape>
+    </region>
+    <region id="30">
+        <name value="Aglarond"/>
+        <shape type="circle">
+            <center value="109,54.25"/>
+            <radius value="1.6005"/>
+        </shape>
+    </region>
+    <region id="31">
+        <name value="West March"/>
+        <shape type="circle">
+            <center value="82,45"/>
+            <radius value="2.9152"/>
+        </shape>
+    </region>
+    <region id="32">
+        <name value="Clear Druwaith Cannons"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="31,12.5,70,54.5"/>
+        </shape>
+    </region>
+    <region id="33">
+        <name value="Druwaith Laur"/>
+        <shape type="circle">
+            <center value="51.75,27.5"/>
+            <radius value="2.3046"/>
+        </shape>
+    </region>
+    <region id="34">
+        <name value="Red Dwarves Encampment"/>
+        <shape type="circle">
+            <center value="233.592,175.725"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="35">
+        <name value="Refuge Of Edhelion"/>
+        <shape type="circle">
+            <center value="17.6816,180.6286"/>
+            <radius value="1.6005"/>
+        </shape>
+    </region>
+    <region id="36">
+        <name value="Lossarnach"/>
+        <shape type="circle">
+            <center value="154.25,42"/>
+            <radius value="1.6005"/>
+        </shape>
+    </region>
+    <region id="37">
+        <name value="Anorien"/>
+        <shape type="circle">
+            <center value="184.5,64.75"/>
+            <radius value="1.25"/>
+        </shape>
+    </region>
+    <region id="38">
+        <name value="Dorwinion"/>
+        <shape type="circle">
+            <center value="201.5,106"/>
+            <radius value="1.8027"/>
+        </shape>
+    </region>
+    <region id="39">
+        <name value="Clear Dorwinion Cannons"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="200.5,96.5,219,112"/>
+        </shape>
+    </region>
+    <region id="40">
+        <name value="Corsair Pelargir"/>
+        <shape type="circle">
+            <center value="162.5002,16.0002"/>
+            <radius value="1.5"/>
+        </shape>
+    </region>
+    <region id="41">
+        <name value="Clear Pelargir"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="155.5,7.5,182.5,24.5"/>
+        </shape>
+    </region>
+    <region id="42">
+        <name value="Corsair Lefnui"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="75,20.25"/>
+            <radius value="5.1293"/>
+        </shape>
+    </region>
+    <region id="43">
+        <name value="Siege Of Erebor"/>
+        <shape type="circle">
+            <center value="171.75,202.5"/>
+            <radius value="3.0102"/>
+        </shape>
+    </region>
+    <region id="44">
+        <name value="EreborCannonCount"/>
+        <shape type="rect">
+            <quad value="177,177.5,196.5,194.5"/>
+        </shape>
+    </region>
+    <region id="45">
+        <name value="Teleport Dol amroth"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="127.5,16.5,142.5,30"/>
+        </shape>
+    </region>
+    <region id="46">
+        <name value="Teleport Mithlond"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="8,127,33.5,149"/>
+        </shape>
+    </region>
+    <region id="47">
+        <name value="Teleport Annuminas"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="31.5,149,59.5,169"/>
+        </shape>
+    </region>
+    <region id="48">
+        <name value="Teleport Dwarves"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="25,161,41,177.5"/>
+        </shape>
+    </region>
+    <region id="49">
+        <name value="Teleport Mount Gundabad"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="120.3437,234.5947,140.3437,249.5947"/>
+        </shape>
+    </region>
+    <region id="50">
+        <name value="Teleport Easterling"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="236.5,67.5,252,79.5"/>
+        </shape>
+    </region>
+    <region id="51">
+        <name value="Teleport Mordor"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="222.5,43.5,254,60.5"/>
+        </shape>
+    </region>
+    <region id="52">
+        <name value="MorgothMoveTeleport"/>
+        <shape type="rect">
+            <quad value="113.6865,230.137,153.1865,251.137"/>
+        </shape>
+    </region>
+    <region id="53">
+        <name value="Tulkas"/>
+        <shape type="circle">
+            <center value="171,38.25"/>
+            <radius value="1.9523"/>
+        </shape>
+    </region>
+    <region id="54">
+        <name value="Aule"/>
+        <shape type="circle">
+            <center value="117.5,125"/>
+            <radius value="1.8027"/>
+        </shape>
+    </region>
+    <region id="55">
+        <name value="Manwe"/>
+        <shape type="circle">
+            <center value="32.7197,157.2536"/>
+            <radius value="2.5"/>
+        </shape>
+    </region>
+    <region id="56">
+        <name value="Ulmo"/>
+        <shape type="circle">
+            <center value="127.7917,19.6328"/>
+            <radius value="2.0153"/>
+        </shape>
+    </region>
+    <region id="57">
+        <name value="Yavanna"/>
+        <shape type="circle">
+            <center value="16.9665,137.8876"/>
+            <radius value="2.3046"/>
+        </shape>
+    </region>
+    <region id="58">
+        <name value="Silverlode"/>
+        <shape type="circle">
+            <center value="130.25,124.5"/>
+            <radius value="1.6005"/>
+        </shape>
+    </region>
+    <region id="59">
+        <name value="Bree"/>
+        <shape type="circle">
+            <center value="64.5,145"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="60">
+        <name value="Lothoiren Kill Trees"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="123.5,94.5,151.5,115.5"/>
+        </shape>
+    </region>
+    <region id="61">
+        <name value="Pallando"/>
+        <shape type="circle">
+            <center value="222.5397,99.8212"/>
+            <radius value="1.25"/>
+        </shape>
+    </region>
+    <region id="62">
+        <name value="Eryn Vorn"/>
+        <shape type="circle">
+            <center value="38.4436,91.9355"/>
+            <radius value="1.25"/>
+        </shape>
+    </region>
+    <region id="63">
+        <name value="Teleport Erech"/>
+        <shape type="rect">
+            <quad value="118.1376,30.5012,140.1452,47.613"/>
+        </shape>
+    </region>
+    <region id="64">
+        <name value="Gray Mountains"/>
+        <shape type="circle">
+            <center value="157.5283,224.7248"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="65">
+        <name value="Grey Mountains Region Clear"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="142.7065,215.6635,178.233,238.149"/>
+        </shape>
+    </region>
+    <region id="67">
+        <name value="Dale Region Clear"/>
+        <shape type="rect">
+            <quad value="192.0312,169.9511,206.7001,179.542"/>
+        </shape>
+    </region>
+    <region id="66">
+        <name value="Dale (Captured)"/>
+        <shape type="circle">
+            <center value="206.072,162.4357"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="68">
+        <name value="Dunharrow Clear"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="134.0793,60.2846,156.4125,78.7216"/>
+        </shape>
+    </region>
+    <region id="69">
+        <name value="Dunharrow (Captured)"/>
+        <shape type="circle">
+            <center value="147.941,68.5842"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="70">
+        <name value="Redwood Crossing"/>
+        <shape type="circle">
+            <center value="219.195,178.9921"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="71">
+        <name value="BURNREGION2"/>
+        <invisible/>
+        <shape type="diamond">
+            <center value="193.2468,92.6257"/>
+            <width value="34"/>
+            <height value="42.1762"/>
+        </shape>
+    </region>
+    <region id="26">
+        <name value="Elstorin"/>
+        <shape type="circle">
+            <center value="44.2744,120.8864"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="72">
+        <name value="Ithilien "/>
+        <shape type="circle">
+            <center value="201.4003,19.2138"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="73">
+        <name value="Nurn"/>
+        <shape type="circle">
+            <center value="235.0312,9.5788"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="74">
+        <name value="Clear Nurn"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="221.5671,0.0324,254.8032,27.9172"/>
+        </shape>
+    </region>
+    <region id="75">
+        <name value="Maglor"/>
+        <shape type="circle">
+            <center value="10.0905,117.8835"/>
+            <radius value="1.25"/>
+        </shape>
+    </region>
+    <region id="76">
+        <name value="Edhellond"/>
+        <shape type="circle">
+            <center value="130.2336,16.7563"/>
+            <radius value="2.0153"/>
+        </shape>
+    </region>
+    <region id="77">
+        <name value="Last Bridge Clear"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="77.911,150.6281,95.1386,178.9636"/>
+        </shape>
+    </region>
+    <region id="78">
+        <name value="Last Bridge"/>
+        <shape type="circle">
+            <center value="95.6215,153.8354"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="79">
+        <name value="CorsairLondDaer"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="36.069,64.3161,46.801,76.5996"/>
+        </shape>
+    </region>
+    <region id="80">
+        <name value="Clear Lond Daer Cannons"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="38.398,72.1767"/>
+            <radius value="13.5"/>
+        </shape>
+    </region>
+    <region id="81">
+        <name value="Fornost (Captured)"/>
+        <shape type="circle">
+            <center value="57.3596,170.9487"/>
+            <radius value="1.8518"/>
+        </shape>
+    </region>
+    <region id="82">
+        <name value="Clear Fornost Cannons"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="55.8564,172.8554"/>
+            <radius value="12"/>
+        </shape>
+    </region>
+    <region id="83">
+        <name value="Clear Amon Sul Cannons"/>
+        <invisible/>
+        <shape type="circle">
+            <center value="70.167,192.2473"/>
+            <radius value="13.5"/>
+        </shape>
+    </region>
+    <region id="84">
+        <name value="Amon Sul (Captured)"/>
+        <shape type="circle">
+            <center value="72.788,189.4086"/>
+            <radius value="1.8518"/>
+        </shape>
+    </region>
+    <region id="85">
+        <name value="Ered Luin"/>
+        <shape type="circle">
+            <center value="10.0256,147.019"/>
+            <radius value="2.5"/>
+        </shape>
+    </region>
+</Regions>

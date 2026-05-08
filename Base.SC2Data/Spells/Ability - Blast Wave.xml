@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectDamage id="AbilityBlastWave@ImpactDamage">
+        <EditorCategories value=""/>
+        <Amount value="95"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="AbilityBlastWave@ImpactDebuffApply">
+        <EditorCategories value=""/>
+        <Behavior value=""/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="AbilityBlastWave@ImpactSearch">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Player,Ally,Missile,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="0.8" Effect="AbilityBlastWave@ImpactSet"/>
+        <ImpactLocation Value="SourceUnit"/>
+    </CEffectEnumArea>
+    <CEffectSet id="AbilityBlastWave@ImpactSet">
+        <ValidatorArray value="noMarkers"/>
+        <EditorCategories value=""/>
+        <EffectArray value="AbilityBlastWave@ImpactDamage"/>
+        <EffectArray value="AbilityBlastWave@ImpactDebuffApply"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="AbilityBlastWave@LaunchMissile">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <LaunchEffect value="AbilityBlastWave@MissilePersistent"/>
+        <AmmoUnit value="BlastWave"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="AbilityBlastWave@MissilePersistent">
+        <EditorCategories value=""/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <WhichLocation Value="SourceUnit"/>
+        <FinalEffect value="Suicide"/>
+        <PeriodicValidator value="AbilityBlastWave@MissilePeriodic"/>
+        <PeriodicEffectArray value="AbilityBlastWave@ImpactSearch"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="AbilityBlastWave@StartPersistent">
+        <EditorCategories value=""/>
+        <WhichLocation Value="SourcePoint"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="AbilityBlastWave@LaunchMissile"/>
+        <PeriodicOffsetArray value="0,-9,0"/>
+    </CEffectCreatePersistent>
+    <CAbilEffectTarget id="AbilityBlastWave@Ability">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <AbilityCategories index="User2" value="1"/>
+        <Effect index="0" value="AbilityBlastWave@StartPersistent"/>
+        <Range value="1000"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AbilityBlastWave@Button">
+            <Flags index="UseDefaultButton" value="1"/>
+            <Flags index="CreateDefaultButton" value="1"/>
+        </CmdButtonArray>
+        <CastOutroTime value="1"/>
+        <CursorEffect value="AbilityBlastWave@ImpactSearch"/>
+        <Cost>
+            <Cooldown TimeUse="200"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CValidatorCombine id="AbilityBlastWave@MissilePeriodic">
+        <Type value="And"/>
+        <CombineArray value="SourceNotDead"/>
+        <CombineArray value="Pathable"/>
+    </CValidatorCombine>
+    <CButton id="AbilityBlastWave@Button">
+        <Icon value="Assets\Textures\btn-ability-zeratul-xelnagastasisturret-staggeringblast.dds"/>
+    </CButton>
+    <CActorMissile id="AbilityBlastWave@MISSILE" parent="GenericAttackMissile" unitName="BlastWave">
+        <Model value="AbilityBlastWave@Missile"/>
+        <Macros value="AbilityBlastWave@MissileEventMacro"/>
+        <HostSiteOps Ops="AbilityBlastWave@MissileVisualOffsetSop"/>
+        <Scale value="1.300000"/>
+    </CActorMissile>
+    <CActorEventMacro id="AbilityBlastWave@MissileEventMacro">
+        <EditorCategories value=""/>
+        <On Terms="ActorCreation" Send="TimerSet 0.010000 Loop1"/>
+        <On Terms="TimerExpired; TimerName Loop1" Send="TimerSet 0.150000 Loop1"/>
+        <On Terms="TimerExpired; TimerName Loop1" Send="Create AbilityBlastWave@ShockwavePeriodicExplosion"/>
+    </CActorEventMacro>
+    <CActorSiteOpLocalOffset id="AbilityBlastWave@MissileVisualOffsetSop">
+        <LocalOffset value="0.000000,0.100000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorModel id="AbilityBlastWave@ShockwavePeriodicExplosion" parent="ModelAnimationStyleOneShot">
+        <HostSiteOps Ops="AbilityBlastWave@OffsetHigherSOp AbilityBlastWave@AttackRandominSphereSOp"/>
+        <Scale value="1.100000"/>
+    </CActorModel>
+    <CActorSiteOpLocalOffset id="AbilityBlastWave@OffsetHigherSOp">
+        <LocalOffset value="0.000000,-1.000000,0.500000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpRandomPointInSphere id="AbilityBlastWave@AttackRandominSphereSOp">
+        <Radius value="0.800000"/>
+        <Distribution value="Gaussian"/>
+        <Variance value="50.000000"/>
+    </CActorSiteOpRandomPointInSphere>
+    <CActorModel id="AbilityBlastWave@DebuffVisual" parent="ModelAnimationStyleContinuous">
+        <On index="0" Terms="ActorOrphan" Send="Destroy"/>
+        <On index="1" Terms="Behavior.AbilityBlastWave@Debuff.On" Send="Create"/>
+        <On index="2" Terms="Behavior.AbilityBlastWave@Debuff.Off" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="AnimPlay BSD Stand"/>
+        <On Terms="AnimDone; AnimPlayingName BSD" Send="AnimPlay BSD Stand"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+        <AutoScaleFactor value="1.000000"/>
+    </CActorModel>
+    <CActorSound id="AbilityBlastWave@LaunchSound" parent="SoundOneShot">
+        <On Terms="Effect.AbilityBlastWave@StartPersistent.Start" Send="Create"/>
+    </CActorSound>
+    <CActorAction id="AbilityBlastWave@ATTACKImpact" parent="GenericAttack" effectAttack="AbilityBlastWave@ImpactDamage">
+        <ImpactMap index="None" Model="AbilityBlastWave@AttackImpact" Sound="AbilityBlastWave@AttackImpact"/>
+        <ImpactPhysics Name="90mmCannonImpact" MatchKeys="Basic" Physics="SiegeTankAttackForce"/>
+    </CActorAction>
+    <CActorQuad id="AbilityBlastWave@GUIDE" parent="ZergGuideVisualQuadDown" abil="AbilityBlastWave@Ability">
+        <Remove Terms="ActorDestruction" Target="_GuideQuadSegment" Send="Destroy"/>
+        <On Terms="ActorDestruction" Target="_GuideQuadSegment" Send="AnimBracketStop BSD"/>
+        <On Terms="ActorCreation" Send="SetTintColor 0,128,0"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+        <LaunchActor value="ProtossGuideVisualQuadLargeLaunch"/>
+        <CenterActor value="ProtossGuideVisualQuadLargeCenter"/>
+        <ImpactActor value="ProtossGuideVisualQuadLargeImpact"/>
+        <ImpactHeight value="0.500000"/>
+        <Height value="9.000000"/>
+        <Width value="2.000000"/>
+    </CActorQuad>
+    <CModel id="AbilityBlastWave@Missile" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\PsionicShift\PsionicShift.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="AbilityBlastWave@ShockwavePeriodicExplosion" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\MiraHorner_Hellion_BasicGrenade_Coop_Impact\MiraHorner_Hellion_BasicGrenade_Coop_Impact.m3"/>
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="AbilityBlastWave@Periodic"/>
+            <Type value="Sound"/>
+            <Payload value="AbilityBlastWave@Periodic"/>
+        </Events>
+    </CModel>
+    <CModel id="AbilityBlastWave@DebuffVisual" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\TimeWarpImpact_Red\TimeWarpImpact_Red.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="AbilityBlastWave@AttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\Colossus_Purifier_Coop_Missile_Impact\Colossus_Purifier_Coop_Missile_Impact.m3"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CMoverMissile id="AbilityBlastWave@Mover">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="3"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+        <MotionPhases YawPitchRoll="MAX"/>
+    </CMoverMissile>
+    <CSound id="AbilityBlastWave@LaunchSound" parent="Spell">
+        <AssetArray File="Assets\Sounds\Kerrigan_PsionicShift02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kerrigan_PsionicShift03.wav" FacialGroup=""/>
+        <Pitch value="-2.000000,0.000000"/>
+        <Volume value="1.000000,1.000000"/>
+    </CSound>
+    <CSound id="AbilityBlastWave@AttackImpact" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall9.wav" FacialGroup=""/>
+        <DupeDestroyCount value="5"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-3.000000,3.000000"/>
+        <Volume value="-3.000000,0.000000"/>
+    </CSound>
+    <CSound id="AbilityBlastWave@Periodic" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall0.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall1.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall2.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall3.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall4.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall5.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall6.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall7.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall8.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall9.wav" Pitch="-3.000000,3.000000"/>
+        <DupeDestroyCount value="6"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="6"/>
+        <Volume value="-10.000000,-10.000000"/>
+    </CSound>
+    <CDataCollectionAbil id="AbilityBlastWave">
+        <EditorCategories value=""/>
+        <DataRecord Entry="Abil,AbilityBlastWave@Ability"/>
+        <DataRecord Entry="Actor,AbilityBlastWave@MISSILE"/>
+        <DataRecord Entry="Actor,AbilityBlastWave@MissileVisualOffsetSop"/>
+        <DataRecord Entry="Actor,AbilityBlastWave@MissileEventMacro"/>
+        <DataRecord Entry="Actor,AbilityBlastWave@ShockwavePeriodicExplosion"/>
+        <DataRecord Entry="Actor,AbilityBlastWave@OffsetHigherSOp"/>
+        <DataRecord Entry="Actor,AbilityBlastWave@AttackRandominSphereSOp"/>
+        <DataRecord Entry="Actor,AbilityBlastWave@DebuffVisual"/>
+        <DataRecord Entry="Actor,AbilityBlastWave@LaunchSound"/>
+        <DataRecord Entry="Actor,AbilityBlastWave@ATTACKImpact"/>
+        <DataRecord Entry="Actor,AbilityBlastWave@GUIDE"/>
+        <DataRecord Entry="Behavior,AbilityBlastWave@Debuff"/>
+        <DataRecord Entry="Button,AbilityBlastWave@Button"/>
+        <DataRecord Entry="Effect,AbilityBlastWave@StartPersistent"/>
+        <DataRecord Entry="Effect,AbilityBlastWave@ImpactSearch"/>
+        <DataRecord Entry="Effect,AbilityBlastWave@ImpactDamage"/>
+        <DataRecord Entry="Effect,AbilityBlastWave@ImpactDebuffApply"/>
+        <DataRecord Entry="Effect,AbilityBlastWave@ImpactSet"/>
+        <DataRecord Entry="Effect,AbilityBlastWave@LaunchMissile"/>
+        <DataRecord Entry="Effect,AbilityBlastWave@MissilePersistent"/>
+        <DataRecord Entry="Model,AbilityBlastWave@Missile"/>
+        <DataRecord Entry="Model,AbilityBlastWave@ShockwavePeriodicExplosion"/>
+        <DataRecord Entry="Model,AbilityBlastWave@DebuffVisual"/>
+        <DataRecord Entry="Model,AbilityBlastWave@AttackImpact"/>
+        <DataRecord Entry="Mover,AbilityBlastWave@Mover"/>
+        <DataRecord Entry="Sound,AbilityBlastWave@LaunchSound"/>
+        <DataRecord Entry="Sound,AbilityBlastWave@AttackImpact"/>
+        <DataRecord Entry="Sound,AbilityBlastWave@Periodic"/>
+        <DataRecord Entry="Unit,BlastWave"/>
+        <DataRecord Entry="Validator,AbilityBlastWave@MissilePeriodic"/>
+    </CDataCollectionAbil>
+    <CUnit id="BlastWave" parent="MISSILE">
+        <Race value="Prot"/>
+        <Mover value="AbilityBlastWave@Mover"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CBehaviorBuff id="AbilityBlastWave@Debuff">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zeratul-xelnagastasisturret-staggeringblast.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="100"/>
+        <MaxStackCountPerCaster value="100"/>
+        <DamageResponse>
+            <ModifyAmount value="25"/>
+            <RequireEffectArray value="AbilityBlastWave@ImpactDamage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+</Catalog>

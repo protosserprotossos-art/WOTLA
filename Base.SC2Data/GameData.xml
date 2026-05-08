@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Includes>
+    <Catalog path="GameData/AbilHeroChainStrike.xml"/>
+    <Catalog path="Spells/Ability - Blast Wave.xml"/>
+    <Catalog path="Spells/FlameShot.xml"/>
+</Includes>
