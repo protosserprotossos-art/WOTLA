@@ -45,6 +45,11 @@
             <Image value="Assets\Textures\Wireframe-Terran-Armory.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorAction id="ArtanisMeleeVoid_AttackImpact2" parent="GenericAttack" effectAttack="ArtanisVoidUlnarDamage2">
+        <LaunchAttachQuery Methods="AMFilterWeaponLeft"/>
+        <LaunchAssets Sound="ArtanisMeleeVoid_AttackLaunch"/>
+        <ImpactMap index="None" Sound="ArtanisMeleeVoid_AttackImpact"/>
+    </CActorAction>
     <CActorModel id="ArtanisVoidStasisModel2" parent="ModelAnimationStyleContinuous">
         <On Terms="ActorCreation" Send="AnimBracketStart GL_BSD GLbirth GLstand GLdeath"/>
         <On Terms="Behavior.HeroStasis.On" Send="Create"/>
@@ -55,6 +60,19 @@
         <HostSiteOps Ops="SOpAttachCenter"/>
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
+    <CActorAction id="ArtanisVoidUlnarAttack2" parent="GenericAttack" effectImpact="ArtanisVoidAirDamage2" effectLaunch="ArtanisVoidUlnarLM2">
+        <LaunchAttachQuery Methods="AMFilterWeaponRight"/>
+        <LaunchAssets Sound="ArtanisVoid_PsionicAssaultLaunch"/>
+        <Missile value="ArtanisVoidUlnarAttackMissile2"/>
+        <ImpactMap index="None" Model="ArtanisVoidUlnarAttackImpact" Sound="ArtanisVoid_PsionicAssaultImpact"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <AcquisitionYawHalfArc value="7.500000"/>
+        <AcquisitionPitchHalfArc value="15.000000"/>
+        <AccuracyHalfArc value="10.000000"/>
+    </CActorAction>
+    <CActorMissile id="ArtanisVoidUlnarAttackMissile2" parent="GenericAttackMissile" unitName="ArtanisVoidUlnarWeapon2">
+        <Model value="ArtanisVoidUlnarWeapon"/>
+    </CActorMissile>
     <CActorAction id="AscendantAttack2" parent="GenericAttack" effectImpact="AscendantWeaponDamage2" effectLaunch="AscendantWeaponLM2">
         <LaunchSiteOps Ops="SOpAttachCenter SOpMoveByDot15"/>
         <LaunchAssets Sound="Karass_AttackLaunch2"/>
@@ -1207,6 +1225,90 @@
             <Image value="Assets\Textures\wireframe-general-circleofpower-terran.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorUnit id="Beacon_Terran2291825" parent="GenericUnitStandardNoAutoSoundLinks" unitName="Framsburg">
+        <Model value="Beacon_Terran22922"/>
+        <BuildModel value="Beacon_Terran22922"/>
+        <DeathArray index="Normal" ModelLink="Beacon_Terran22922"/>
+        <DeathCustoms index="0" ModelLink="ZergSmallUnitDeathLow32922"/>
+        <DeathCustoms index="1" ModelLink="ProtossSmallUnitDeathLow32922"/>
+        <DeathCustoms index="2" ModelLink="TerranSmallUnitDeathLow32922"/>
+        <DeathCustoms index="3" ModelLink="ZergSmallUnitDeathLow32922"/>
+        <DeathCustoms index="4" ModelLink="Invisible32922"/>
+        <PlacementModel value="Beacon_Terran22922"/>
+        <PortraitModel value="StaticPortrait22922"/>
+        <WalkAnimMoveSpeed value="0"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-general-circleofpower-terran.dds"/>
+        </GroupIcon>
+        <HighlightTooltip value="FramsburgBeaconHighlight"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+        <StatusBarFlags index="Magazine" value="0"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-general-circleofpower-terran.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="Beacon_Terran22918252" parent="GenericUnitStandardNoAutoSoundLinks" unitName="MinasDuath">
+        <Model value="Beacon_Terran22922"/>
+        <BuildModel value="Beacon_Terran22922"/>
+        <DeathArray index="Normal" ModelLink="Beacon_Terran22922"/>
+        <DeathCustoms index="0" ModelLink="ZergSmallUnitDeathLow32922"/>
+        <DeathCustoms index="1" ModelLink="ProtossSmallUnitDeathLow32922"/>
+        <DeathCustoms index="2" ModelLink="TerranSmallUnitDeathLow32922"/>
+        <DeathCustoms index="3" ModelLink="ZergSmallUnitDeathLow32922"/>
+        <DeathCustoms index="4" ModelLink="Invisible32922"/>
+        <PlacementModel value="Beacon_Terran22922"/>
+        <PortraitModel value="StaticPortrait22922"/>
+        <WalkAnimMoveSpeed value="0"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-general-circleofpower-terran.dds"/>
+        </GroupIcon>
+        <HighlightTooltip value="MinasDuathBeaconHighlight"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+        <StatusBarFlags index="Magazine" value="0"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-general-circleofpower-terran.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="Beacon_Terran22918253" parent="GenericUnitStandardNoAutoSoundLinks" unitName="SouthronEmbassy2">
+        <Model value="Beacon_Terran22922"/>
+        <BuildModel value="Beacon_Terran22922"/>
+        <DeathArray index="Normal" ModelLink="Beacon_Terran22922"/>
+        <DeathCustoms index="0" ModelLink="ZergSmallUnitDeathLow32922"/>
+        <DeathCustoms index="1" ModelLink="ProtossSmallUnitDeathLow32922"/>
+        <DeathCustoms index="2" ModelLink="TerranSmallUnitDeathLow32922"/>
+        <DeathCustoms index="3" ModelLink="ZergSmallUnitDeathLow32922"/>
+        <DeathCustoms index="4" ModelLink="Invisible32922"/>
+        <PlacementModel value="Beacon_Terran22922"/>
+        <PortraitModel value="StaticPortrait22922"/>
+        <WalkAnimMoveSpeed value="0"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-general-circleofpower-terran.dds"/>
+        </GroupIcon>
+        <HighlightTooltip value="SouthronEmbassyBeaconHighlight"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+        <StatusBarFlags index="Magazine" value="0"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-general-circleofpower-terran.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorUnit id="Beacon_Terran22919" parent="GenericUnitStandardNoAutoSoundLinks" unitName="Lossarnach">
         <Model value="Beacon_Terran22923"/>
         <BuildModel value="Beacon_Terran22923"/>
@@ -1944,17 +2046,17 @@
     <CActorUnit id="ColonistShip">
         <On Terms="ActorCreation" Send="SetTintColor 170,170,170"/>
     </CActorUnit>
-    <CActorUnit id="ColonistShip2" parent="TerranBuilding" unitName="CorsairEncampmentLefnui">
+    <CActorUnit id="ColonistShip2" parent="TerranBuilding" unitName="CorsairEncampment2">
         <Aliases value="_UnitHuge"/>
-        <On Terms="UnitBirth.CorsairEncampmentLefnui2" Send="Create"/>
-        <On Terms="UnitBirth.CorsairEncampmentLefnui2" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
+        <On Terms="UnitBirth.CorsairEncampment" Send="Create"/>
+        <On Terms="UnitBirth.CorsairEncampment" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
         <On Terms="AbilMorph.*.Start; MorphFrom CorsairEncampmentLefnui2; MorphTo CorsairEncampmentLefnui" Send="AnimGroupApply Fly Fly,Start Fly,End"/>
         <On Terms="AbilMorph.*.Start; MorphFrom CorsairEncampmentLefnui2; MorphTo CorsairEncampmentLefnui" Target="_BuildingTerrainFlatten" Send="Destroy"/>
         <On Terms="AbilMorph.*.Start; MorphFrom ColonistShip; MorphTo ColonistShipFlying; ScopeContains GroundLocalSelection" Send="StatusIncrement FlyerHelper"/>
         <On Terms="AbilMorph.*.Start; MorphFrom CorsairEncampmentLefnui2; MorphTo CorsairEncampmentLefnui" Send="AnimGroupRemove Fly"/>
         <On Terms="AbilMorph.*.Start; MorphFrom CorsairEncampmentLefnui2; MorphTo CorsairEncampmentLefnui" Send="Create BuildingTerrainFlatten"/>
         <On Terms="AbilMorph.*.Start; MorphFrom CorsairEncampmentLefnui2; MorphTo CorsairEncampmentLefnui; ScopeContains FlyerHelperSplat; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
-        <On Terms="UnitDeathCustomize.CorsairEncampmentLefnui2" Send="DeathCustomize Flying"/>
+        <On Terms="UnitDeathCustomize.CorsairEncampment" Send="DeathCustomize Flying"/>
         <On Terms="UnitDeathCustomize; ModelIsLowQuality" Send="DeathCustomize Low"/>
         <On Terms="ActorCreation.ColonistShip2" Send="SetTintColor 170,170,170"/>
         <Model value="ColonistShip2"/>
@@ -2325,6 +2427,65 @@
             <Image value="Assets\Textures\Wireframe-Protoss-DarkShrine-Shield03.dds"/>
         </WireframeShield>
     </CActorUnit>
+    <CActorUnit id="DarkShrine3" parent="ProtossBuildingEx" unitName="SouthronEmbassy">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="ProtossBuildingPowerUp"/>
+        <Macros value="VoidMPUnpoweredAnim"/>
+        <Macros value="QueueAnim"/>
+        <Macros value="GlobalLoopMacro"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="TextureSelectById DarkShrineDarkDiffuse"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="TextureSelectById DarkShrineDarkSpecular"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="TextureSelectById DarkShrineDarkEmissive"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="TextureSelectById GradRaysGreen"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="TextureSelectById GlowGreen"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="TextureSelectById PylonDarkDiffuse"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="TextureSelectById PylonDarkSpecular"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="TextureSelectById PylonDarkEmissive"/>
+        <On Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="TextureSelectById DarkShrineDarkDiffuse"/>
+        <On Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="TextureSelectById DarkShrineDarkSpecular"/>
+        <On Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="TextureSelectById DarkShrineDarkEmissive"/>
+        <On Terms="UnitBirth; ValidateUnit NoDarkProtoss" Send="TextureSelectById GradRaysGreen"/>
+        <On Terms="UnitBirth; ValidateUnit NoDarkProtoss" Send="TextureSelectById GlowGreen"/>
+        <On Terms="UnitBirth; ValidateUnit NoDarkProtoss" Send="TextureSelectById PylonDarkDiffuse"/>
+        <On Terms="UnitBirth; ValidateUnit NoDarkProtoss" Send="TextureSelectById PylonDarkSpecular"/>
+        <On Terms="UnitBirth; ValidateUnit NoDarkProtoss" Send="TextureSelectById PylonDarkEmissive"/>
+        <On Terms="UnitBirth; ValidateUnit HasPurifierProtoss" Send="TextureSelectById PurifierHackDiffuse"/>
+        <On Terms="Upgrade.PurifierProtoss.Add" Send="TextureSelectById PurifierHackDiffuse"/>
+        <On Terms="Signal.*.PurifierHack" Send="TextureSelectById PurifierHackDiffuse"/>
+        <On Terms="Upgrade.DarkProtoss.Add" Send="ModelSwap DarkShrineTaldarim"/>
+        <On Terms="UnitBirth; ValidateUnit NoDarkProtoss" Send="ModelSwap DarkShrineTaldarim"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit NoDarkProtoss" Send="DeathCustomize DarkProtoss"/>
+        <Model value="DarkShrine3"/>
+        <AnimBlendTime value="0.750000"/>
+        <ModelFlags index="AutomateGlobalLoops" value="0"/>
+        <BuildModel value="DarkShrineBirth"/>
+        <DeathArray index="Normal" ModelLink="DarkShrineDeath" SoundLink="DarkShrine_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="DarkShrineDeathUnderConstruction" SoundLink="DarkShrine_Explode"/>
+        <DeathCustoms ModelLink="DarkShrineTaldarimDeath" Name="DarkProtoss"/>
+        <DeathActorModel value="DarkShrineDeath"/>
+        <PlacementModel value="DarkShrinePlacement"/>
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <PortraitModel value="DarkShrinePortrait"/>
+        <BarOffset value="180"/>
+        <BarWidth value="85"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Protoss-DarkShrine.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-protoss-DarkShrine.dds"/>
+        <HighlightTooltip value="Unit/Name/DarkShrine3"/>
+        <SoundArray index="Ready" value="DarkShrine_Ready"/>
+        <SoundArray index="What" value="DarkShrine_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-protoss-DarkShrine.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Protoss-DarkShrine.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Textures\Wireframe-Protoss-DarkShrine-Shield01.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-DarkShrine-Shield02.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-DarkShrine-Shield03.dds"/>
+        </WireframeShield>
+    </CActorUnit>
     <CActorSplat id="DarkShrineSplat2" parent="GenericUnitSplat" unitName="EvilOrthanc"/>
     <CActorUnit id="DarkTemplar2" parent="GenericUnitStandard" unitName="NoldorWarrior">
         <Aliases value="_UnitSmall"/>
@@ -2614,6 +2775,8 @@
     <!-- VoidDarkTemplarDeepShadows -->
     <CActorUnit id="DarkTemplarShakuras">
         <On Terms="ActorCreation" Send="SetTintColor 239,149,80"/>
+        <On Terms="Upgrade.SouthronElites" Send="SetTintColor 111,111,111"/>
+        <On Terms="ActorCreation; ValidatePlayer SouthronElitesResearchedvalidator" Send="SetTintColor 111,111,111"/>
     </CActorUnit>
     <CActorSound id="DarkTemplar_Death2" parent="SoundOneShot">
         <On Terms="UnitDeath.NoldorWarrior; PassChance 25.000000" Send="Create"/>
@@ -2667,7 +2830,7 @@
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Diamondback_Land"/>
         <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
         <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
-        <On Terms="ActorCreation" Send="SetTintColor 136,215,219"/>
+        <On Terms="ActorCreation" Send="SetTintColor 80,197,203"/>
         <On Terms="ActorCreation" Send="Create SwarmHeroGlow"/>
         <Model value="Diamondback"/>
         <Scale value="0.880000"/>
@@ -5832,6 +5995,8 @@
     </CActorUnit>
     <CActorUnit id="MengskHellion">
         <On Terms="ActorCreation" Send="SetTintColor 239,149,80"/>
+        <On Terms="Upgrade.SouthronElites" Send="SetTintColor 133,133,133"/>
+        <On Terms="ActorCreation; ValidatePlayer SouthronElitesResearchedvalidator" Send="SetTintColor 133,133,133"/>
         <Scale value="0.500000"/>
     </CActorUnit>
     <CActorUnit id="MengskSiegeTank">
@@ -6024,10 +6189,10 @@
     <CActorUnit id="Brynulf" parent="GenericUnitStandard" unitName="Brynulf">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
-        <On Terms="ActorCreation" Send="SetTintColor 120,209,214"/>
+        <On Terms="ActorCreation" Send="SetTintColor 57,181,187"/>
         <On Terms="ActorCreation" Send="Create SwarmHeroGlow"/>
         <Model value="Predator"/>
-        <Scale value="1.050000"/>
+        <Scale value="1.100000"/>
         <Baselines index="Walk" AnimProps="Walk,Fast"/>
         <BuildModel value="Predator"/>
         <DeathArray index="Normal" ModelLink="PredatorDeath" SoundLink="Predator_Explode"/>
@@ -8293,7 +8458,19 @@
         <AcquisitionPitchHalfArc value="15.000000"/>
         <AccuracyHalfArc value="10.000000"/>
     </CActorAction>
-    <CActorAction id="StalkerAttack3" parent="GenericAttack" effectImpact="ParticleDisruptorsU3" effectLaunch="ParticleDisruptors3">
+    <CActorAction id="StalkerAttack3" parent="GenericAttack" effectImpact="BlackNumenoreanDamage" effectLaunch="ParticleDisruptors3">
+        <On Terms="Signal.*.DarkProtossTest" Send="RefSetFromMsg ::actor.sender ::Sender"/>
+        <On Terms="Signal.*.DarkProtossTest; ValidateUnit NoDarkProtoss" Target="::actor.sender" Send="Signal DarkProtossSwap"/>
+        <LaunchAssets Sound="Stalker_AttackLaunch"/>
+        <Missile value="StalkerAttackMissile"/>
+        <ImpactMap index="None" Model="StalkerAttackImpact" Sound="Stalker_AttackImpact"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <ImpactPhysics Name="ParticleDisruptorImpact" MatchKeys="Basic" Physics="StalkerAttackDeathForce"/>
+        <AcquisitionYawHalfArc value="7.500000"/>
+        <AcquisitionPitchHalfArc value="15.000000"/>
+        <AccuracyHalfArc value="10.000000"/>
+    </CActorAction>
+    <CActorAction id="StalkerAttack32" parent="GenericAttack" effectImpact="ParticleDisruptorsU32" effectLaunch="ParticleDisruptors32">
         <On Terms="Signal.*.DarkProtossTest" Send="RefSetFromMsg ::actor.sender ::Sender"/>
         <On Terms="Signal.*.DarkProtossTest; ValidateUnit NoDarkProtoss" Target="::actor.sender" Send="Signal DarkProtossSwap"/>
         <LaunchAssets Sound="Stalker_AttackLaunch"/>
@@ -8307,10 +8484,17 @@
     </CActorAction>
     <CActorMissile id="StalkerAttackMissile2" parent="GenericAttackMissile" unitName="StalkerWeapon">
         <Remove Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="ModelSwap DarkStalkerWeapon"/>
+        <On index="0" Terms="UnitBirth.DuathMissile" Send="Create"/>
+        <On Terms="ActorCreation" Send="ModelSwap DarkStalkerWeapon"/>
+    </CActorMissile>
+    <CActorMissile id="StalkerAttackMissile22" parent="GenericAttackMissile" unitName="StalkerWeapon">
+        <Remove Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="ModelSwap DarkStalkerWeapon"/>
         <On Terms="ActorCreation; ValidateUnit NoDarkProtoss" Send="ModelSwap DarkStalkerWeapon"/>
     </CActorMissile>
     <CActorUnit id="StalkerPurifier">
         <On Terms="ActorCreation" Send="SetTintColor 239,149,80"/>
+        <On Terms="Upgrade.SouthronElites" Send="SetTintColor 108,108,108"/>
+        <On Terms="ActorCreation; ValidatePlayer SouthronElitesResearchedvalidator" Send="SetTintColor 108,108,108"/>
         <Scale value="0.700000"/>
     </CActorUnit>
     <!--                                                                                         -->
@@ -8599,6 +8783,11 @@
     <CActorMissile id="VileStreamMissile2" parent="GenericAttackMissile" unitName="VileStreamWeapon">
         <Model value="VileStreamWeapon2"/>
     </CActorMissile>
+    <CActorUnit id="Viper">
+        <Scale value="1.150000"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+    </CActorUnit>
     <CActorAction id="ViperAirAttack2" parent="GenericAttack" effectImpact="ViperAirDamage2" effectLaunch="ViperAirLaunchMissile2">
         <LaunchAssets Sound="Viper_AirAttack"/>
         <Missile value="ViperAirAttackMissile"/>
@@ -8807,6 +8996,40 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
     </CActorModel>
+    <CActorUnit id="WreckingCrewAssault2" parent="GenericUnitMorph" unitName="AnardrLordofMinasDuath">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo HelsAngelAssault" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create SwarmHeroGlow"/>
+        <Model value="HelsAngelAssault2"/>
+        <BuildModel value="HelsAngelAssault2"/>
+        <DeathArray index="Normal" ModelLink="WreckingCrewAssaultDeath" SoundLink="Viking_Explode"/>
+        <DeathArray index="Blast" AnimProps="Death,Blast" ModelLink="WreckingCrewAssaultDeath"/>
+        <PlacementModel value="HelsAngelAssault2"/>
+        <PortraitModel value="VikingMercenaryFighterPortrait"/>
+        <WalkAnimMoveSpeed value="2.5468"/>
+        <AbilSoundArray AbilCmd="FighterMode,Execute" Sound="Viking_FighterModeVO"/>
+        <BarOffset value="70"/>
+        <BarWidth value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-assault.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Assault.dds"/>
+        <HighlightTooltip value="Unit/Name/HelsAngelAssault"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="Viking_Ready"/>
+        <SoundArray index="Help" value="Viking_Help"/>
+        <SoundArray index="What" value="Viking_What"/>
+        <SoundArray index="Yes" value="Viking_Yes"/>
+        <SoundArray index="Attack" value="Viking_Attack"/>
+        <SoundArray index="Pissed" value="Viking_Pissed"/>
+        <UnitBorderNormalColor value="150,150,150"/>
+        <UnitBorderSubgroupColor value="255,255,255"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-VikingMercenary-Assault.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-mercenary-assault.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <!--                                                                                         -->
     <!-- Za'Gara ............................................................................... -->
     <!--                                                                                         -->

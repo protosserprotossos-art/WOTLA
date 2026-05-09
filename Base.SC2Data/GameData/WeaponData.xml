@@ -36,6 +36,16 @@
         <Range value="6"/>
         <MinimumRange value="0"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="ArtanisVoidUlnar2">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="ArtanisVoidUlnarDamage2"/>
+        <TargetFilters value="Air,Visible;Ground,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="4"/>
+        <Period value="1.25"/>
+        <DamagePoint value="0.2"/>
+        <Effect value="ArtanisVoidUlnarSet2"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="AscendantWeapon">
         <Range value="5.5"/>
         <Period value="1.5"/>
@@ -566,6 +576,7 @@
     <CWeaponLegacy id="MengskBanshee">
         <MinScanRange value="5.5"/>
         <Range value="5.5"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MengskDiamondback">
         <Range value="5.5"/>
@@ -600,8 +611,12 @@
         <Backswing value="0.75"/>
         <Effect value="DorwinionSpawnUnit"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="MengskReaperP38ScytheGuassPistol">
+        <TargetFilters value="Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="MengskSiegeTank">
         <Range value="5.25"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MengskThorsHammer">
         <Range value="6.5"/>
@@ -772,11 +787,20 @@
     <CWeaponLegacy id="ParticleDisruptors2">
         <EditorCategories value="Race:Protoss"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
-        <DisplayEffect value="ParticleDisruptorsU3"/>
+        <DisplayEffect value="BlackNumenoreanDamage"/>
         <TargetFilters value="Visible;Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="6"/>
         <Period value="1.44"/>
         <Effect value="ParticleDisruptors3"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MinasDuathHero">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="ParticleDisruptorsU32"/>
+        <TargetFilters value="Visible;Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Period value="0.5"/>
+        <Effect value="ParticleDisruptors32"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Predator3">
         <EditorCategories value="Race:Terran"/>
@@ -1150,7 +1174,7 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="ViperAir">
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <Range value="35"/>
+        <Range value="6.75"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="AcidSpores2">
         <EditorCategories value="Race:Zerg"/>
@@ -1182,7 +1206,7 @@
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
         <DisplayEffect value="VultureU2"/>
-        <TargetFilters value="Ground,Visible;Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="5.25"/>
         <Period value="1.47"/>
         <Backswing value="0"/>

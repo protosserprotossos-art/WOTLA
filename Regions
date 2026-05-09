@@ -598,4 +598,45 @@
             <radius value="2.5"/>
         </shape>
     </region>
+    <region id="86">
+        <name value="Framsburg"/>
+        <shape type="circle">
+            <center value="158.8117,196.1206"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="87">
+        <name value="Withered Heath Clear"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="143.587,194.865,168.587,217.3503"/>
+        </shape>
+    </region>
+    <region id="88">
+        <name value="CorsairAnduin"/>
+        <shape type="rect">
+            <quad value="187.2978,59.712,198.0297,71.9953"/>
+        </shape>
+    </region>
+    <region id="89">
+        <name value="Minas Duath"/>
+        <shape type="circle">
+            <center value="173.882,32.1657"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
+    <region id="90">
+        <name value="Minas Anor Clear"/>
+        <invisible/>
+        <shape type="rect">
+            <quad value="159.3308,32.7175,184.3308,59.7175"/>
+        </shape>
+    </region>
+    <region id="91">
+        <name value="Southron Embassy"/>
+        <shape type="circle">
+            <center value="251.078,45.5026"/>
+            <radius value="1.414"/>
+        </shape>
+    </region>
 </Regions>

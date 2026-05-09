@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorPlayerRequirement id="SouthronElitesResearchedvalidator">
+        <ResultNoPlayer value="Error"/>
+        <Find value="1"/>
+        <Value value="SouthronElitesResearched"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="HasLifeSteal">
         <Find value="1"/>
         <Value value="LifeSteal"/>

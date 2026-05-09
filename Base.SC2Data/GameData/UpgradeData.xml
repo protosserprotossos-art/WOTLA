@@ -1419,12 +1419,52 @@
     <CUpgrade id="AmonSulCapturedUpgradeSpawn2">
         <MaxLevel value="4"/>
     </CUpgrade>
+    <CUpgrade id="FortifyOuterHoldingEvendim" parent="Research">
+        <LeaderAlias value="OsgiliathUpgradespawn3"/>
+    </CUpgrade>
+    <CUpgrade id="RetreatOuterHoldingsEvendim" parent="Research">
+        <LeaderAlias value="OsgiliathUpgradespawn3"/>
+    </CUpgrade>
+    <CUpgrade id="SouthronElites" parent="Research">
+        <EffectArray Reference="Unit,MengskHellion,LifeMax" Value="100"/>
+        <EffectArray Reference="Unit,MengskHellion,LifeStart" Value="100"/>
+        <EffectArray Reference="Unit,DarkTemplarShakuras,LifeMax" Value="200"/>
+        <EffectArray Reference="Unit,DarkTemplarShakuras,LifeStart" Value="200"/>
+        <EffectArray Reference="Unit,StalkerPurifier,LifeStart" Value="100"/>
+        <EffectArray Reference="Unit,StalkerPurifier,LifeMax" Value="100"/>
+        <EffectArray Reference="Unit,StalkerShakuras,LifeStart" Value="200"/>
+        <EffectArray Reference="Unit,StalkerShakuras,LifeMax" Value="200"/>
+        <EffectArray Reference="Effect,MengskHellionInfernalFlameThrower,Amount" Value="5"/>
+        <EffectArray Reference="Effect,BlackNumenoreanDamage,Amount" Value="10"/>
+        <EffectArray Reference="Effect,ParticleDisruptorsU2,Amount" Value="5"/>
+        <EffectArray Reference="Effect,WarpBlades3,Amount" Value="10"/>
+        <LeaderAlias value="OsgiliathUpgradespawn3"/>
+    </CUpgrade>
+    <CUpgrade id="CorsairEncampmentAnduin" parent="Research">
+        <LeaderAlias value="OsgiliathUpgradespawn3"/>
+    </CUpgrade>
     <CUpgrade id="DevelopeNorthArnor" parent="Research">
         <EffectArray Reference="Unit,ScienceVessel,LifeArmor" Value="1"/>
         <EffectArray Reference="Effect,ReplicantWeaponDamage,Amount" Value="20"/>
         <EffectArray Reference="Unit,Marine,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,Spectre,LifeArmor" Value="1"/>
         <LeaderAlias value="OsgiliathUpgradespawn3"/>
+    </CUpgrade>
+    <CUpgrade id="FortifyTheRiverOfAnduinPriceReduction" parent="Research">
+        <EffectArray Operation="Subtract" Reference="Abil,FortifyTheRiverOFAnduin,InfoArray[Research1].Resource[Minerals]" Value="1250"/>
+        <LeaderAlias value="OsgiliathUpgradespawn3"/>
+    </CUpgrade>
+    <CUpgrade id="FramsburgCapturedUpgradeSpawn">
+        <MaxLevel value="4"/>
+    </CUpgrade>
+    <CUpgrade id="Anandr" parent="Research">
+        <LeaderAlias value="OsgiliathUpgradespawn3"/>
+    </CUpgrade>
+    <CUpgrade id="SouthronEmbassyUpgradeSpawn">
+        <MaxLevel value="8"/>
+    </CUpgrade>
+    <CUpgrade id="MinasDuathUpgradeSpawn">
+        <MaxLevel value="4"/>
     </CUpgrade>
     <CUpgrade id="GrowNoblePower" parent="Research">
         <EffectArray Operation="Subtract" Reference="Unit,MengskGoliath,LifeArmor" Value="2"/>
@@ -1435,6 +1475,9 @@
         <EffectArray Operation="Subtract" Reference="Effect,OdinDamage,Amount" Value="10"/>
         <EffectArray Operation="Subtract" Reference="Effect,OdinDamageRight,Amount" Value="10"/>
         <EffectArray Operation="Subtract" Reference="Effect,OdinDamageLeft,Amount" Value="10"/>
+        <LeaderAlias value="OsgiliathUpgradespawn3"/>
+    </CUpgrade>
+    <CUpgrade id="RenTheUnclean" parent="Research">
         <LeaderAlias value="OsgiliathUpgradespawn3"/>
     </CUpgrade>
     <CUpgrade id="MarinelordOfTharbad" parent="Research">
@@ -1504,6 +1547,9 @@
         <LeaderAlias value="OsgiliathUpgradespawn3"/>
     </CUpgrade>
     <CUpgrade id="Eorlbrand" parent="Research">
+        <LeaderAlias value="OsgiliathUpgradespawn3"/>
+    </CUpgrade>
+    <CUpgrade id="OsgiliathDestroyed" parent="Research">
         <LeaderAlias value="OsgiliathUpgradespawn3"/>
     </CUpgrade>
     <CUpgrade id="RapidOrcBreeding" parent="Research">

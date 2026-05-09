@@ -137,9 +137,48 @@
     <CButton id="AlarakForkedLightning">
         <Icon value="Assets\Textures\ui_tipicon_campaign_zerus03-zurvanlightning.dds"/>
     </CButton>
+    <CButton id="FortifyOuterHoldingEvendim">
+        <Icon value="Assets\Textures\btn-research-zerg-fortifiedbunker.dds"/>
+        <HotkeyAlias value="UpgradeSpawn"/>
+    </CButton>
+    <CButton id="RetreatOuterHoldingsEvendim">
+        <Icon value="Assets\Textures\command_retreat_ac.dds"/>
+        <HotkeyAlias value="UpgradeSpawn"/>
+    </CButton>
+    <CButton id="SouthronElites">
+        <Icon value="Assets\Textures\btn-upgrade-zagara-aberrationarmorcover.dds"/>
+        <HotkeyAlias value="UpgradeSpawn"/>
+    </CButton>
+    <CButton id="CorsairEncampmentAnduin">
+        <Icon value="Assets\Textures\btn-ability-terran-hercules-tacticaljump.dds"/>
+        <HotkeyAlias value="UpgradeSpawn"/>
+    </CButton>
     <CButton id="DevelopeNorthArnor">
         <Icon value="Assets\Textures\btn-progression-hornerhan-6-mirabuildtime.dds"/>
         <HotkeyAlias value="AmonsulUpgradeSpawn3"/>
+    </CButton>
+    <CButton id="FramsburgCapturedUpgradeSpawn">
+        <Icon value="Assets\Textures\ui_aoestretchline_terran_scroll.dds"/>
+        <HotkeyAlias value="UpgradeSpawn"/>
+    </CButton>
+    <CButton id="Anandr">
+        <Icon value="Assets\Textures\btn-unit-collectoin-terran-mecha-vikingassault.dds"/>
+        <HotkeyAlias value="UpgradeSpawn"/>
+    </CButton>
+    <CButton id="SouthronEmbassyUpgradeSpawn">
+        <Icon value="Assets\Textures\ui_aoestretchline_terran_scroll.dds"/>
+        <HotkeyAlias value="UpgradeSpawn"/>
+    </CButton>
+    <CButton id="MinasDuathUpgradeSpawn">
+        <Icon value="Assets\Textures\ui_aoestretchline_terran_scroll.dds"/>
+        <HotkeyAlias value="UpgradeSpawn"/>
+    </CButton>
+    <CButton id="PsiStrike">
+        <Icon value="Assets\Textures\btn-upgrade-nova-monomolecularblade.dds"/>
+    </CButton>
+    <CButton id="RenTheUnclean">
+        <Icon value="Assets\Textures\btn-unit-zerg-viper.dds"/>
+        <HotkeyAlias value="UpgradeSpawn"/>
     </CButton>
     <CButton id="RefugeOfErynLuin">
         <Icon value="Assets\Textures\btn-tips-starmap.dds"/>

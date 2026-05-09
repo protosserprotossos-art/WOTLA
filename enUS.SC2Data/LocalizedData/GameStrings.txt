@@ -19,6 +19,7 @@ Abil/Name/AlatarAbility=Alatar Ability
 Abil/Name/AmonLancUpgradeSpawn=(Amon Lanc) Upgrade Spawn
 Abil/Name/AmonSulCapturedUpgradeSpawn=Amon Sul (Captured) (Upgrade Spawn)
 Abil/Name/AmonSulUpgradeSpawn=(Amon Sul) Upgrade Spawn 
+Abil/Name/Anandr=Anandür
 Abil/Name/AnduinCampUpgradeSpawn=(Anduin Camp) Upgrade Spawn
 Abil/Name/AnfalasUpgradeSpawn=(Anfalas) Upgrade Spawn
 Abil/Name/AnnuminasUpgradeSpawn=(Annuminas) Upgrade Spawn 
@@ -135,6 +136,7 @@ Abil/Name/FormAcolation=Form A colation
 Abil/Name/FormaDwarvenColation=Form a Dwarven Colation
 Abil/Name/FornostCapturedUpgradeSpawn=Fornost (Captured) (Upgrade Spawn)
 Abil/Name/FornostUpgradeSpawn=(Fornost) Upgrade Spawn
+Abil/Name/FortifyOuterHoldingEvendim=Fortify Outer Holding (Evendim)
 Abil/Name/FortifyOuterHoldingOuterRhuadur=Fortify Outer Holding (Outer Rhuadur)
 Abil/Name/FortifyOuterHoldingsLastBridge=Fortify Outer Holdings (Last Bridge)
 Abil/Name/FortifyOuterHoldingsLondDaer=Fortify Outer Holdings (Lond Daer)
@@ -142,6 +144,7 @@ Abil/Name/FortifyOuterHoldingsMinhiarth=Fortify Outer Holdings (Minhiarth)
 Abil/Name/FortifyOuterHoldingsTharbad=Fortify Outer Holdings (Tharbad)
 Abil/Name/FortifyTheRiverOFAnduin=Fortify The River OF Anduin
 Abil/Name/FortifyTheTrollshaws=Fortify The Trollshaws
+Abil/Name/FramsburgCapturedUpgradeSpawn=Framsburg (Captured) (Upgrade Spawn)
 Abil/Name/FreePeopleOfDorwinionUpgradeSpawn=(Free People Of Dorwinion) Upgrade Spawn
 Abil/Name/FrozenPlainsUpgradeSpawn=(Frozen Plains) Upgrade Spawn
 Abil/Name/Galadriel=Galadriel
@@ -231,6 +234,7 @@ Abil/Name/MarquilLeaderOfTheNorthmen=Marquil, Leader Of The Northmen (gladden)
 Abil/Name/MarquilLeaderOfTheNorthmen2=Marquil, Leader Of The Northmen (free people)
 Abil/Name/MartimeLegacy=Martime Legacy
 Abil/Name/MinasAnorUpgradeSpawn=(Minas Anor) Upgrade Spawn 
+Abil/Name/MinasDuathUpgradeSpawn=Minas Duath (Upgrade Spawn)
 Abil/Name/MinasMorgulUpgradeSpawn=(Minas Morgul) Upgrade Spawn
 Abil/Name/MinasMorgulUpgradeSpawn2=Uvartha
 Abil/Name/MindBlast=Stun
@@ -270,6 +274,8 @@ Abil/Name/RangersOfTheWhiteMountains=Rangers Of The White Mountains
 Abil/Name/RapidOrcBreeding=Rapid Orc Breeding
 Abil/Name/RedDwarvesEncampmentUpgradeSpawn=(Red Dwarves Encampment) Upgrade Spawn
 Abil/Name/ReinforcementsFromHarandor=Reinforcements From Harandor
+Abil/Name/RenTheUnclean=Ren, The Unclean
+Abil/Name/RetreatOuterHoldingsEvendim=Retreat Outer Holdings (Evendim)
 Abil/Name/RetreatOuterHoldingsLastBridge=Retreat Outer Holdings (Last Bridge)
 Abil/Name/RetreatOuterHoldingsLondDaer=Retreat Outer Holdings (Lond Daer)
 Abil/Name/RetreatOuterHoldingsMinhiarth=Retreat Outer Holdings (Minhiarth)
@@ -289,6 +295,8 @@ Abil/Name/ServantsOfMordor=Servants Of Mordor
 Abil/Name/SilvanCombatantTraining=Silvan Combatant Training
 Abil/Name/SliceOfCorruption=Slice Of Corruption
 Abil/Name/SouthEnedwaithUpgradeSpawn=(South Enedwaith) Upgrade Spawn
+Abil/Name/SouthronElites=Southron Elites
+Abil/Name/SouthronEmbassyUpgradeSpawn=Southron Embassy (Upgrade Spawn)
 Abil/Name/SpawnTraining=Spawn Training
 Abil/Name/SporeCrawlerUproot2=Uproot
 Abil/Name/Stimpack2=Stimpack
@@ -434,7 +442,7 @@ Behavior/Tooltip/AulesIngenuinity=Increases DR by 5%
 Behavior/Tooltip/BasicAuraapplyreal=Life regeneration increased.
 Behavior/Tooltip/Corruption2=This unit takes 20% extra damage.
 Behavior/Tooltip/CraftmanshipOfTheNoldor=Increases shields by 100 and shield regen by 5
-Behavior/Tooltip/EclipseOfHopeapply=10% DR, 10% movement speed, 10% attack speed, 5 life regenration per second.
+Behavior/Tooltip/EclipseOfHopeapply=15% DR, 10% movement speed, 10% attack speed, 5 life regenration per second.
 Behavior/Tooltip/FortiudeOfManwe2=Increases armor by 2
 Behavior/Tooltip/GuardianShield2=Incoming attack damage reduced by 2.
 Behavior/Tooltip/GuardianShield3=Incoming attack damage reduced by 2.
@@ -510,6 +518,7 @@ Button/Name/AmonSulUpgradeSpawn4=(Amon Sul) Upgrade Spawn 4
 Button/Name/AmonsulUpgradeSpawn=(Amon Sul) Upgrade Spawn
 Button/Name/AmonsulUpgradeSpawn2=(Amon Sul) Upgrade Spawn 2 
 Button/Name/AmonsulUpgradeSpawn3=(Amon Sul) Upgrade Spawn 3
+Button/Name/Anandr=Anandür
 Button/Name/AnduinCampUpgradeSpawn=(Anduin Camp) Upgrade Spawn
 Button/Name/AnduinCampUpgradeSpawn2=(Anduin Camp) Upgrade Spawn 2
 Button/Name/AnduinCampUpgradeSpawn3=(Anduin Camp) Upgrade Spawn 3
@@ -620,6 +629,7 @@ Button/Name/ColossusHallucination3=Summon Colossus Hallucination
 Button/Name/ConcealTheHalls=Conceal The Halls
 Button/Name/CorrosiveBile=Vulnerability
 Button/Name/CorsairEncampment=Corsair Encampment
+Button/Name/CorsairEncampmentAnduin=Corsair Encampment (Anduin)
 Button/Name/CorsairEncampmentHarlond=Corsair Encampment Harlond
 Button/Name/CorsairEncampmentLefnui=Corsair Encampment Lefnui
 Button/Name/CorsairEncampmentLondDaer=Corsair Encampment Lond Daer
@@ -760,9 +770,11 @@ Button/Name/FornostCapturedUpgradeSpawn=Fornost (Captured) (Upgrade Spawn)
 Button/Name/FornostUpgradeSpawn=(Fornost) Upgrade Spawn
 Button/Name/FornostUpgradeSpawn2=(Fornost) Upgrade Spawn 2
 Button/Name/FornostUpgradeSpawn3=(Fornost) Upgrade Spawn 3
+Button/Name/FortifyOuterHoldingEvendim=Fortify Outer Holding (Evendim
 Button/Name/FortifyTheRiverOfAnduin=Fortify The River Of Anduin
 Button/Name/FortifyTheTrollshaws=Fortify The Trollshaws
 Button/Name/FortiudeOfManwe=Fortiude Of Manwe
+Button/Name/FramsburgCapturedUpgradeSpawn=Framsburg (Captured) (Upgrade Spawn)
 Button/Name/FreePeopleOfDorwinionUpgradeSpawn=(Free People Of Dorwinion) Upgrade Spawn
 Button/Name/FreePeopleOfDorwinionUpgradeSpawn2=(Free People Of Dorwinion) Upgrade Spawn 2
 Button/Name/FreePeopleOfDorwinionUpgradeSpawn3=(Free People Of Dorwinion) Upgrade Spawn 3
@@ -890,6 +902,7 @@ Button/Name/MinasAnorUpgradeSpawn3=(Minas Anor) Upgrade Spawn 3
 Button/Name/MinasAnorUpgradeSpawn4=(Minas Anor) Upgrade Spawn 4
 Button/Name/MinasAnorUpgradeSpawn5=(Minas Anor) Upgrade Spawn 5
 Button/Name/MinasAnorUpgradeSpawn6=(Minas Anor) Upgrade Spawn 6
+Button/Name/MinasDuathUpgradeSpawn=Minas Duath (Upgrade Spawn)
 Button/Name/MinasMorgulUpgradeSpawn=(Minas Morgul) Upgrade Spawn
 Button/Name/MinasMorgulUpgradeSpawn2=(Minas Morgul) Upgrade Spawn 2
 Button/Name/MinasMorgulUpgradeSpawn3=(Minas Morgul) Upgrade Spawn 3
@@ -1024,11 +1037,13 @@ Button/Name/RedDwarvesEncampmentUpgradeSpawn3=(Red Dwarves Encampment) Upgrade S
 Button/Name/RefugeOfEdhellond=Refuge Of Edhellond
 Button/Name/RefugeOfErynLuin=Refuge Of Ered Luin
 Button/Name/ReinforcementsFromHarandor=Reinforcements From Harandor
+Button/Name/RenTheUnclean=Ren, The Unclean
 Button/Name/RetreatOuterHoldingLastBridge=Retreat Outer Holding (Last Bridge)
 Button/Name/RetreatOuterHoldingLondDaer=Retreat Outer Holding (Lond Daer)
 Button/Name/RetreatOuterHoldingMinhiarth=Retreat Outer Holding (Minhiarth)
 Button/Name/RetreatOuterHoldingOuterRhuadur=Retreat Outer Holding (Outer Rhuadur)
 Button/Name/RetreatOuterHoldingTharbad=Retreat Outer Holding (Tharbad)
+Button/Name/RetreatOuterHoldingsEvendim=Retreat Outer Holdings (Evendim)
 Button/Name/RhosgobelUpgradeSpawn=(Rhosgobel) Upgrade Spawn
 Button/Name/RhosgobelUpgradeSpawn2=(Rhosgobel) Upgrade Spawn 2
 Button/Name/RhosgobelUpgradeSpawn3=(Rhosgobel) Upgrade Spawn 3
@@ -1061,6 +1076,8 @@ Button/Name/SliceOfCorruption=Slice Of Corruption
 Button/Name/SouthEnedwaithUpgradeSpawn=(South Enedwaith) Upgrade Spawn
 Button/Name/SouthEnedwaithUpgradeSpawn2=(South Enedwaith) Upgrade Spawn 2
 Button/Name/SouthEnedwaithUpgradeSpawn23=(South Enedwaith) Upgrade Spawn 4
+Button/Name/SouthronElites=Southron Elites
+Button/Name/SouthronEmbassyUpgradeSpawn=Southron Embassy (Upgrade Spawn)
 Button/Name/SouthronEncampmentUpgradeSpawn=(Southron Encampment) Upgrade Spawn
 Button/Name/SouthronEncampmentUpgradeSpawn2=(Southron Encampment) Upgrade Spawn 2
 Button/Name/SouthronEncampmentUpgradeSpawn3=(Southron Encampment) Upgrade Spawn 3
@@ -1194,7 +1211,9 @@ Button/Tooltip/AmonSulUpgradeSpawn4=Upgrade this spawn increasing the amount of 
 Button/Tooltip/AmonsulUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Numenorean Archer<n/>+1 Hound</c>
 Button/Tooltip/AmonsulUpgradeSpawn2=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Numenorean Archer<n/>+1 Numenorean Warrior</c>
 Button/Tooltip/AmonsulUpgradeSpawn3=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Hound<n/>+1 Numenorean Archerr</c>
+Button/Tooltip/Anandr=<c val="9E8876">Summon <c val="7D382D">Anadur</c></c>
 Button/Tooltip/AnardilKeeperofNobleHouses=
+Button/Tooltip/AnardrLordofMinasDuath=Durable support unit. Can switch into Fighter Mode to attack air units.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/AnduinCampUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+3 Hound</c>
 Button/Tooltip/AnduinCampUpgradeSpawn2=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Easterling Warrior<n/>+2 Easterling Archer</c>
 Button/Tooltip/AnduinCampUpgradeSpawn3=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Easterling Champion</n>+2 Easterling Warrior<n/>+2 Easterling Archer</c>
@@ -1337,10 +1356,10 @@ Button/Tooltip/Corruptor=
 Button/Tooltip/Corruptor2=
 Button/Tooltip/Corruptor22=
 Button/Tooltip/Corruptor3=
-Button/Tooltip/CorsairEncampment=The corsairs are ready to embark upon an invasion of mainland of Eriador and Gondor, we shall seize the ports!
+Button/Tooltip/CorsairEncampment=
+Button/Tooltip/CorsairEncampment2=
+Button/Tooltip/CorsairEncampmentAnduin=<c val="9E8876">The corsairs will launch an invasion against the region of Anduin aiming to set up an encampment.<n/><n/>Creates a new spawner at <c val="7D382D">Anduin</c> with <c val="47BC29">2</c> gasses and <c val="F4FA29">14</c> fortifications, sharing the same gas as other Corsair Spawners</c>
 Button/Tooltip/CorsairEncampmentHarlond=The corsairs are ready to embark upon an invasion of mainland Gondor, we shall seize the ports!<n/><n/><c val="80FF00">Creates 5 armies at Lefnui, Anfalas, Libnir, Pelargir, Osgiliath composing of 10 archers, 10 warriors, 2 corsairs</c>
-Button/Tooltip/CorsairEncampmentLefnui=
-Button/Tooltip/CorsairEncampmentLefnui2=
 Button/Tooltip/CorsairEncampmentLondDaer=The corsairs are ready to embark upon an invasion of mainland Gondor, we shall seize the ports!<n/><n/><c val="80FF00">Creates 5 armies at Lefnui, Anfalas, Libnir, Pelargir, Osgiliath composing of 10 archers, 10 warriors, 2 corsairs</c>
 Button/Tooltip/CorsairEncampmentPelargir=<c val="9E8876">The corsairs will launch an invasion against the region of Pelargir aiming to set up an encampment.<n/><n/>Creates a new spawner at <c val="7D382D">Pelargir</c> with <c val="47BC29">2</c> gasses and <c val="F4FA29">14</c> fortifications, sharing the same gas as other Corsair Spawners</c>
 Button/Tooltip/CorsairEncampmentUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Southron Rider</n>+2 Southron Archer<n/>+2 Southron Warrior</c>
@@ -1382,6 +1401,7 @@ Button/Tooltip/DevotionToAmdir=<c val="B9B9B9">The Elves of Lothorien's fervor t
 Button/Tooltip/DevotiontoAmroth=<c val="B9B9B9">The Elves of Lothorien's fervor towards their king brings them to ever greater heights.<n/><n/><n/>Unlocks the <c val="F4FA29">Shroud Of Lothorien</c> ability for <c val="4CC0C6">Amroth</c><n/>Increases <c val="4CC0C6">Amroth's</c> attack speed by <c val="F4FA29">0.25 </c><n/>Increases <c val="4CC0C6">Amroth's</c> HP by <c val="47BC29">150</c><n/><n/>Increases <c val="4CC0C6">Handmaiden Of Amroth</c> Damage by <c val="C81E2B">2</c><n/>Increases <c val="4CC0C6">Handmaiden of Amroth</c> hp by <c val="47BC29">20</c><n/><n/><c val="C81E2B">Mutually Exclusive with Devotion to Amdir and Galadriel</c> </c>
 Button/Tooltip/DevourerMP=
 Button/Tooltip/Diamondback=
+Button/Tooltip/DisablingCloud=<c val="9E8876">Creates a cloud that slows movement speed by <c val="F4FA29">50% </c>and prevents enemy units from attacking. Lasts for <c val="F4FA29"><d ref="(Effect,DisablingCloud,PeriodCount + 1) * Effect,DisablingCloud,PeriodicPeriodArray[0]"/> </c>seconds.</c>
 Button/Tooltip/DispersePower=<c val="B9B9B9">As the kingdom grows, the monarch recognizes that the strength of the realm lies not only in the crown but in the hands of its nobility. As such the king has decided to disperse his power rather then centralize it in the region of Annuminas granting increased power to the nobility<n/><n/>Unlocks new abilities at <c val="4CC0C6">Annuminas</c> that can be activated periodically being <c val="F4FA29">Crown's bounty</c>, <c val="F4FA29">Noble Muster</c>, <c val="F4FA29">Noble's accord</c>.<n/><n/>Disables the spawning of <c val="4CC0C6">Annuminas</c>, except for <c val="4CC0C6">mass</c> that has been <c val="F4FA29">retreated</c>.<n/>Disables gassing of <c val="4CC0C6">Annuminas</c></c>
 Button/Tooltip/Disruptor=
 Button/Tooltip/DisruptorHallucination2=This hallucinated copy functions like the original unit, but it cannot use active abilities, cannot deal damage, and dies more easily. Hallucinations last <d time="60"/> before they disappear.
@@ -1493,6 +1513,7 @@ Button/Tooltip/EvilOrthancUpgradeSpawn=Upgrade this spawn increasing the amount 
 Button/Tooltip/EvilRhuadurUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Warrior<n/>+2 Orcish Archer</c>
 Button/Tooltip/EvilRhuadurUpgradeSpawn2=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Warrior<n/>+2 Orcish Archer</c>
 Button/Tooltip/EvilRhuadurUpgradeSpawn3=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Mountain Troll<n/>+1 Catapult<n/>+1 Archerl</c>
+Button/Tooltip/FaceEmbrace=<c val="9E8876">Pulls target unit to the <c val="7D382D">Ren, The Unclean</c>. Enemy is stunned for <c val="F4FA29">1 </c>second.</c>
 Button/Tooltip/Factory=
 Button/Tooltip/FenixChampion=
 Button/Tooltip/FieldOfCelebrandt=
@@ -1523,9 +1544,11 @@ Button/Tooltip/FornostCapturedUpgradeSpawn=<c val="9E8876">Upgrade this spawn in
 Button/Tooltip/FornostUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Archer<n/>+1 Warrior</c>
 Button/Tooltip/FornostUpgradeSpawn2=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Numenorean Archer</n>+1 Numenorean Warrior</c>
 Button/Tooltip/FornostUpgradeSpawn3=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Numenorean Warrior </n>+1 Numerorean Archer</c>
-Button/Tooltip/FortifyTheRiverOfAnduin=<c val="B9B9B9">Gondor will fortify the river of Anduin preparing for the coming of Mordor<n/><n/>Creates <c val="F4FA29">12</c> <c val="4CC0C6">fortiifications</c> spread near the river of Anduin at different locations.</c>
+Button/Tooltip/FortifyOuterHoldingEvendim=<c val="80FF00">Creates 5 cannons at Evendimr<n/>Unlocks the third upgrade of Evendim</c>
+Button/Tooltip/FortifyTheRiverOfAnduin=<c val="B9B9B9">Gondor will fortify the river of Anduin preparing for the coming of Mordor<n/><n/>Creates <c val="F4FA29">12</c> <c val="4CC0C6">fortiifications</c> spread near the river of Anduin at different locations.<n/><n/>Price is reduced by <c val="F4FA29">1250 </c>after researching first <c val="4CC0C6">Osgiliath</c> upgrade</c>
 Button/Tooltip/FortifyTheTrollshaws=<c val="9E8876">Grants access to a new weapon for <c val="7D382D">Trollshaws </c>dealing high damage</c>
 Button/Tooltip/FortiudeOfManwe=Applies an aura that increases nearby friendly units armor by 2.
+Button/Tooltip/FramsburgCapturedUpgradeSpawn=<c val="B9B9B9">Upgrade this spawn increasing the amount of units you receive each cycle <n/>Level 1: 2 <c val="4CC0C6">Archer</c> 1 <c val="4CC0C6">Rider</c> <n/><n/>Level 2: 2 <c val="4CC0C6">Rider</c>, 1 <c val="4CC0C6">Warrior</c> <n/><n/>Level 3: 2 <c val="4CC0C6">Archer</c>, 1 <c val="4CC0C6">Knight</c><n/><n/>Level 4: 1 <c val="4CC0C6">Warrior</c>, 1 <c val="4CC0C6">Knight</c> 1 <c val="4CC0C6">Catapult</c></c></c>
 Button/Tooltip/FreePeopleOfDorwinionUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Silvan Archer</n>+3 Warrior</c>
 Button/Tooltip/FreePeopleOfDorwinionUpgradeSpawn2=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Woodland Elf</n>+1 Rider<n/>+2 Warrior</c>
 Button/Tooltip/FreePeopleOfDorwinionUpgradeSpawn3=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Archer</n>+1 Silvan Warrior<n/>+2 Rider</c>
@@ -1749,6 +1772,7 @@ Button/Tooltip/MinasAnorUpgradeSpawn3=Upgrade this spawn increasing the amount o
 Button/Tooltip/MinasAnorUpgradeSpawn4=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Numenorean Archer</n>+1 Warrior</c>
 Button/Tooltip/MinasAnorUpgradeSpawn5=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Knightt</n>+1 Catapult</c>
 Button/Tooltip/MinasAnorUpgradeSpawn6=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Guard Of The Citadel</n>+1 Great Knight Of Minas Anor<n/><n/>Add leveling to <c val="F4FA29">Genvive </c></c>
+Button/Tooltip/MinasDuathUpgradeSpawn=<c val="9E8876">Upgrade this spawn increasing the amount of units you receive each cycle <n/>Level 1: 4 <c val="7D382D">Undead</c> 1 <c val="7D382D">Wraith</c> <n/><n/>Level 2: 4 <c val="7D382D">Undead</c>, 1 <c val="7D382D">Wraith</c> <n/><n/>Level 3: 4 <c val="7D382D">Undead</c>, 2 <c val="7D382D">Wraith</c></c>
 Button/Tooltip/MinasMorgulUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Orcish Archer</n>+1 Orcish Warrior<n/>+1 Uruk crossbowman</c>
 Button/Tooltip/MinasMorgulUpgradeSpawn2=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Goblin Hunter</n>+1 Wraith<n/>+1 Orcish Fighter</c>
 Button/Tooltip/MinasMorgulUpgradeSpawn3=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Orcish Archer</n>+2 Orcish Fighter<n/>+1 Goblin Hunter</c>
@@ -1884,7 +1908,7 @@ Button/Tooltip/PhoenixHallucination2=This hallucinated copy functions like the o
 Button/Tooltip/PhoenixHallucination3=This hallucinated copy functions like the original unit, but it cannot use active abilities, cannot deal damage, and dies more easily. Hallucinations last <d time="60"/> before they disappear.
 Button/Tooltip/PhoenixPurifier=
 Button/Tooltip/PhotonCannon=
-Button/Tooltip/Pillaging=<c val="9E8876">Attacking enemy structures increases the stack count of pillaging up to <c val="F4FA29">50</c>, resetting when reaching <c val="F4FA29">50 </c>and granting <c val="F4FA29">200 </c>minerals.</c>
+Button/Tooltip/Pillaging=<c val="9E8876">Attacking enemy structures increases the stack count of pillaging up to <c val="F4FA29">50</c>, resetting when reaching <c val="F4FA29">50 </c>and granting <c val="F4FA29">500 </c>minerals.</c>
 Button/Tooltip/PinnathGaelinUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Warrior</c>
 Button/Tooltip/PinnathGaelinUpgradeSpawn2=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Archer </n>+1 Numenorean Archer</c>
 Button/Tooltip/PinnathGaelinUpgradeSpawn3=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Catapult </n>+1 Numenorean Archer</c>
@@ -1905,6 +1929,7 @@ Button/Tooltip/ProbeHallucination2=These hallucinated copies function like the o
 Button/Tooltip/ProbeHallucination3=These hallucinated copies function like the original unit, but they cannot use active abilities, deal damage, warp in structures, or gather resources, and they die more easily. Hallucinations last <d time="60"/> before they disappear.
 Button/Tooltip/PsiDisruptor=
 Button/Tooltip/PsiIndoctrinator=
+Button/Tooltip/PsiStrike=<c val="B9B9B9">Dashes through enemies, dealing <c val="F4FA29"><d ref="Effect,PsiStrikeDamage,Amount"/></c> damage to all enemies in the path.</c>
 Button/Tooltip/Pygalisk=
 Button/Tooltip/Pylon=
 Button/Tooltip/Queen=
@@ -1944,12 +1969,14 @@ Button/Tooltip/RefugeOfEdhellond=<c val="B9B9B9">Edhellond serves as a refuge fo
 Button/Tooltip/RefugeOfErynLuin=<c val="B9B9B9">Ered Luin Encampment serves as a refuge for the Numeroeans Of Arnor.<n/><n/>if <c val="4CC0C6">Annuminas </c>is dead<n/>Spawn <c val="F4FA29">2 </c><c val="4CC0C6">Numenorean Archerr</c><n/>Spawn <c val="F4FA29">1 </c><c val="4CC0C6">Numeorean Warrior</c><n/><n/>if <c val="4CC0C6">Barrow down </c>is dead<n/>Spawn <c val="F4FA29">1 </c><c val="4CC0C6">Numenorean Warrior</c><n/><n/>if <c val="4CC0C6">Fornost </c>is dead<n/>Spawn <c val="F4FA29">1 </c><c val="4CC0C6">Numenorean Archer</c><n/><n/>If <c val="4CC0C6">Amon sul </c>is dead<n/>Spawn <c val="F4FA29">1 </c><c val="4CC0C6">Numenorean Archer</c><n/><n/>If <c val="4CC0C6">Tharbad</c> is dead<n/>Spawn <c val="F4FA29">1 </c><c val="4CC0C6">Numenorean Warrior</c><n/><n/>If <c val="4CC0C6">Evendim</c> is dead Spawn <c val="F4FA29">1 </c><c val="4CC0C6">Numenorean Warrior</c>
 Button/Tooltip/RegenerativeArmor=Weapon info:<n/><n/>Range: 5.5<n/>Attack speed: 1.5<n/>Damage 125
 Button/Tooltip/ReinforcementsFromHarandor=<c val="B9B9B9">Gondor still has forces in the south in the region of Harandor, with the primary host of the Southron's attacking from Itihilien rather then Harandor, these forces can be pulled to defend the region of Lebennin<n/><n/>Increases the amount of <c val="4CC0C6">Archer</c> spawned at <c val="4CC0C6">Pelargir</c> by <c val="F4FA29">1 </c>for each upgrade completed<n/>Increases the amount of <c val="4CC0C6">Warrior</c> spawned at <c val="4CC0C6">Pelargir</c> by <c val="F4FA29">1 </c>for each upgrade completed</c>
+Button/Tooltip/RenTheUnclean=<c val="9E8876">Summon the Nazgul known as <c val="7D382D">Ren, The Unclean</c></c>
 Button/Tooltip/Replicant=
 Button/Tooltip/RetreatOuterHoldingLastBridge=<c val="80FF00">Moves the initial spawn of this spawn's gas aswell as the initial units to Annuminas.<n/>Disables the second upgrade of this spawner, fortify upgrade.</c>
 Button/Tooltip/RetreatOuterHoldingLondDaer=<c val="80FF00">Moves the initial spawn of this spawn's gas aswell as the initial units to Annuminas.<n/>Disables the second upgrade of this spawner, fortify upgrade.</c>
 Button/Tooltip/RetreatOuterHoldingMinhiarth=<c val="80FF00">Moves the initial spawn of this spawn's gas aswell as the initial units to Annuminas<n/>Disables the second upgrade of this spawner, fortify upgrade.</c>
 Button/Tooltip/RetreatOuterHoldingOuterRhuadur=<c val="80FF00">Moves the initial spawn of this spawn's gas aswell as the initial units to Annuminas<n/>Disables the second upgrade of this spawner, fortify upgrade.</c>
 Button/Tooltip/RetreatOuterHoldingTharbad=<c val="80FF00">Moves the initial spawn of this spawn's gas aswell as the initial units to Annuminas.<n/>Disables the second upgrade of this spawner, fortify upgrade.</c>
+Button/Tooltip/RetreatOuterHoldingsEvendim=<c val="80FF00">Moves the initial spawn of this spawn's gas aswell as the initial units to Annuminas<n/>Disables the second upgrade of this spawner, fortify upgrade.</c>
 Button/Tooltip/RhosgobelUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Silvan Warrior</n>+1 Woodland Elf</c>
 Button/Tooltip/RhosgobelUpgradeSpawn2=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Archer</n>+1 Warrior</c>
 Button/Tooltip/RhosgobelUpgradeSpawn3=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Rider</c>
@@ -2014,6 +2041,9 @@ Button/Tooltip/SoulAbsorption=The witch king heals 6 health of every nearby kill
 Button/Tooltip/SouthEnedwaithUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Enedwaithrin  </n>+1 Wild Men Archer<n/>+2 Barbarian</c>
 Button/Tooltip/SouthEnedwaithUpgradeSpawn2=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Enedwaithrin</n>+1 Barbarian</c>
 Button/Tooltip/SouthEnedwaithUpgradeSpawn23=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Orcish Warboss (<c val="8000FF">Unique</c>) </n>+1 Cave Troll</c>
+Button/Tooltip/SouthronElites=<c val="9E8876">With our lack of numbers, we must train and arm the few soldiers we have well <n/><n/>Increases <c val="7D382D">Black Numenorean</c> hp by <c val="F4FA29">200</c><n/>Increases <c val="7D382D">Black Numenorean</c> damage by <c val="F4FA29">10</c><n/><n/>Increases <c val="7D382D">Southron Archer</c> hp by <c val="F4FA29">100</c><n/>Increases <c val="7D382D">Southron Archer</c> damage by <c val="F4FA29">5</c><n/><n/>Increases <c val="7D382D">Southron Rider</c> hp by <c val="F4FA29">100</c><n/>Increases <c val="7D382D">Southron Riderr</c> damage by <c val="F4FA29">5</c><n/><n/>Increases <c val="7D382D">Southron Warrior</c> hp by <c val="F4FA29">200</c><n/>Increases <c val="7D382D">Southron Riderr</c> damage by <c val="F4FA29">10</c><n/><n/>Sets supply count to <c val="C81E2B">30</c>
+Button/Tooltip/SouthronEmbassy=
+Button/Tooltip/SouthronEmbassyUpgradeSpawn=<c val="9E8876">Upgrade this spawn increasing the amount of units you receive each cycle <n/>Level 1: 1 <c val="7D382D">Black Numenorean</c> <n/><n/>Level 2: 1 <c val="7D382D">Southron Rider</c> <n/><n/>Level 3: 1 <c val="7D382D">Southron Rider</c> <n/><n/>Level 4: 1 <c val="7D382D">Southron Warrior</c> <n/><n/>Level 5: 1 <c val="7D382D">Black Numenorean</c> <n/><n/>Level 6: 1 <c val="7D382D">Southron Warrior</c> <n/><n/>Level 8: 1 <c val="7D382D">Mumakil</c> 
 Button/Tooltip/SouthronEncampmentUpgradeSpawn=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Southron Archer</n>+1 Southron Warrior</c>
 Button/Tooltip/SouthronEncampmentUpgradeSpawn2=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+2 Southron Archer</n>+1 Southron Warrior<n/>+1 Southron Rider</c>
 Button/Tooltip/SouthronEncampmentUpgradeSpawn3=Upgrade this spawn increasing the amount of units you receive each cycle <n/><n/><c val="FFFF00">+1 Southron Archer</n>+1 Southron Warrior<n/>+1 Corsair<n/>+1 Southron Rider</c>
@@ -2179,8 +2209,8 @@ CarnDumHighlight=<c val="FFFF00">Establish Carn Dum</c><n/><c val="80FFFF">6500 
 CarnDumSubtitle=<c val="008080"> Requires Witch-King or Sauron and 6500 minerals.<n/>
 CelebrandtHighlight=<c val="FFFF00">Forify The Plains Of Celebrandt</c><n/><c val="80FFFF">3000 Minerals</c><n/><c val="FF8000"> Amdir : Amroth</c>
 CelebrandtSubtitle=<c val="008080"> Requires Amroth or Amdir and 3000 minerals.<n/>
-Corsair Encampment lefnui=Corsair Encampment Lefnui
-CorsairEncampmentLefnui=Corsair Encampment Lefnui
+Corsair Encampment lefnui=Corsair Encampment
+CorsairEncampmentLefnui=Corsair Encampment
 DOCSTR_0000=With the danger of the easterling invasion rapidly approaching, it may be suitable to prepare for an eventual departure should the city of Dale fall.<n/><n/><c val="00FF00">Moves Dale to the western side on the river of Esstargoth if the spawner dies inreating 8 new fortifications <n/></c></c></c></c></c>
 DaleCaptured=<c val="FFFF00">Seize Dale</c><n/><c val="80FFFF">4500 Minerals</c><n/><c val="FF8000"> Queen Of Rhovanion, King Of Dorwinion </c>
 DataCollection/Name/AbilityBlastWave=Ability - Blast Wave
@@ -2278,6 +2308,24 @@ DocInfo/PatchNote079=fixed genevive not having heroic tag
 DocInfo/PatchNote080=Fixed grashkul, galadriel not having trigger beacon
 DocInfo/PatchNote081=Fixed maglor not having hero regen.
 DocInfo/PatchNote082=Fixed an issue where fortify Trollsahws was applying buffs to units
+DocInfo/PatchNote083=# content
+DocInfo/PatchNote084=Framsburg
+DocInfo/PatchNote085=Corsair encampment (Anduin)
+DocInfo/PatchNote086=Ren, The Unclean
+DocInfo/PatchNote087=Minas Duath 
+DocInfo/PatchNote088=Anardur
+DocInfo/PatchNote089=Southron Embassy
+DocInfo/PatchNote090=Southron Elites
+DocInfo/PatchNote091=Retreat, fortify at Evendim
+DocInfo/PatchNote092=# Balance / design
+DocInfo/PatchNote093=Price of Fortify The River Of Anduin is reduced by 1250 after getting the first upgrade of osgiliath
+DocInfo/PatchNote094=Brynulf is 5% larger
+DocInfo/PatchNote095=Adunabeth blink range reduced 8 to 6
+DocInfo/PatchNote096=Modified cannon palcement, spawn location for Gladden camp, refugee camp, dunharrow.,
+DocInfo/PatchNote097=Reduced price of resettle ithilien, Nurn (liberated) from 5500 to 4500
+DocInfo/PatchNote098=Marquil can attack air.
+DocInfo/PatchNote099=Increased Grashkul life from 1350 to 1375
+DocInfo/PatchNote100=Gave Gil-gilad a weak air attack
 DocInfo/Website=https://discord.gg/TCrQU6q2ZN
 DorwinionHighlight=<c val="FFFF00">Free Dorwinion</c><n/><c val="80FFFF">3000 Minerals</c><n/><c val="FF8000"> Marquil </c>
 DorwinionSubtitle=<c val="008080"> Requires Marquil and 3000 minerals.<n/>
@@ -2309,6 +2357,9 @@ Effect/Name/AnnihilatorParticleDisruptors=Dwarven Bolt Thrower (Damage)
 Effect/Name/ApplyPlague=Apply Plague
 Effect/Name/ApplyPlagueResistance=Apply Plague Resistance
 Effect/Name/ArtanisStasisFieldAB2=Artanis Stasis Field 
+Effect/Name/ArtanisVoidUlnarDamage2=Artanis Void Ulnar Damage
+Effect/Name/ArtanisVoidUlnarLM2=Artanis Void Ulnar 
+Effect/Name/ArtanisVoidUlnarSet2=Artanis Void Ulnar Set
 Effect/Name/AscendantWeaponDamage=Priest Of Melkor (Damage)
 Effect/Name/AscendantWeaponDamage3=Khorakhil (Damage)
 Effect/Name/AshWormBurrowMove2=Ash Worm Burrow Move
@@ -2318,6 +2369,8 @@ Effect/Name/BabyUltralisk=Dwarven Zealot (Damage)
 Effect/Name/BacklashRocketsU=Marauder
 Effect/Name/BasicAuraSearch=Basic Aura (Search)
 Effect/Name/BasicAuraapply=Basic Aura (apply)
+Effect/Name/BlackNumenoreanDamage=Black Numenorean (Damage)
+Effect/Name/BlackSerpentSet=Black Serpent (Set)
 Effect/Name/C10CanisterRifle=Warden Of Annuminas
 Effect/Name/C10CanisterRifle2=Archer
 Effect/Name/C10CanisterRifle22=C-10 Canister Rifle
@@ -2544,9 +2597,10 @@ Effect/Name/ParasiteSporeLaunchMissile22=Parasite Spore
 Effect/Name/ParasiteSporeLaunchMissile3=Parasite Spore
 Effect/Name/ParticleDisruptors2=Entropy Lance (LM)
 Effect/Name/ParticleDisruptors3=Entropy Lance (LM)
+Effect/Name/ParticleDisruptors32=Entropy Lance (LM)
 Effect/Name/ParticleDisruptorsU=Noldor Spearguard (Damage)
 Effect/Name/ParticleDisruptorsU2=Southron Archer (Damage)
-Effect/Name/ParticleDisruptorsU3=Entropy Lance (Damage)
+Effect/Name/ParticleDisruptorsU32=Entropy Lance (Damage)
 Effect/Name/PhaseDisruptors=Silvan Deer Rider
 Effect/Name/PhaseDisruptors2=Phase Disruptors
 Effect/Name/Pillaging=Pillaging
@@ -2614,6 +2668,7 @@ Effect/Name/StalkerEntropyLanceSearch2=Stalker - Entropy Lance (Search)
 Effect/Name/StalkerEntropyLanceSearch3=Stalker - Entropy Lance (Search)
 Effect/Name/StalkerEntropyLanceSearchSet2=Stalker - Entropy Lance (Impact Set)
 Effect/Name/StalkerEntropyLanceSearchSet3=Stalker - Entropy Lance (Impact Set)
+Effect/Name/StalkerEntropyLanceSearchSet32=Stalker - Entropy Lance (Impact Set)
 Effect/Name/StalkerEntropyLanceSecondaryDamage2=Entropy Lance Secondary Damage
 Effect/Name/StalkerEntropyLanceSecondaryDamage3=Entropy Lance Secondary Damage
 Effect/Name/StalkerEntropyLanceSecondaryLM2=Entropy Lance Secondary LM
@@ -2731,6 +2786,7 @@ EvilOrthancSubtitle=<c val="008080"> Requires Mootlord of Enedwaith Or Chieftain
 EvilRhuadurSubtitleEvilRhudaurSubtitle=<c val="008080"> Requires Azog or Commander Of Hoarddale or Witch-King and 3750 minerals.<n/>
 EvilfFornostSubtitle=<c val="008080"> Requires Witch King or Commander Of Hoarddale and 4000 minerals.<n/>
 ForlondSubtitle=<c val="008080"> Requires Gil-Gilad and 4500 minerals.<n/>
+FramsburgBeaconHighlight=<c val="FFFF00">Establish Framsburg</c><n/><c val="80FFFF">5000 Minerals</c><n/><c val="FF8000">Marquil : Brandvig </c>
 GenericBeacon=<c val="008080"> Requires Cemendur or Isildur and 4000 minerals.<n/>
 GrayMountains=<c val="FFFF00">Establish Gray Mountains</c><n/><c val="80FFFF">5500 Minerals</c><n/><c val="FF8000"> Lord Of Erebor : Lord Of Iron Hills </c>
 GuardianOfArnor=Guardian Of Arnor
@@ -2762,6 +2818,7 @@ MapInfo/Player12/Name=Hoarddale
 MapInfo/Player13/Name=Southrons
 MapInfo/Player14/Name=Northmen
 MapInfo/Player15/Name=Hostile
+MinasDuathBeaconHighlight=<c val="FFFF00">Corrupt Minas Anor</c><n/><c val="80FFFF">5000 Minerals</c><n/><c val="FF8000">Mouth Of Sauron : Sauron </c>
 Minhiarth=<c val="008080"> Requires Mootlord of Enedwaith or Chieftain Of Dunland and 4500 minerals.<n/>
 MirkwoodSubtitle=<c val="008080"> Requires Great Goblin or Sauron  and 7000 minerals.<n/>
 NanLaeglinHighlight=<c val="FFFF00">Convince the tribes of Lhan Tarren</c><n/><c val="80FFFF">4000 Minerals</c><n/><c val="FF8000"> Mootlord Of Enedwaith, Chieftain Of Dunland</c>
@@ -2821,9 +2878,11 @@ Param/Value/488117E7=<c val="FFFF00">The Easterlings are prepared to invade Cale
 Param/Value/4AB40CAA=<s val="AB_Description"><c val="47BC29">Redwood Crossing has been seized by the Easterlings, aiming to utilize its stragetic position to advance upon the men of the west.
 Param/Value/4B3259E7=<c val="FFFF00">The halls of Greenwood have been concealed</c>
 Param/Value/4BF0EE2D=<c val="FFFF00">Khorakhil has been summoned to aid the Evil Men Of The West</c>
+Param/Value/4E55063F=<s val="AB_Description"><c val="F4FA29">Minas Anor would be corrupted by the influence of Sauron, being now known as Minas Duath</c>
 Param/Value/4F5BC4C0=<c val="FFFF00">The House of Healing in Minas Anor is founded as a sanctuary for the sick and wounded, established by the wise and compassionate healers of Gondor to provide refuge and care during times of war and strife.</c>
 Param/Value/50FC14E9=<c val="FFFF00">Dorwinion has been liberated from the yoke of the Easterlings </c>
 Param/Value/52C0E721=<c val="400000">Sauron</c> <c val="FFFF00"> has been Empowered.</c>
+Param/Value/54045A15=<c val="FFFF00">Anardun has surfaced at Minas Duath</c>
 Param/Value/541EC324=<c val="FFFF00">Fornost has been occupied by orcish forces.</c>
 Param/Value/56BA0B3F=<s val="AB_Description"><c val="47BC29">Gondor has resettled Ithilien with the Southron invasion and Mordor having been repelled from the border of Gondor</c>
 Param/Value/580F86B2=<c val="FFFF00">A refuge has been established in the region of Edhelion for dwarves and elves</c>
@@ -2852,6 +2911,7 @@ Param/Value/6DCEC16B=<c val="FFFF00">Eorlbrand has come forth from Dunharrow to 
 Param/Value/70CFD4A1=<c val="FFFF00">The Free People Of Dorwinion would embark on a great exodus leaving their former lands of Dorwinion, journeying to Gladden where they now would make their new home.</c>
 Param/Value/718FA498=<c val="FFFF00">A Numenorean encampment has been established on the Ered Luin for the refeugges of Arnor</c>
 Param/Value/733D4C36=<c val="FFFF00">Scorba has come from the north to engulf Eriador in fire</c>
+Param/Value/7482E6E7=<c val="FFFF00">The Corsairs have launched an invasion into the region of Lond Daer</c>
 Param/Value/786F30C6=<s val="AB_Description"><c val="47BC29">Elostorin has been garrsioned by Elves
 Param/Value/78F0D85D=<c val="FFFF00">Alatar was found near the Southron Encampment disrupting southron supplies, He was convinced to join the forces of the West against Sauron in a more active role </c>
 Param/Value/7986ECA9=<s val="AB_Description"><c val="47BC29">The Slaves of Nurn have been freed and joined the realm of Gondor in the destruction of Mordor</c>
@@ -2888,7 +2948,9 @@ Param/Value/AE5ED8E8=<c val="FFFF00">Disillusioned by Sauron's devastation of Mi
 Param/Value/B3E675E4=<c val="FFFF00">Arnor has granted privilegies to the nobles in the south of Arnor</c>
 Param/Value/B42FADCB=<c val="4CC0C6"><c val="47BC29">Manwe</c> has arrived, his presence like a gust of wind sweeping across the plains. The skies part in his wake, and the very air seems to hum with his power. He calls upon the men of Arnor, stirring their spirits with the majesty of the winds and the clarity of the heavens.</c>
 Param/Value/B455E870=<c val="FFFF00">The region of East Bight has been taken by the Easterlings</c>
+Param/Value/B47F51EF=<s val="AB_Description"><c val="47BC29">With the fall of Withered Heath Framsburg would be founded as a town in the far north of Rhovanion
 Param/Value/B4B5EB80=<c val="FFFF00">The Fortess of Litash has been established</c>
+Param/Value/B6D32DD0=<c val="FFFF00">Ren, The Unclean one of the nine has surfaced.</c>
 Param/Value/B8174036=<c val="9E8876"><c val="4CC0C6">Galadriel, Lady Of Lothorien</c> would seize the <c val="B45510">One Ring</c> unable to resist its seductive influence. With its immense power, she would transform into the Dark Queen of Lothlórien--radiant and terrible, as beautiful as the dawn yet as destructive as a storm. Under her rule, the serene forest realm would become a place of awe and dread.</c>
 Param/Value/B90470A0=<s val="AB_Description"><c val="F4FA29">The Easterlings have seized the town of Dale and now controll the surrounding region.</c>
 Param/Value/B988A1F9=<s val="AB_Description"><c val="FFFF00">The Elves of Greenwood and beyond march to war once more, standing beside Men against Sauron. Victory may come, but even now, it's clear their time is ending, the world is shifting, and the battles ahead will belong to Men</c></s>
@@ -2900,6 +2962,7 @@ Param/Value/C4E56E93=<c val="9E8876">The <c val="B45510">One Ring</c> was taken 
 Param/Value/C6B01EEC=<c val="400000">Witch-King</c><c val="FFFF00"> has been Empowered.</c>
 Param/Value/C9406320=<c val="FFFF00">Maglor has joined the forces of Lindon in an effort to redeem past wrongs.</c>
 Param/Value/C9C25E85=<c val="FFFF00">The Corsairs have succuesfully landed in Lefnui establishing an encampment</c>
+Param/Value/CA4E7B57=<s val="AB_Description"><c val="F4FA29">With the Southron Encampment having been destroyed at borders of Gondor, the remaining Southron forces established a camp near Barad Dur</c>
 Param/Value/CC2C1E7F=Set AI to Normal<n/>
 Param/Value/CC85F023=<c val="FFFF00">Arantar has come of age and now joins his kinsmen in defending the realm of Arnor</c>
 Param/Value/CDE986D2=Southron reinforcements arriving
@@ -2918,7 +2981,7 @@ Param/Value/DE7DA537=<c val="4CC0C6"><c val="47BC29">Ulmo</c> has arrived, his p
 Param/Value/DFE1AAC3=<c val="FFFF00">The Free People Of Dorwinion have decided to fight for their home rather then flee.</c>
 Param/Value/E077D488=<s val="AB_Description"><c val="47BC29">A Dwarven settlement upon the Gray Mountains would be established with the recent defeats of the dragons
 Param/Value/E11251CA=<c val="FFFF00">With Oropher dead Thranduil takes up the kingship of Greenwood.</c>
-Param/Value/E172E3AD=Southron reinforcements arriving
+Param/Value/E172E3AD=Dwarven reinforcements arriving
 Param/Value/E3A69FB0=<s val="AB_Description"><c val="F4FA29">Dunharrow has been seized by Gondor, with them establishing controll over the surrounding region</c>
 Param/Value/E3BA8A4D=
 Param/Value/E51EEB75=<c val="FFFF00">The Druedain aligned against Gondor have completely taken the region of Lefnui</c>
@@ -2927,6 +2990,7 @@ Param/Value/E8875612=<c val="FFFF00">A Nazgul has been summoned to Minas Morgul<
 Param/Value/E9AE7D21=<c val="FFFF00">The Dwarves of Durin's folk have made an alliance with the dwarves of Red mountain</c>
 Param/Value/EA475FC2=<c val="FFFF00">Rhosgobel has been convinced to join the war</c>
 Param/Value/EAF50F1E=<c val="FFFF00">Elendil has centralized the kingdom of Arnor,</c>
+Param/Value/EB2E2B01=<c val="FFFF00">The Corsairs have succuesfully landed in Lefnui establishing an encampment</c>
 Param/Value/EB79BBA6=<c val="FFFF00">The Prince Of Dol Amroth has rallied forth to save his people.</c>
 Param/Value/EBB9D68B=<c val="F4FA29">The Last Bridge has been seized by the forces of Hoarddale</c>
 Param/Value/EBF4AC5A=<c val="FFFF00">The Anduin Camp would be established by the Easterlings to controll the river. </c>
@@ -2948,13 +3012,13 @@ Param/Value/FE5D305F=<c val="FFFF00">The Conductor Of The Surveilers has arrived
 PilagingChargeText=<c val="F4FA29"><d ref="$BehaviorStackCount:Pillaging$"/></c>
 PrinceOfDolAmrothUpgrade=<c val="B9B9B9">Summon The <c val="24B6C6">Prince Of Dol Amroth</c> to aid the kingdom of Gondor<n/><n/><c val="C81E2B">Mutually exclusive with Valandil's Insanity</c></c>
 RedDwarvesHighlight=<c val="FFFF00">Form an alliance with the dwares of Red Mountain</c><n/><c val="80FFFF">4500 Minerals</c><n/><c val="FF8000"> Lord Of Erebor : Lord Of Iron Hills </c>
-RedDwarvesSubtitle=<c val="008080"> Requires Lord Of Erebor or Lord Of Iron Hills and 5500 minerals.<n/>
+RedDwarvesSubtitle=<c val="008080"> Requires Khalmira or Black Serpent and 1250 minerals.<n/>
 RedwoodCrossingHighlight=<c val="FFFF00">Secure Redwood Crossing</c><n/><c val="80FFFF">3000 Minerals</c><n/><c val="FF8000"> King Of Dorwinion : Lord Of Erebor : Brandvig</c>
 RedwoodCrossingSubtitle=<c val="008080"> Requires King Of Dorwinion or Lord Of Erebor or Brandvig and 3000 minerals.<n/>
 RequirementNode/Tooltip/Or96167438=Factory
 ResettleIthilien=Resettle Ithilien
-ResettleIthilienHighlight=<c val="FFFF00">Resettle Ithilien</c><n/><c val="80FFFF">5500 Minerals</c><n/><c val="FF8000"> Cemendur : Anarion</c>
-ResettleIthilienSubtitle=<c val="008080"> Requires Cemendur or Anarion and 5500 minerals.<n/>
+ResettleIthilienHighlight=<c val="FFFF00">Resettle Ithilien</c><n/><c val="80FFFF">4500 Minerals</c><n/><c val="FF8000"> Cemendur : Anarion</c>
+ResettleIthilienSubtitle=<c val="008080"> Requires Cemendur or Anarion and 4500 minerals.<n/>
 RhosgobelHighlight=<c val="FFFF00">Rhosgobel</c><n/><c val="80FFFF">6500 Minerals</c><n/><c val="FF8000"> Oropher : Admir : Amroth : Brandvig</c>
 RhosgobelSubtitle=<c val="008080"> Requires Amroth Or Amdir Or Oropher Or Brandvig and 6500 minerals.<n/>
 ScathaSubtitle=<c val="008080"> Requires Urgost or Drogoth and 8500 minerals.<n/>
@@ -2992,6 +3056,7 @@ SimpleDisplay/Move6=<IMG path="Assets\Textures\tutorialmouserightbuttondown.dds"
 SimpleDisplay/Move7=<IMG path="Assets\Textures\tutorialmouserightbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">to Move</s>
 SimpleDisplay/Move8=<IMG path="Assets\Textures\tutorialmouserightbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">to Move</s>
 SimpleDisplay/Move9=<IMG path="Assets\Textures\tutorialmouserightbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">to Move</s>
+SouthronEmbassyBeaconHighlight=<c val="FFFF00">Establish Southron Embassy</c><n/><c val="80FFFF">1250 Minerals</c><n/><c val="FF8000">Khalmiral : Black Serpent </c>
 TolfalasSubtitle=<c val="008080"> Requires Isildur or Anarion and 5000 minerals.<n/>
 TulkasBeacon=<c val="008080"> Requires Anarion or Isildur and 0 minerals.<n/>
 TulkasHighlight=<c val="FFFF00">Tulkas</c><n/><c val="80FFFF">0 Minerals</c><n/><c val="FF8000"> Anarion : Isildur </c><n/><c val="C81E2B">10 minutes have passed</c>
@@ -3010,12 +3075,14 @@ Unit/Name/AlatarHighlight=<c val="FFFF00">Find Alatar</c><n/><c val="80FFFF">750
 Unit/Name/AllianceWithTheRedDwarves=Alliance With The Red Dwarves
 Unit/Name/AmonSulCaptured=Amon Sul (Captured)
 Unit/Name/AnardilKeeperofNobleHouses=Anardil, Keeper of Noble Houses
+Unit/Name/AnardrLordofMinasDuath=Anardûr, Lord of Minas Duath
 Unit/Name/AnduinCamp=Anduin Camp
 Unit/Name/AnduinCampHighlight=<c val="FFFF00">Establish Anduin Camp</c><n/><c val="80FFFF">5000 Minerals</c><n/><c val="FF8000"> Khamul : King Of Dorwinion</c>
 Unit/Name/Anorien=Anorien
 Unit/Name/Arantar=Arantar
 Unit/Name/Archon=Khamul
 Unit/Name/Armory=Fornost
+Unit/Name/ArtanisVoidUlnarWeapon2=Artanis Void Ulnar Weapon
 Unit/Name/AshWorm2=Scatha The Long-Worm
 Unit/Name/AshWormWeapon2=Ash Worm
 Unit/Name/Assimilator=Anduin Camp
@@ -3075,6 +3142,7 @@ Unit/Name/Cyclone=Dunlending Sapper
 Unit/Name/DaleCaptured=Dale (Captured)
 Unit/Name/DaleCaptured2=Dale (Captured)
 Unit/Name/DarkShrine=Orthanc
+Unit/Name/DarkShrine3=Orthanc
 Unit/Name/DarkTemplar=Silvan Warrior
 Unit/Name/DarkTemplarAiur=Ciryon
 Unit/Name/DarkTemplarShakuras=Southron Warrior
@@ -3092,6 +3160,7 @@ Unit/Name/DominionKillTeam=Dwarven Lord
 Unit/Name/DorwinionGood=Dorwinion (Good)
 Unit/Name/Dragoon=Sentinel Of Mithlond
 Unit/Name/DruwaithLaurGood=Druwaith Laur (Good)
+Unit/Name/DuathMissile=Duath Missile
 Unit/Name/DunharrowGood=Dunharrow (Good)
 Unit/Name/Dunlending=Dunlending
 Unit/Name/DuskWing=Broggau, Captain Of Raiders
@@ -3129,6 +3198,7 @@ Unit/Name/FlamingBetty=Dwarven Fortification
 Unit/Name/Forge=Lothorien
 Unit/Name/ForlondHighlight=<c val="FFFF00">Convince Forlond To Join</c><n/><c val="80FFFF">4500 Minerals</c><n/><c val="FF8000">GIl-GIlad </c>
 Unit/Name/FornostCaptured=Fornost (Captured)
+Unit/Name/Framsburg=Framsburg
 Unit/Name/FreeDorwinion=Free Dorwinion
 Unit/Name/FusionCore=Dorwinion
 Unit/Name/FusionReactor=Anfalas
@@ -3172,6 +3242,7 @@ Unit/Name/Impaler=Shelob
 Unit/Name/InfestationPit=Withered Heath
 Unit/Name/InfestedAbomination=Cave Troll
 Unit/Name/InfestedArmory=Rhudaur
+Unit/Name/InfestedBarracks=Framsburg
 Unit/Name/InfestedCivilian=Undead
 Unit/Name/InfestedDominionHousing1=Red Dwarves Encampment
 Unit/Name/InfestedDominionHousing2=Northern Wastes (east)
@@ -3234,6 +3305,7 @@ Unit/Name/MercHellion=Black Serpent
 Unit/Name/MercReaper=Dwarven Crossbowman
 Unit/Name/MilitarizedColonistShip=Warship Of Arnor
 Unit/Name/MilitarizedColonistTransport=WarChariot (unused)
+Unit/Name/MinasDuath=Minas Duath
 Unit/Name/Minhiarth=Liberate Minhiarth
 Unit/Name/MinhiarthHightlight=<c val="FFFF00">Liberate Minhiarth</c><n/><c val="80FFFF">4500 Minerals</c><n/><c val="FF8000">Mootlord Of Enedwaith, Chieftain Of Dunland. </c>
 Unit/Name/Mirkwood=Mirkwood
@@ -3334,10 +3406,13 @@ Unit/Name/ShipGeneratorSmall=Edhellond
 Unit/Name/SiegeOfErebor=Siege Of Erebor
 Unit/Name/SiegeTank=Catapult
 Unit/Name/SnowRefinery_Terran_BaseRefinery=Libnir
+Unit/Name/SouthronEmbassy=Southron Embassy
+Unit/Name/SouthronEmbassy2=Southron Embassy
 Unit/Name/SpaceCowSmall=Ice Drake
 Unit/Name/SpawningPool=Udun, The Black Gate
 Unit/Name/Spectre=Numenorean Archer
 Unit/Name/SpiderMine=Traps
+Unit/Name/Spire=Minas Duath
 Unit/Name/SporeCrawlerUprooted2=Spore Crawler
 Unit/Name/SporeCrawlerWeapon2=Spore Crawler Weapon
 Unit/Name/Stalker=Noldor Spearguard
@@ -3380,6 +3455,7 @@ Unit/Name/Ursadon=Mountain Troll
 Unit/Name/Urun=Oropher
 Unit/Name/VikingFighter=Dwarven Axe-Guard
 Unit/Name/VikingFighterMounted=Dwarven Axe-Guard (Hog Mounted)
+Unit/Name/Viper=Ren, The Unclean
 Unit/Name/Virophage=Mount Gram
 Unit/Name/VoidPylon=base supplies
 Unit/Name/VoidRay=Warship Of Lindon
@@ -3453,6 +3529,7 @@ Upgrade/Name/AmonSulUpgradeSpawn4=(Amon Sul) Upgrade Spawn 4
 Upgrade/Name/AmonsulUpgradespawn=(Amon Sul) Upgrade Spawn 
 Upgrade/Name/AmonsulUpgradespawn2=(Amon Sul) Upgrade Spawn 2
 Upgrade/Name/AmonsulUpgradespawn3=(Amon Sul) Upgrade Spawn 3
+Upgrade/Name/Anandr=Anandür
 Upgrade/Name/AnduinCampUpgradeSpawn=(Anduin Camp) Upgrade Spawn
 Upgrade/Name/AnduinCampUpgradeSpawn2=(Anduin Camp) Upgrade Spawn 2
 Upgrade/Name/AnduinCampUpgradeSpawn3=(Anduin Camp) Upgrade Spawn 3
@@ -3537,6 +3614,7 @@ Upgrade/Name/CirthNurnUpgradespawn3=(Cirth-Nurn) Upgrade spawn 3
 Upgrade/Name/CombatShield2=Combat Shield
 Upgrade/Name/ConcealTheHalls=Conceal The Halls
 Upgrade/Name/ConsolidatePowerConditions=Retreat 3 Outer Holdings
+Upgrade/Name/CorsairEncampmentAnduin=Corsair Encampment (Anduin)
 Upgrade/Name/CorsairEncampmentHarlond=Corsair Encampment (Harlond)
 Upgrade/Name/CorsairEncampmentLefnui=Corsair Encampment (Lefnui)
 Upgrade/Name/CorsairEncampmentLondDaer=Corsair Encampment (Lond Daer)
@@ -3665,13 +3743,16 @@ Upgrade/Name/FornostUpgradespawn=(Fornost) Upgrade Spawn
 Upgrade/Name/FornostUpgradespawn2=(Fornost) Upgrade Spawn 2
 Upgrade/Name/FornostUpgradespawn3=(Fornost) Upgrade Spawn 3
 Upgrade/Name/Fortify3OuterHoldings=Fortify 3 Outer Holdings
+Upgrade/Name/FortifyOuterHoldingEvendim=Fortify Outer Holding (Evendim
 Upgrade/Name/FortifyOuterHoldingLastBridge=Fortify Outer Holding (Last Bridge)
 Upgrade/Name/FortifyOuterHoldingLondDaer=Fortify Outer Holding (Lond Daer)
 Upgrade/Name/FortifyOuterHoldingMinhiarth=Fortify Outer Holding (Minhiarth)
 Upgrade/Name/FortifyOuterHoldingOuterRhuadur=Fortify Outer Holding (Outer Rhuadur)
 Upgrade/Name/FortifyOuterHoldingTharbad=Fortify Outer Holding (Tharbad)
 Upgrade/Name/FortifyTheRiverOfAnduin=Fortify The River Of Anduin
+Upgrade/Name/FortifyTheRiverOfAnduinPriceReduction=Fortify The River Of Anduin Price Reduction
 Upgrade/Name/FortifyTheTrollshaws=Fortify The Trollshaws
+Upgrade/Name/FramsburgCapturedUpgradeSpawn=Framsburg (Captured) (Upgrade Spawn)
 Upgrade/Name/FreePeopleOfDorwinionUpgradeSpawn=(Free People Of Dorwinion) Upgrade Spawn
 Upgrade/Name/FreePeopleOfDorwinionUpgradeSpawn2=(Free People Of Dorwinion) Upgrade Spawn 2
 Upgrade/Name/FreePeopleOfDorwinionUpgradeSpawn3=(Free People Of Dorwinion) Upgrade Spawn 3
@@ -3794,6 +3875,7 @@ Upgrade/Name/MinasAnorUpgradespawn3=(Minas Anor) Upgrade spawn 3
 Upgrade/Name/MinasAnorUpgradespawn4=(Minas Anor) Upgrade spawn 4
 Upgrade/Name/MinasAnorUpgradespawn5=(Minas Anor) Upgrade spawn 5
 Upgrade/Name/MinasAnorUpgradespawn6=(Minas Anor) Upgrade spawn 6
+Upgrade/Name/MinasDuathUpgradeSpawn=Minas Duath (Upgrade Spawn)
 Upgrade/Name/MinasMorgulUpgradespawn=(Minas Morgul) Upgrade spawn 
 Upgrade/Name/MinasMorgulUpgradespawn2=(Minas Morgul) Upgrade spawn 2
 Upgrade/Name/MinasMorgulUpgradespawn3=(Minas Morgul) Upgrade spawn 3
@@ -3853,6 +3935,7 @@ Upgrade/Name/Orophin=Orophin
 Upgrade/Name/OrthancUpgradespawn=(Orthanc) Upgrade spawn
 Upgrade/Name/OrthancUpgradespawn2=(Orthanc) Upgrade spawn 2
 Upgrade/Name/OrthancUpgradespawn3=(Orthanc) Upgrade spawn 3
+Upgrade/Name/OsgiliathDestroyed=Osgiliath Destroyed
 Upgrade/Name/OsgiliathUpgradespawn=(Osgiliath) Upgrade spawn 
 Upgrade/Name/OsgiliathUpgradespawn2=(Osgiliath) Upgrade spawn 2
 Upgrade/Name/OsgiliathUpgradespawn3=(Osgiliath) Upgrade spawn 3
@@ -3887,11 +3970,13 @@ Upgrade/Name/RedDwarvesEncampmentUpgradespawn3=(Red Dwarves Encampment) Upgrade 
 Upgrade/Name/RedwoodCrossingDwarves=Redwood Crossing Dwarves
 Upgrade/Name/RedwoodCrossingEasterlings=Redwood Crossing Easterlings
 Upgrade/Name/ReinforcementsFromHarandor=Reinforcements From Harandor
+Upgrade/Name/RenTheUnclean=Ren, The Unclean
 Upgrade/Name/RetreatOuterHoldingLastBridge=Retreat Outer Holding (Last Bridge)
 Upgrade/Name/RetreatOuterHoldingLondDaer=Retreat Outer Holding (Lond Daer)
 Upgrade/Name/RetreatOuterHoldingMinhiarth=Retreat Outer Holding (Minhiarth)
 Upgrade/Name/RetreatOuterHoldingOuterRhuadur=Retreat Outer Holding (Outer Rhuadur)
 Upgrade/Name/RetreatOuterHoldingTharbad=Retreat Outer Holding (Tharbad)
+Upgrade/Name/RetreatOuterHoldingsEvendim=Retreat Outer Holdings (Evendim)
 Upgrade/Name/RewardDanceGhost2=Reward Dance - Ghost
 Upgrade/Name/RhosgobelUpgradespawn=(Rhosgobel) Upgrade spawn
 Upgrade/Name/RhosgobelUpgradespawn2=(Rhosgobel) Upgrade spawn 2
@@ -3923,6 +4008,8 @@ Upgrade/Name/SouthernEncampmentUpgradespawn2=(Southern Encampment) Upgrade spawn
 Upgrade/Name/SouthernEncampmentUpgradespawn3=(Southern Encampment) Upgrade spawn 3
 Upgrade/Name/SouthernEncampmentUpgradespawn33=(Southern Encampment) Upgrade spawn 5
 Upgrade/Name/SouthernEncampmentUpgradespawn4=(Southern Encampment) Upgrade spawn 4
+Upgrade/Name/SouthronElites=Southron Elites
+Upgrade/Name/SouthronEmbassyUpgradeSpawn=Southron Embassy (Upgrade Spawn)
 Upgrade/Name/SummonMorgomir=Summon Morgomir
 Upgrade/Name/SuthburgUpgradespawn=(Suthburg) Upgrade spawn
 Upgrade/Name/SuthburgUpgradespawn2=(Suthburg) Upgrade spawn 2
@@ -3996,6 +4083,7 @@ Variant001/ModeName=Standard
 Weapon/Name/AcidSpew2=Acid Spew
 Weapon/Name/AcidSpores2=Acid Spores
 Weapon/Name/Annihilator=Dwarven Bolt
+Weapon/Name/ArtanisVoidUlnar2=Psionic Assault
 Weapon/Name/Ascendant=Witch Priest
 Weapon/Name/AscendantAmdir=Amdir
 Weapon/Name/AshWorm2=Acid Spray
@@ -4048,6 +4136,7 @@ Weapon/Name/LocustPressurizedGlands2=Talons
 Weapon/Name/LongBow=Long Bow
 Weapon/Name/MengskHellion=Magic
 Weapon/Name/MercReaperP38ScytheGuassPistol=Dwarven Crossbow<n/>
+Weapon/Name/MinasDuathHero=Minas Duath Hero
 Weapon/Name/NeedleClaws=Spider Bite
 Weapon/Name/NeedleClaws2=Great Spider Bite
 Weapon/Name/NeedleSpines2=Needle Spines Copy

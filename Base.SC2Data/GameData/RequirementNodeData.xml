@@ -6,6 +6,16 @@
     <CRequirementAllowUnit id="AllowUnitMarine2">
         <Link value="Marine2"/>
     </CRequirementAllowUnit>
+    <CRequirementAnd id="AndAndCountUpgradeCentralizePowerQueuedOrBetterNotCountUpgradeEldacarUnlockQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="AndCountUpgradeCentralizePowerQueuedOrBetter"/>
+        <OperandArray value="NotCountUpgradeEldacarUnlockQueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndAndCountUpgradeEvendimUpgradespawnCompleteOnlyAndNotCountUpgradeRetreatOuterHoldingsEvendimQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="AndCountUpgradeEvendimUpgradespawnCompleteOnly"/>
+        <OperandArray value="AndNotCountUpgradeRetreatOuterHoldingsEvendimQueuedOrBetter"/>
+    </CRequirementAnd>
     <CRequirementAnd id="AndAndCountUpgradeOuterRhuadurUpgradespawnCompleteOnlyAndNotCountUpgradeRetreatOuterHoldingOuterRhuadurQueuedOrBetter">
         <OperandArray value="AndCountUpgradeOuterRhuadurUpgradespawnCompleteOnly"/>
         <OperandArray value="AndNotCountUpgradeRetreatOuterHoldingOuterRhuadurQueuedOrBetter"/>
@@ -13,6 +23,24 @@
     <CRequirementAnd id="AndAndCountUpgradeTharbadUpgradespawnCompleteOnlyAndNotCountUpgradeRetreatOuterHoldingTharbadQueuedOrBetter">
         <OperandArray value="AndCountUpgradeTharbadUpgradespawnCompleteOnly"/>
         <OperandArray value="AndNotCountUpgradeRetreatOuterHoldingTharbadQueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeCentralizePowerQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUpgradeCentralizePowerQueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeDispersePowerQueuedOrBetterNotCountUpgradeEldacarUnlock2QueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUpgradeDispersePowerQueuedOrBetter"/>
+        <OperandArray value="NotCountUpgradeEldacarUnlock2QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeEvendimUpgradespawnCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUpgradeEvendimUpgradespawnCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeEvendimUpgradespawnCompleteOnlyAndNotCountUpgradeFortifyOuterHoldingEvendimQueuedOrBetterNotCountUpgradeEvendimUpgradespawn2QueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUpgradeEvendimUpgradespawnCompleteOnly"/>
+        <OperandArray value="AndNotCountUpgradeFortifyOuterHoldingEvendimQueuedOrBetterNotCountUpgradeEvendimUpgradespawn2QueuedOrBetter"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndCountUpgradeLastBridgeUpgradespawnCompleteOnlyAndNotCountUpgradeFortifyOuterHoldingLastBridgeQueuedOrBetter">
         <OperandArray value="CountUpgradeLastBridgeUpgradespawnCompleteOnly"/>
@@ -56,7 +84,6 @@
         <OperandArray value="LTCountUnitArbiterMPQueuedOrBetter2"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndLTCountUpgradeAmonSulCapturedUpgradeSpawn2QueuedOnly2">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="LTCountUpgradeAmonSulCapturedUpgradeSpawn2QueuedOnly2"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndLTCountUpgradeAmonSulCapturedUpgradeSpawnQueuedOnly2">
@@ -77,14 +104,26 @@
     <CRequirementAnd id="AndLTCountUpgradeFornostCapturedUpgradeSpawnQueuedOrBetter3">
         <OperandArray value="LTCountUpgradeFornostCapturedUpgradeSpawnQueuedOrBetter3"/>
     </CRequirementAnd>
+    <CRequirementAnd id="AndLTCountUpgradeFramsburgCapturedUpgradeSpawnQueuedOrBetter4">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="LTCountUpgradeFramsburgCapturedUpgradeSpawnQueuedOrBetter4"/>
+    </CRequirementAnd>
     <CRequirementAnd id="AndLTCountUpgradeGrayMountainsUpgradeSpawnQueuedOrBetter4">
         <OperandArray value="LTCountUpgradeGrayMountainsUpgradeSpawnQueuedOrBetter4"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndLTCountUpgradeIthilienUpgradeSpawnQueuedOrBetter4">
         <OperandArray value="LTCountUpgradeIthilienUpgradeSpawnQueuedOrBetter4"/>
     </CRequirementAnd>
+    <CRequirementAnd id="AndLTCountUpgradeMinasDuathUpgradeSpawnQueuedOrBetter3">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="LTCountUpgradeMinasDuathUpgradeSpawnQueuedOrBetter3"/>
+    </CRequirementAnd>
     <CRequirementAnd id="AndLTCountUpgradeNorthmanSettlementUpgradeSpawnQueuedOrBetter2">
         <OperandArray value="LTCountUpgradeNorthmanSettlementUpgradeSpawnQueuedOrBetter2"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndLTCountUpgradeSouthronEmbassyUpgradeSpawnQueuedOrBetter8">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="LTCountUpgradeSouthronEmbassyUpgradeSpawnQueuedOrBetter8"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndNot866976074CountUnitNukeQueuedOrBetterAtUnit">
         <OperandArray value="Not866976074CountUnitNukeQueuedOrBetterAtUnit"/>
@@ -227,8 +266,10 @@
     <CRequirementAnd id="AndNotCountUpgradeBuzraDumMithrilQueuedOrBetter">
         <OperandArray value="NotCountUpgradeBuzraDumMithrilQueuedOrBetter"/>
     </CRequirementAnd>
-    <CRequirementAnd id="AndNotCountUpgradeCentralizePowerQueuedOrBetter">
+    <CRequirementAnd id="AndNotCountUpgradeCentralizePowerQueuedOrBetterNotCountUpgradeDispersePowerQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="NotCountUpgradeCentralizePowerQueuedOrBetter"/>
+        <OperandArray value="NotCountUpgradeDispersePowerQueuedOrBetter"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndNotCountUpgradeDevotionToAmdirQueuedOrBetterNotCountUpgradeDevotionToAmrothQueuedOrBetter">
         <OperandArray value="NotCountUpgradeDevotionToAmdirQueuedOrBetter"/>
@@ -241,6 +282,11 @@
     <CRequirementAnd id="AndNotCountUpgradeDispersePowerQueuedOrBetterNotCountUpgradeBarrowDownsUpgradespawn3QueuedOrBetter">
         <OperandArray value="NotCountUpgradeDispersePowerQueuedOrBetter"/>
         <OperandArray value="NotCountUpgradeBarrowDownsUpgradespawn3QueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeDispersePowerQueuedOrBetterNotCountUpgradeCentralizePowerQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="NotCountUpgradeDispersePowerQueuedOrBetter"/>
+        <OperandArray value="NotCountUpgradeCentralizePowerQueuedOrBetter"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndNotCountUpgradeEmpowerAdunabethTheQuietQueuedOrBetter">
         <OperandArray value="NotCountUpgradeEmpowerAdunabethTheQuietQueuedOrBetter"/>
@@ -282,6 +328,11 @@
     </CRequirementAnd>
     <CRequirementAnd id="AndNotCountUpgradeEreborMithrilQueuedOrBetter">
         <OperandArray value="NotCountUpgradeEreborMithrilQueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeFortifyOuterHoldingEvendimQueuedOrBetterNotCountUpgradeEvendimUpgradespawn2QueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="NotCountUpgradeFortifyOuterHoldingEvendimQueuedOrBetter"/>
+        <OperandArray value="NotCountUpgradeEvendimUpgradespawn2QueuedOrBetter"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndNotCountUpgradeFortifyOuterHoldingLastBridgeQueuedOrBetter">
         <OperandArray value="NotCountUpgradeFortifyOuterHoldingLastBridgeQueuedOrBetter"/>
@@ -413,6 +464,10 @@
     </CRequirementAnd>
     <CRequirementAnd id="AndNotCountUpgradeRetreatOuterHoldingTharbadQueuedOrBetter">
         <OperandArray value="NotCountUpgradeRetreatOuterHoldingTharbadQueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeRetreatOuterHoldingsEvendimQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="NotCountUpgradeRetreatOuterHoldingsEvendimQueuedOrBetter"/>
     </CRequirementAnd>
     <CRequirementAnd id="AndNotCountUpgradeUvarthaTheBlackHorsemanQueuedOrBetterNotCountUpgradeEmpowerSauronQueuedOrBetter">
         <OperandArray value="NotCountUpgradeUvarthaTheBlackHorsemanQueuedOrBetter"/>
@@ -618,7 +673,6 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeAmonSulCapturedUpgradeSpawn2QueuedOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="AmonSulCapturedUpgradeSpawn2"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeAmonSulCapturedUpgradeSpawnQueuedOnly">
@@ -640,6 +694,11 @@
     <CRequirementCountUpgrade id="CountUpgradeAmonsulUpgradespawnQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="AmonsulUpgradespawn" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAnandrQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Anandr" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeAnduinCampUpgradeSpawn2QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -957,13 +1016,18 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="ConsolidatePowerConditions" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCorsairEncampmentAnduinQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="CorsairEncampmentAnduin" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeCorsairEncampmentHarlondQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="CorsairEncampmentHarlond" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeCorsairEncampmentLefnuiQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="CorsairEncampmentLefnui" State="QueuedOrBetter"/>
+        <Count Link="CorsairEncampment2" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeCorsairEncampmentLondDaerQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -1023,17 +1087,14 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeDevelopeNorthArnorQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="DevelopeNorthArnor" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeDevelopeSouthArnorCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="DevelopeSouthArnor" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeDevelopeSouthArnorQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="DevelopeSouthArnor" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeDevotionToAmdirCompleteOnly">
@@ -1226,7 +1287,6 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeElderOfErynVornQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="ElderOfErynVorn" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeElostorinUpgradeSpawnQueuedOnly">
@@ -1377,6 +1437,11 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="EvendimUpgradespawn3" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeEvendimUpgradespawnCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="EvendimUpgradespawn" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeEvendimUpgradespawnQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="EvendimUpgradespawn" State="QueuedOrBetter"/>
@@ -1489,6 +1554,16 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="Fortify3OuterHoldings" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeFortifyOuterHoldingEvendimCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="FortifyOuterHoldingEvendim" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeFortifyOuterHoldingEvendimQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="FortifyOuterHoldingEvendim" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeFortifyOuterHoldingLastBridgeCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="FortifyOuterHoldingLastBridge" State="CompleteOnly"/>
@@ -1536,6 +1611,11 @@
     <CRequirementCountUpgrade id="CountUpgradeFortifyTheTrollshawsQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="FortifyTheTrollshaws" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeFramsburgCapturedUpgradeSpawnQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="FramsburgCapturedUpgradeSpawn" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeFreePeopleOfDorwinionUpgradeSpawn2QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -1655,7 +1735,6 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeGrowNoblePowerQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="GrowNoblePower" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeGuardiansOfLastBridgeCompleteOnly">
@@ -1964,7 +2043,6 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMarinelordOfTharbadQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="MarinelordOfTharbad" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMarquilLeaderOfTheNorthmenQueuedOrBetter">
@@ -2002,6 +2080,11 @@
     <CRequirementCountUpgrade id="CountUpgradeMinasAnorUpgradespawnQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="MinasAnorUpgradespawn" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMinasDuathUpgradeSpawnQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="MinasDuathUpgradeSpawn" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMinasMorgulUpgradespawn2QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -2247,6 +2330,11 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="OrthancUpgradespawn" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeOsgiliathDestroyedCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="OsgiliathDestroyed" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeOsgiliathUpgradespawn2QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="OsgiliathUpgradespawn2" State="QueuedOrBetter"/>
@@ -2375,6 +2463,11 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="ReinforcementsFromHarandor" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRenTheUncleanQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RenTheUnclean" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRetreatOuterHoldingLastBridgeQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RetreatOuterHoldingLastBridge" State="QueuedOrBetter"/>
@@ -2394,6 +2487,11 @@
     <CRequirementCountUpgrade id="CountUpgradeRetreatOuterHoldingTharbadQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RetreatOuterHoldingTharbad" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRetreatOuterHoldingsEvendimQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RetreatOuterHoldingsEvendim" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRhosgobelUpgradespawn2QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -2522,6 +2620,21 @@
     <CRequirementCountUpgrade id="CountUpgradeSouthernEncampmentUpgradespawnQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="SouthernEncampmentUpgradespawn" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSouthronElitesCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="SouthronElites" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSouthronElitesQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="SouthronElites" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSouthronEmbassyUpgradeSpawnQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="SouthronEmbassyUpgradeSpawn" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSummonMorgomirQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -2664,7 +2777,6 @@
         <OperandArray index="1" value="2"/>
     </CRequirementLT>
     <CRequirementLT id="LTCountUpgradeAmonSulCapturedUpgradeSpawn2QueuedOnly2">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeAmonSulCapturedUpgradeSpawn2QueuedOnly"/>
         <OperandArray index="1" value="2"/>
     </CRequirementLT>
@@ -2692,6 +2804,11 @@
         <OperandArray index="0" value="CountUpgradeFornostCapturedUpgradeSpawnQueuedOrBetter"/>
         <OperandArray index="1" value="3"/>
     </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeFramsburgCapturedUpgradeSpawnQueuedOrBetter4">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeFramsburgCapturedUpgradeSpawnQueuedOrBetter"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementLT>
     <CRequirementLT id="LTCountUpgradeGrayMountainsUpgradeSpawnQueuedOrBetter4">
         <OperandArray index="0" value="CountUpgradeGrayMountainsUpgradeSpawnQueuedOrBetter"/>
         <OperandArray index="1" value="4"/>
@@ -2700,9 +2817,19 @@
         <OperandArray index="0" value="CountUpgradeIthilienUpgradeSpawnQueuedOrBetter"/>
         <OperandArray index="1" value="4"/>
     </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeMinasDuathUpgradeSpawnQueuedOrBetter3">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeMinasDuathUpgradeSpawnQueuedOrBetter"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementLT>
     <CRequirementLT id="LTCountUpgradeNorthmanSettlementUpgradeSpawnQueuedOrBetter2">
         <OperandArray index="0" value="CountUpgradeNorthmanSettlementUpgradeSpawnQueuedOrBetter"/>
         <OperandArray index="1" value="2"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeSouthronEmbassyUpgradeSpawnQueuedOrBetter8">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeSouthronEmbassyUpgradeSpawnQueuedOrBetter"/>
+        <OperandArray index="1" value="8"/>
     </CRequirementLT>
     <CRequirementNot id="NotCountUpgradeAIArnorBaseQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeAIArnorBaseQueuedOrBetter"/>
@@ -2823,6 +2950,10 @@
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeAmonsulUpgradespawnQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeAmonsulUpgradespawnQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAnandrQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeAnandrQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeAnduinCampUpgradeSpawn2QueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeAnduinCampUpgradeSpawn2QueuedOrBetter"/>
@@ -3037,6 +3168,10 @@
     <CRequirementNot id="NotCountUpgradeConcealTheHallsQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeConcealTheHallsQueuedOrBetter"/>
     </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeCorsairEncampmentAnduinQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeCorsairEncampmentAnduinQueuedOrBetter"/>
+    </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeCorsairEncampmentHarlondQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeCorsairEncampmentHarlondQueuedOrBetter"/>
     </CRequirementNot>
@@ -3077,11 +3212,9 @@
         <OperandArray index="0" value="CountUpgradeDeployTheNoldorNavyQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeDevelopeNorthArnorQueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeDevelopeNorthArnorQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeDevelopeSouthArnorQueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeDevelopeSouthArnorQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeDevotionToAmdirQueuedOrBetter">
@@ -3214,7 +3347,6 @@
         <OperandArray index="0" value="CountUpgradeEldacarUnlockQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeElderOfErynVornQueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeElderOfErynVornQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeEmpowerAdunabethTheQuietQueuedOrBetter">
@@ -3385,6 +3517,10 @@
     <CRequirementNot id="NotCountUpgradeFornostUpgradespawnQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeFornostUpgradespawnQueuedOrBetter"/>
     </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeFortifyOuterHoldingEvendimQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeFortifyOuterHoldingEvendimQueuedOrBetter"/>
+    </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeFortifyOuterHoldingLastBridgeQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeFortifyOuterHoldingLastBridgeQueuedOrBetter"/>
     </CRequirementNot>
@@ -3485,7 +3621,6 @@
         <OperandArray index="0" value="CountUpgradeGreenwoodhallsUpgradespawnQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeGrowNoblePowerQueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeGrowNoblePowerQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeGuardiansOfLastBridgeQueuedOrBetter">
@@ -3684,7 +3819,6 @@
         <OperandArray index="0" value="CountUpgradeLugrakQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeMarinelordOfTharbadQueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeMarinelordOfTharbadQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeMarquilLeaderOfTheNorthmenQueuedOrBetter">
@@ -3969,6 +4103,10 @@
     <CRequirementNot id="NotCountUpgradeReinforcementsFromHarandorQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeReinforcementsFromHarandorQueuedOrBetter"/>
     </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeRenTheUncleanQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeRenTheUncleanQueuedOrBetter"/>
+    </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeRetreatOuterHoldingLastBridgeQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeRetreatOuterHoldingLastBridgeQueuedOrBetter"/>
     </CRequirementNot>
@@ -3983,6 +4121,10 @@
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeRetreatOuterHoldingTharbadQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeRetreatOuterHoldingTharbadQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeRetreatOuterHoldingsEvendimQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeRetreatOuterHoldingsEvendimQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeRhosgobelUpgradespawn2QueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeRhosgobelUpgradespawn2QueuedOrBetter"/>
@@ -4067,6 +4209,10 @@
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeSouthernEncampmentUpgradespawnQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeSouthernEncampmentUpgradespawnQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeSouthronElitesQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeSouthronElitesQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeSummonMorgomirQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeSummonMorgomirQueuedOrBetter"/>

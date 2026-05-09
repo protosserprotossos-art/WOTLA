@@ -212,6 +212,7 @@
 <Unit id="Probe"/>
 <Unit id="Hatchery"/>
 <Unit id="SpawningPool"/>
+<Unit id="Spire"/>
 <Unit id="UltraliskCavern"/>
 <Unit id="InfestationPit"/>
 <Unit id="NydusNetwork"/>
@@ -254,6 +255,7 @@
 <Unit id="Scantipede"/>
 <Unit id="DestructibleRock2x4Horizontal" Variations="0"/>
 <Unit id="DestructibleRampDiagonalHugeULBR"/>
+<Unit id="SiegeTankSkinPreview"/>
 <Unit id="ThorAP"/>
 <Unit id="WolfStatue"/>
 <Unit id="TechReactor"/>
@@ -319,6 +321,7 @@
 <Unit id="Hut" Variations="4"/>
 <Unit id="ColonistHut" Variations="6"/>
 <Unit id="InfestedArmory"/>
+<Unit id="InfestedBarracks"/>
 <Unit id="InfestedEngBay"/>
 <Unit id="InfestedFactory"/>
 <Unit id="LogisticsHeadquarters"/>
@@ -463,17 +466,21 @@
 <Unit id="SnowRefinery_Terran_BaseRefinery"/>
 <Unit id="SkyTank"/>
 <Unit id="VultureDOMParked"/>
-<Unit id="CorsairEncampmentLefnui2"/>
 <Unit id="Corruptor3"/>
 <Unit id="DaleCaptured"/>
+<Unit id="AnardrLordofMinasDuath"/>
 <Unit id="MorthondArcher"/>
 <Unit id="Marine2"/>
+<Unit id="SouthronEmbassy2"/>
+<Unit id="SouthronEmbassy"/>
 <Unit id="ErynLuinEncampment"/>
 <Unit id="EredLuinEncampment"/>
 <Unit id="EvilFornost"/>
 <Unit id="EvilAmonSul"/>
 <Unit id="FornostCaptured"/>
 <Unit id="CaptureLastBridge"/>
+<Unit id="Framsburg"/>
+<Unit id="MinasDuath"/>
 <Unit id="Maglor"/>
 <Unit id="Beacon_Terran2252"/>
 <Unit id="Brandvig"/>
@@ -520,6 +527,7 @@
 <Unit id="Anorien"/>
 <Unit id="Ereborcaptured"/>
 <Unit id="SiegeOfErebor"/>
+<Unit id="CorsairEncampment"/>
 <Unit id="FreeDorwinion"/>
 <Unit id="DorwinionGood"/>
 <Unit id="Lossarnach"/>

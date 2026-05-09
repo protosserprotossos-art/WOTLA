@@ -146,12 +146,85 @@
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="VoidPhoenixPhasingArmor"/>
     </CAbilEffectInstant>
+    <CAbilResearch id="FortifyOuterHoldingEvendim">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DataCollection value="OsgiliathUpgradeSpawn"/>
+        <InfoArray index="Research1" Time="15" Upgrade="FortifyOuterHoldingEvendim">
+            <Resource index="Minerals" value="1500"/>
+            <Button DefaultButtonFace="FortifyOuterHoldingEvendim" Requirements="FortifyOuterHoldingEvendim"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilResearch id="RetreatOuterHoldingsEvendim">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DataCollection value="OsgiliathUpgradeSpawn"/>
+        <InfoArray index="Research1" Time="15" Upgrade="RetreatOuterHoldingsEvendim">
+            <Resource index="Minerals" value="1250"/>
+            <Button DefaultButtonFace="RetreatOuterHoldingsEvendim" Requirements="RetreatOuterHoldingsEvendim"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilResearch id="SouthronElites">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DataCollection value="OsgiliathUpgradeSpawn"/>
+        <InfoArray index="Research1" Time="10" Upgrade="SouthronElites">
+            <Resource index="Minerals" value="1250"/>
+            <Button DefaultButtonFace="SouthronElites" Requirements="SouthronElites"/>
+        </InfoArray>
+    </CAbilResearch>
     <CAbilResearch id="DevelopeNorthArnor">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DataCollection value="OsgiliathUpgradeSpawn"/>
         <InfoArray index="Research1" Time="30" Upgrade="DevelopeNorthArnor">
             <Resource index="Minerals" value="4500"/>
             <Button DefaultButtonFace="DevelopeNorthArnor" Requirements="DevelopeNorthArnor"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilEffectTarget id="DisablingCloud">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Cooldown TimeUse="240"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilResearch id="FramsburgCapturedUpgradeSpawn">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Research1" Time="240" Upgrade="FramsburgCapturedUpgradeSpawn">
+            <Resource index="Vespene" value="1"/>
+            <Button DefaultButtonFace="FramsburgCapturedUpgradeSpawn" Requirements="FramsburgCapturedUpgradeSpawn"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilResearch id="Anandr">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DataCollection value="OsgiliathUpgradeSpawn"/>
+        <InfoArray index="Research1" Upgrade="Anandr">
+            <Resource index="Minerals" value="6000"/>
+            <Button DefaultButtonFace="Anandr" Requirements="Anandr"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilResearch id="SouthronEmbassyUpgradeSpawn">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Research1" Time="240" Upgrade="SouthronEmbassyUpgradeSpawn">
+            <Resource index="Vespene" value="1"/>
+            <Button DefaultButtonFace="SouthronEmbassyUpgradeSpawn" Requirements="SouthronEmbassyUpgradeSpawn"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilResearch id="MinasDuathUpgradeSpawn">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Research1" Time="240" Upgrade="MinasDuathUpgradeSpawn">
+            <Resource index="Vespene" value="1"/>
+            <Button DefaultButtonFace="MinasDuathUpgradeSpawn" Requirements="MinasDuathUpgradeSpawn"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilEffectTarget id="PsiStrike">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
+    <CAbilResearch id="RenTheUnclean">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DataCollection value="OsgiliathUpgradeSpawn"/>
+        <InfoArray index="Research1" Upgrade="RenTheUnclean">
+            <Resource index="Minerals" value="6250"/>
+            <Button DefaultButtonFace="RenTheUnclean" Requirements="RenTheUnclean"/>
         </InfoArray>
     </CAbilResearch>
     <CAbilEffectTarget id="Reclamation">
@@ -895,7 +968,7 @@
         <ActorKey value="LiftOffLand"/>
         <Flags index="IgnoreFacing" value="1"/>
         <Flags index="SuppressMovement" value="1"/>
-        <InfoArray Unit="CorsairEncampmentLefnui">
+        <InfoArray Unit="CorsairEncampment2">
             <SectionArray index="Actor">
                 <DurationArray index="Duration" value="6"/>
             </SectionArray>
@@ -938,6 +1011,10 @@
         <InfoArray index="Research4" Upgrade="CorsairEncampmentPelargir">
             <Resource index="Minerals" value="2750"/>
             <Button DefaultButtonFace="CorsairEncampmentPelargir" Requirements="CorsairEncampmentPelargir"/>
+        </InfoArray>
+        <InfoArray index="Research5" Upgrade="CorsairEncampmentAnduin">
+            <Resource index="Minerals" value="2750"/>
+            <Button DefaultButtonFace="CorsairEncampmentAnduin" Requirements="CorsairEncampmentAnduin"/>
         </InfoArray>
     </CAbilResearch>
     <CAbilResearch id="CorsairLord">
@@ -1280,6 +1357,17 @@
             <Button DefaultButtonFace="BreeUpgradeSpawn3" Requirements="BreeUpgradeSpawn3"/>
         </InfoArray>
     </CAbilResearch>
+    <CAbilEffectTarget id="VoidSentryForcePush">
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost index="0">
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <TargetFilters index="0" value="Visible;Self,Player,Ally,Neutral,Structure,Heroic,Missile,Item,Stasis,Dead,Invulnerable"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Heroic,Missile"/>
+        <AutoCastRange value="8"/>
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilEffectTarget>
     <CAbilEffectInstant id="VoidZealotWhirlwind">
         <Flags index="AutoCastOn" value="0"/>
         <Cost index="0">
@@ -4433,6 +4521,17 @@
             <Button DefaultButtonFace="Scorba" Requirements="Scorba"/>
         </InfoArray>
     </CAbilResearch>
+    <CAbilEffectTarget id="Yoink">
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+            <Cooldown TimeUse="4"/>
+        </Cost>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral"/>
+        <AutoCastRange value="9"/>
+        <AutoCastValidatorArray value="NotHeroicAndNotStructure"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="ZeratulBlink">
         <Cost index="0">
             <Cooldown TimeUse="180"/>

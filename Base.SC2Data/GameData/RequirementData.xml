@@ -101,11 +101,44 @@
     <CRequirement id="AmonsulUpgradeSpawn33">
         <NodeArray index="Show" Link="NotCountUpgradeGuerillaWarfareQueuedOrBetter"/>
     </CRequirement>
+    <CRequirement id="FortifyOuterHoldingEvendim">
+        <NodeArray index="Use" Link="AndAndCountUpgradeEvendimUpgradespawnCompleteOnlyAndNotCountUpgradeRetreatOuterHoldingsEvendimQueuedOrBetter"/>
+        <NodeArray index="Show" Link="NotCountUpgradeFortifyOuterHoldingEvendimQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="RetreatOuterHoldingsEvendim">
+        <NodeArray index="Use" Link="AndCountUpgradeEvendimUpgradespawnCompleteOnlyAndNotCountUpgradeFortifyOuterHoldingEvendimQueuedOrBetterNotCountUpgradeEvendimUpgradespawn2QueuedOrBetter"/>
+        <NodeArray index="Show" Link="NotCountUpgradeRetreatOuterHoldingsEvendimQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="SouthronElitesResearched">
+        <NodeArray index="Use" Link="CountUpgradeSouthronElitesCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="SouthronElites">
+        <NodeArray index="Show" Link="NotCountUpgradeSouthronElitesQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="CorsairEncampmentAnduin">
+        <NodeArray index="Use" Link="CountUpgradeOsgiliathDestroyedCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeCorsairEncampmentAnduinQueuedOrBetter"/>
+    </CRequirement>
     <CRequirement id="DevelopeNorthArnor">
         <NodeArray index="Show" Link="NotCountUpgradeDevelopeNorthArnorQueuedOrBetter"/>
     </CRequirement>
+    <CRequirement id="FramsburgCapturedUpgradeSpawn">
+        <NodeArray index="Show" Link="AndLTCountUpgradeFramsburgCapturedUpgradeSpawnQueuedOrBetter4"/>
+    </CRequirement>
+    <CRequirement id="Anandr">
+        <NodeArray index="Show" Link="NotCountUpgradeAnandrQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="SouthronEmbassyUpgradeSpawn">
+        <NodeArray index="Show" Link="AndLTCountUpgradeSouthronEmbassyUpgradeSpawnQueuedOrBetter8"/>
+    </CRequirement>
+    <CRequirement id="MinasDuathUpgradeSpawn">
+        <NodeArray index="Show" Link="AndLTCountUpgradeMinasDuathUpgradeSpawnQueuedOrBetter3"/>
+    </CRequirement>
     <CRequirement id="GrowNoblePower">
         <NodeArray index="Show" Link="NotCountUpgradeGrowNoblePowerQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="RenTheUnclean">
+        <NodeArray index="Show" Link="NotCountUpgradeRenTheUncleanQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="MarinelordOfTharbad">
         <NodeArray index="Use" Link="CountUpgradeDevelopeSouthArnorCompleteOnly"/>
@@ -276,11 +309,11 @@
     </CRequirement>
     <CRequirement id="DispersePower">
         <NodeArray index="Use" Link="CountUpgradeFortify3OuterHoldingsCompleteOnly"/>
-        <NodeArray index="Show" Link="NotCountUpgradeDispersePowerQueuedOrBetter"/>
+        <NodeArray index="Show" Link="AndNotCountUpgradeDispersePowerQueuedOrBetterNotCountUpgradeCentralizePowerQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="EldacarUnlock2">
         <NodeArray index="Use" Link="CountUpgradeDispersePowerCompleteOnly"/>
-        <NodeArray index="Show" Link="NotCountUpgradeEldacarUnlock2QueuedOrBetter"/>
+        <NodeArray index="Show" Link="AndCountUpgradeDispersePowerQueuedOrBetterNotCountUpgradeEldacarUnlock2QueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="BeastsOfNurn">
         <NodeArray index="Show" Link="NotCountUpgradeBeastsOfNurnQueuedOrBetter"/>
@@ -699,7 +732,7 @@
     </CRequirement>
     <CRequirement id="EldacarUnlock">
         <NodeArray index="Use" Link="CountUpgradeCentralizePowerCompleteOnly"/>
-        <NodeArray index="Show" Link="NotCountUpgradeEldacarUnlockQueuedOrBetter"/>
+        <NodeArray index="Show" Link="AndAndCountUpgradeCentralizePowerQueuedOrBetterNotCountUpgradeEldacarUnlockQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="BurstCapacitorsResearched">
         <NodeArray index="Use" Link=""/>
@@ -707,7 +740,7 @@
     <CRequirement id="BurstCapacitorsResearched2"/>
     <CRequirement id="ConsolidatePower">
         <NodeArray index="Use" Link="CountUpgradeConsolidatePowerConditionsCompleteOnly"/>
-        <NodeArray index="Show" Link="AndNotCountUpgradeCentralizePowerQueuedOrBetter"/>
+        <NodeArray index="Show" Link="AndNotCountUpgradeCentralizePowerQueuedOrBetterNotCountUpgradeDispersePowerQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="EastBightUpgradeSpawn">
         <NodeArray index="Show" Link="NotCountUpgradeEastBightUpgradeSpawnQueuedOrBetter"/>
@@ -1374,6 +1407,7 @@
         <NodeArray index="Show" Link="NotCountUpgradeEvendimUpgradespawn2QueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="EvendimUpgradeSpawn3">
+        <NodeArray index="Use" Link="CountUpgradeFortifyOuterHoldingEvendimCompleteOnly"/>
         <NodeArray index="Show" Link="NotCountUpgradeEvendimUpgradespawn3QueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="BarrowDownsUpgradeSpawn">

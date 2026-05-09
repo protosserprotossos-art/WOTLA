@@ -1073,6 +1073,25 @@
             <Adaptions Slot="generic02"/>
         </TextureDeclares>
     </CModel>
+    <CModel id="DarkShrine3" parent="DarkShrineBase">
+        <Model value="Assets\Buildings\Protoss\DarkShrine_Forged\DarkShrine_Forged.m3"/>
+        <TextureDeclares Prefix="darkshrine_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Emissive" Slot="main"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="pylon_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="campaign"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="campaign"/>
+            <Adaptions TriggerOnSubstring="_Emissive" Slot="campaign"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="glow_">
+            <Adaptions Slot="generic01"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="grad_rays_blue">
+            <Adaptions Slot="generic02"/>
+        </TextureDeclares>
+    </CModel>
     <CModel id="DarkShrineBirth2" parent="DarkShrineWarpInBase">
         <Model value="Assets\Buildings\Protoss\DarkShrineWarpIn\DarkShrineWarpIn.m3"/>
         <TextureDeclares Prefix="darkshrine_">
@@ -1579,8 +1598,52 @@
     <CModel id="GlazeFenixShield2">
         <Model value="Assets\Effects\Glaze\Glaze_FenixShield\Glaze_FenixShield.m3"/>
     </CModel>
+    <CModel id="HelsAngelAssault2" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\ArchAngelAssault_Xanthos_Experimentation\ArchAngelAssault_Xanthos_Experimentation.m3"/>
+        <AttachProps Id="Ref_Weapon Left">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon Right">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 06">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 07">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.950000,0.950000,0.950000"/>
+        <ScaleMin value="0.950000,0.950000,0.950000"/>
+        <SelectionRadius value="0.764400"/>
+        <ShadowRadius value="0.764400"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+    </CModel>
     <CModel id="MengskDiamondback">
         <Model value="Assets\Assets\Units\Assets\Units\DGrey.m3"/>
+    </CModel>
+    <CModel id="PhotonCannonPlacement">
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="PlagueModel">
         <Model value="Assets\Effects\Glaze\Glaze_ParasiticBomb\Glaze_ParasiticBomb.m3"/>

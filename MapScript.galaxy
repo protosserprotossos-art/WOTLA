@@ -164,6 +164,8 @@ unit gv_dale;
 int gv_miningUpgrades;
 unit gv_buzraDumbeacon;
 unit gv_buzradum;
+unit gv_framsburgBeacon;
+unit gv_framsburg;
 bool gv_nurnActivated;
 unit gv_nurnBeacon;
 unit gv_nurn;
@@ -243,6 +245,8 @@ unit gv_nanLaeglin;
 unitgroup gv_clearminhiarthcannons;
 unit gv_minhiarthBeacon;
 unit gv_evilMinhiarth;
+unit gv_minasDuathBeacon;
+unit gv_minasDuath;
 unit gv_shelobBeacon;
 unit gv_burnGardensbeacon;
 unit gv_carnDumBeacon;
@@ -254,16 +258,19 @@ unit gv_creep1;
 unit gv_creep2;
 unit gv_creep3;
 unit gv_creep4;
+unit gv_southronEmbassyBeacon;
+unit gv_southronEmbassy;
 bool gv_daleActivated;
 unit gv_daleBeaconcaptured;
 unit gv_daleCaptured;
 timer gv_callSouthTimer;
 int gv_callSouthTimerwindow;
+int gv_corsairTriggeringUnitOwner;
 unitgroup gv_clearPelargir;
 unit gv_corsairPelargir;
-int gv_corsairTriggeringUnitOwner;
 unit gv_corsairLefnui;
 unit gv_corsairLondDaer;
+unit gv_corsairAnduin;
 unit gv_southronEncampment;
 unit gv_eastBightBeacon;
 unit gv_eastbight;
@@ -709,6 +716,9 @@ trigger gt_ActivateBuzraDum;
 trigger gt_BuzraDum;
 trigger gt_BuzraeventIncome;
 trigger gt_BuzraIncome;
+trigger gt_TurnFramsburgBeaconOn;
+trigger gt_ActivateFramsburg;
+trigger gt_Framsburg;
 trigger gt_RangerCaptain;
 trigger gt_TurnNurnBeaconOn;
 trigger gt_ActivateNurn;
@@ -725,6 +735,7 @@ trigger gt_FightForDorwinion;
 trigger gt_SpawnDorwinion;
 trigger gt_ActivateDorwinion;
 trigger gt_GoodDorwinion;
+trigger gt_FortifyRiverPriceReduction;
 trigger gt_FortifyRiver;
 trigger gt_ActivateAnorien;
 trigger gt_Anorien;
@@ -771,6 +782,7 @@ trigger gt_FortifiedLondDaer;
 trigger gt_FortifiedMinhiarth;
 trigger gt_FortifiedOuterRhuadur;
 trigger gt_FortifiedTharbad;
+trigger gt_FortifiedEvendim;
 trigger gt_Centralize;
 trigger gt_UnlockCentralize;
 trigger gt_Eldacarcentralize;
@@ -779,11 +791,13 @@ trigger gt_RetreatedLondDaer;
 trigger gt_RetreatedMinhiarth;
 trigger gt_RetreatedOuterRhuadur;
 trigger gt_RetreatedTharbad;
+trigger gt_RetreatedEvendim;
 trigger gt_FortifyOuterRhuadur;
 trigger gt_FortifyLastBridge;
 trigger gt_FortifyTharbad;
 trigger gt_FortifyMinhiarth;
 trigger gt_FortifyLondDaer;
+trigger gt_FortifyEvendim;
 trigger gt_Guerillawarfare;
 trigger gt_PrinceOfDolAmroth;
 trigger gt_ChiefOfDruwaith;
@@ -800,6 +814,7 @@ trigger gt_ActivateValandilsinsanity;
 trigger gt_ValandilIncomeErech;
 trigger gt_ValandilIncomeDolamroth;
 trigger gt_ValandilIncomePinnathGaelin;
+trigger gt_RenTheUnclean;
 trigger gt_SpawnAmonSulCaptured;
 trigger gt_ActivateAmonSulCaptured;
 trigger gt_AmonSulCaptured;
@@ -838,6 +853,10 @@ trigger gt_NanLaeglin;
 trigger gt_SpawnEvilMinhiarth;
 trigger gt_ActivateEvilMinhiarth;
 trigger gt_EvilMinhiarth;
+trigger gt_Anardur;
+trigger gt_TurnMinasDuathBeaconOn;
+trigger gt_ActivateMinasDuath;
+trigger gt_MinasDuath;
 trigger gt_SerantsOfMordorActivate;
 trigger gt_MouthOfSauronSpawning;
 trigger gt_ActivateShelob;
@@ -856,6 +875,10 @@ trigger gt_ActivateDolGuldur;
 trigger gt_DolGuldur;
 trigger gt_Udundestroyed2;
 trigger gt_Dolguldurdestroyed;
+trigger gt_SouthronElites;
+trigger gt_TurnSouthronEmbassyBeaconOn;
+trigger gt_ActivateSouthronEncampment;
+trigger gt_SouthronEncampment;
 trigger gt_HoundsOfRhun;
 trigger gt_JiIndur;
 trigger gt_TurnDaleBeaconOn;
@@ -876,6 +899,10 @@ trigger gt_EnableCorsairLondDaer;
 trigger gt_ActivateCorsairLondDaerSpawn;
 trigger gt_ActivateCorsairLondDaership;
 trigger gt_CorsairLondDaer;
+trigger gt_EnableCorsairAnduin;
+trigger gt_ActivateCorsairAnduinSpawn;
+trigger gt_ActivateCorsairAnduinship;
+trigger gt_CorsairAnduin;
 trigger gt_Morgomir;
 trigger gt_ShatterMorgomir;
 trigger gt_RallyTheEasterlings;
@@ -3257,8 +3284,8 @@ bool gt_Pillaging_Func (bool testConds, bool runActions) {
     }
 
     if ((UnitBehaviorCount(EventUnit(), "Pillaging") == 50)) {
-        PlayerModifyPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals, c_playerPropOperAdd, 200);
-        libNtve_gf_SetBehaviorCount(gv_grashkul, "Pillaging", gv_grashkul, 0);
+        PlayerModifyPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals, c_playerPropOperAdd, 500);
+        libNtve_gf_SetBehaviorCount(EventUnit(), "Pillaging", EventUnit(), 0);
     }
 
     return true;
@@ -3267,7 +3294,7 @@ bool gt_Pillaging_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void gt_Pillaging_Init () {
     gt_Pillaging = TriggerCreate("gt_Pillaging_Func");
-    TriggerAddEventUnitBehaviorChange(gt_Pillaging, UnitRefFromVariable("gv_grashkul"), "Pillaging", c_unitBehaviorChangeAny);
+    TriggerAddEventUnitBehaviorChange(gt_Pillaging, null, "Pillaging", c_unitBehaviorChangeAny);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -3994,6 +4021,30 @@ bool gt_ReturnGas_Func (bool testConds, bool runActions) {
         }
 
         if (!((libNtve_gf_TriggeringProgressUpgrade() != "DevelopeNorthArnor"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUpgrade() != "CorsairEncampmentAnduin"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUpgrade() != "RenTheUnclean"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUpgrade() != "Anandr"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUpgrade() != "SouthronElites"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUpgrade() != "RetreatOuterHoldingsEvendim"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUpgrade() != "FortifyOuterHoldingEvendim"))) {
             return false;
         }
     }
@@ -6100,7 +6151,7 @@ bool gt_Manwe_Func (bool testConds, bool runActions) {
 void gt_Manwe_Init () {
     gt_Manwe = TriggerCreate("gt_Manwe_Func");
     TriggerEnable(gt_Manwe, false);
-    TriggerAddEventTimeElapsed(gt_Manwe, 600.0, c_timeGame);
+    TriggerAddEventTimeElapsed(gt_Manwe, 500.0, c_timeGame);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -6130,7 +6181,7 @@ bool gt_Ulmo_Func (bool testConds, bool runActions) {
 void gt_Ulmo_Init () {
     gt_Ulmo = TriggerCreate("gt_Ulmo_Func");
     TriggerEnable(gt_Ulmo, false);
-    TriggerAddEventTimeElapsed(gt_Ulmo, 1020.0, c_timeGame);
+    TriggerAddEventTimeElapsed(gt_Ulmo, 900.0, c_timeGame);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -11903,6 +11954,10 @@ bool gt_Annuminas_Func (bool testConds, bool runActions) {
             libNtve_gf_CreateUnitsWithDefaultFacing(1, "Spectre", 0, UnitGetOwner(lv_annuminas), PointFromId(1102867604));
         }
 
+        if ((TechTreeUpgradeCount(UnitGetOwner(lv_annuminas), "RetreatOuterHoldingsEvendim", c_techCountCompleteOnly) == 1)) {
+            libNtve_gf_CreateUnitsWithDefaultFacing(4, "Spectre", 0, UnitGetOwner(lv_annuminas), PointFromId(1102867604));
+        }
+
     }
 
     return true;
@@ -14796,7 +14851,7 @@ bool gt_ActivateLibnir_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Conditions
     if (testConds) {
-        if (!((PlayerGetPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals) >= 7500))) {
+        if (!((PlayerGetPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals) >= 7000))) {
             return false;
         }
 
@@ -15967,6 +16022,154 @@ void gt_BuzraIncome_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Turn Framsburg Beacon On
+//--------------------------------------------------------------------------------------------------
+bool gt_TurnFramsburgBeaconOn_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Framsburg", c_unitCreateIgnorePlacement, 0, PointFromId(1664189924));
+    gv_framsburgBeacon = UnitLastCreated();
+    TriggerEnable(gt_ActivateFramsburg, true);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_TurnFramsburgBeaconOn_Init () {
+    gt_TurnFramsburgBeaconOn = TriggerCreate("gt_TurnFramsburgBeaconOn_Func");
+    TriggerAddEventUnitDied(gt_TurnFramsburgBeaconOn, UnitRefFromUnit(UnitFromId(2081578249)));
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Activate Framsburg
+//--------------------------------------------------------------------------------------------------
+bool gt_ActivateFramsburg_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_index;
+
+    // Automatic Variable Declarations
+    const int autoAE924785_ae = 28;
+    const int autoAE924785_ai = 1;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((PlayerGetPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals) >= 5000))) {
+            return false;
+        }
+
+        if (!(((UnitGetType(EventUnit()) == "Brandvig") || (UnitGetType(EventUnit()) == "VultureDOMParked")))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_UnitInRegion(EventUnit(), RegionFromId(86)) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    gf_ClearRegionOfStatic(RegionFromId(87));
+    PlayerModifyPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals, c_playerPropOperSubtract, 5000);
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "InfestedBarracks", c_unitCreateIgnorePlacement, EventPlayer(), PointFromId(1962910724));
+    gv_framsburg = UnitLastCreated();
+    lv_index = 1;
+    for ( ; ( (autoAE924785_ai >= 0 && lv_index <= autoAE924785_ae) || (autoAE924785_ai < 0 && lv_index >= autoAE924785_ae) ) ; lv_index += autoAE924785_ai ) {
+        gf_CreateCannon(UnitGetOwner(EventUnit()), PointFromName(("FramsburgCannon" + IntToString(lv_index))));
+    }
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/B47F51EF"));
+    SoundPlayForPlayer(SoundLink("Eventtriggering", -1), c_maxPlayers, PlayerGroupAll(), 75.0, 0.0);
+    UnitKill(gv_framsburgBeacon);
+    TriggerEnable(gt_Framsburg, true);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_ActivateFramsburg_Init () {
+    gt_ActivateFramsburg = TriggerCreate("gt_ActivateFramsburg_Func");
+    TriggerEnable(gt_ActivateFramsburg, false);
+    TriggerAddEventUnitBehaviorChange(gt_ActivateFramsburg, null, "EventCooldown", c_unitBehaviorChangeDestroy);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Framsburg
+//--------------------------------------------------------------------------------------------------
+bool gt_Framsburg_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_spawner;
+    point lv_point;
+    string lv_research;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_spawner = gv_framsburg;
+    lv_point = PointFromId(1083605207);
+    lv_research = "FramsburgCapturedUpgradeSpawn";
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitIsAlive(lv_spawner) == true))) {
+            return false;
+        }
+
+        if (!((PlayerGetPropertyInt(UnitGetOwner(lv_spawner), c_playerPropSuppliesUsed) <= PlayerGetPropertyInt(UnitGetOwner(lv_spawner), c_playerPropSuppliesMade)))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(lv_spawner) != 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.25, c_timeGame);
+    gf_Createunit(1, "Vulture", lv_spawner, lv_point);
+    gf_Createunit(1, "Diamondback", lv_spawner, lv_point);
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 4)) {
+        gf_Createunit(1, "Zealot", lv_spawner, lv_point);
+        gf_Createunit(1, "Diamondback", lv_spawner, lv_point);
+        gf_Createunit(1, "SiegeTankSkinPreview", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 3)) {
+        gf_Createunit(2, "Marine", lv_spawner, lv_point);
+        gf_Createunit(1, "Diamondback", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 2)) {
+        gf_Createunit(2, "Vulture", lv_spawner, lv_point);
+        gf_Createunit(1, "Zealot", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 1)) {
+        gf_Createunit(1, "Vulture", lv_spawner, lv_point);
+        gf_Createunit(2, "Marine", lv_spawner, lv_point);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_Framsburg_Init () {
+    gt_Framsburg = TriggerCreate("gt_Framsburg_Func");
+    TriggerEnable(gt_Framsburg, false);
+    TriggerAddEventTimePeriodic(gt_Framsburg, 90.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Ranger Captain
 //--------------------------------------------------------------------------------------------------
 bool gt_RangerCaptain_Func (bool testConds, bool runActions) {
@@ -16043,7 +16246,7 @@ bool gt_ActivateNurn_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Conditions
     if (testConds) {
-        if (!((PlayerGetPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals) >= 5500))) {
+        if (!((PlayerGetPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals) >= 4500))) {
             return false;
         }
 
@@ -16062,7 +16265,7 @@ bool gt_ActivateNurn_Func (bool testConds, bool runActions) {
     }
 
     gf_ClearRegionOfStatic(RegionFromId(74));
-    PlayerModifyPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals, c_playerPropOperSubtract, 5500);
+    PlayerModifyPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals, c_playerPropOperSubtract, 4500);
     libNtve_gf_CreateUnitsWithDefaultFacing(1, "NurnGood", c_unitCreateIgnorePlacement, EventPlayer(), PointFromId(1886691717));
     gv_nurn = UnitLastCreated();
     gv_nurnActivated = true;
@@ -16217,7 +16420,7 @@ bool gt_ActivateIthilien_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Conditions
     if (testConds) {
-        if (!((PlayerGetPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals) >= 5500))) {
+        if (!((PlayerGetPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals) >= 4500))) {
             return false;
         }
 
@@ -16235,7 +16438,7 @@ bool gt_ActivateIthilien_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    PlayerModifyPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals, c_playerPropOperSubtract, 5500);
+    PlayerModifyPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals, c_playerPropOperSubtract, 4500);
     libNtve_gf_RescueUnit(UnitFromId(308479748), UnitGetOwner(EventUnit()), true);
     libNtve_gf_ShowHideUnit(UnitFromId(308479748), true);
     gv_ithilien = UnitFromId(308479748);
@@ -16796,6 +16999,33 @@ void gt_GoodDorwinion_Init () {
     gt_GoodDorwinion = TriggerCreate("gt_GoodDorwinion_Func");
     TriggerEnable(gt_GoodDorwinion, false);
     TriggerAddEventTimePeriodic(gt_GoodDorwinion, 90.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: FortifyRiverPriceReduction
+//--------------------------------------------------------------------------------------------------
+bool gt_FortifyRiverPriceReduction_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TechTreeUpgradeCount(UnitGetOwner(UnitFromId(1897128707)), "OsgiliathUpgradespawn", c_techCountCompleteOnly) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_SetUpgradeLevelForPlayer(UnitGetOwner(UnitFromId(1897128707)), "FortifyTheRiverOfAnduinPriceReduction", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_FortifyRiverPriceReduction_Init () {
+    gt_FortifyRiverPriceReduction = TriggerCreate("gt_FortifyRiverPriceReduction_Func");
+    TriggerAddEventUnitResearchProgress(gt_FortifyRiverPriceReduction, null, c_unitProgressStageComplete);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -18984,6 +19214,44 @@ void gt_FortifiedTharbad_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Fortified Evendim
+//--------------------------------------------------------------------------------------------------
+bool gt_FortifiedEvendim_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_annuminas;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_annuminas = UnitFromId(439325741);
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(lv_annuminas) != 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(UnitFromId(573473263)), "FortifyOuterHoldingEvendim", c_techCountCompleteOnly) == 1)) {
+        gv_fortifyUpgrades += 1;
+        TriggerEnable(gt_UnlockDisperse, true);
+        TriggerEnable(TriggerGetCurrent(), false);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_FortifiedEvendim_Init () {
+    gt_FortifiedEvendim = TriggerCreate("gt_FortifiedEvendim_Func");
+    TriggerAddEventUnitResearchProgress(gt_FortifiedEvendim, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Centralize
 //--------------------------------------------------------------------------------------------------
 bool gt_Centralize_Func (bool testConds, bool runActions) {
@@ -19293,6 +19561,44 @@ void gt_RetreatedTharbad_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Retreated Evendim
+//--------------------------------------------------------------------------------------------------
+bool gt_RetreatedEvendim_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_annuminas;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_annuminas = UnitFromId(439325741);
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(lv_annuminas) != 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(UnitFromId(573473263)), "RetreatOuterHoldingsEvendim", c_techCountCompleteOnly) == 1)) {
+        gv_retreatUpgrades += 1;
+        TriggerEnable(gt_UnlockCentralize, true);
+        TriggerEnable(TriggerGetCurrent(), false);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_RetreatedEvendim_Init () {
+    gt_RetreatedEvendim = TriggerCreate("gt_RetreatedEvendim_Func");
+    TriggerAddEventUnitResearchProgress(gt_RetreatedEvendim, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Fortify Outer Rhuadur
 //--------------------------------------------------------------------------------------------------
 bool gt_FortifyOuterRhuadur_Func (bool testConds, bool runActions) {
@@ -19500,6 +19806,48 @@ bool gt_FortifyLondDaer_Func (bool testConds, bool runActions) {
 void gt_FortifyLondDaer_Init () {
     gt_FortifyLondDaer = TriggerCreate("gt_FortifyLondDaer_Func");
     TriggerAddEventUnitResearchProgress(gt_FortifyLondDaer, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Fortify Evendim
+//--------------------------------------------------------------------------------------------------
+bool gt_FortifyEvendim_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_evendim;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_evendim = UnitFromId(573473263);
+
+    // Conditions
+    if (testConds) {
+        if (!((TechTreeUpgradeCount(UnitGetOwner(lv_evendim), "FortifyOuterHoldingEvendim", c_techCountCompleteOnly) == 1))) {
+            return false;
+        }
+
+        if (!((EventPlayer() == UnitGetOwner(lv_evendim)))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    gf_CreateCannon(UnitGetOwner(EventUnit()), PointFromId(1016311233));
+    gf_CreateCannon(UnitGetOwner(EventUnit()), PointFromId(1785017928));
+    gf_CreateCannon(UnitGetOwner(EventUnit()), PointFromId(1413627409));
+    gf_CreateCannon(UnitGetOwner(EventUnit()), PointFromId(1029521288));
+    gf_CreateCannon(UnitGetOwner(EventUnit()), PointFromId(1110788592));
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_FortifyEvendim_Init () {
+    gt_FortifyEvendim = TriggerCreate("gt_FortifyEvendim_Func");
+    TriggerAddEventUnitResearchProgress(gt_FortifyEvendim, null, c_unitProgressStageComplete);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -20341,6 +20689,46 @@ void gt_ValandilIncomePinnathGaelin_Init () {
     gt_ValandilIncomePinnathGaelin = TriggerCreate("gt_ValandilIncomePinnathGaelin_Func");
     TriggerEnable(gt_ValandilIncomePinnathGaelin, false);
     TriggerAddEventTimePeriodic(gt_ValandilIncomePinnathGaelin, 90.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Ren, The Unclean
+//--------------------------------------------------------------------------------------------------
+bool gt_RenTheUnclean_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto1B7A6D85_g;
+    int auto1B7A6D85_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((TechTreeUpgradeCount(UnitGetOwner(EventUnit()), "RenTheUnclean", c_techCountCompleteOnly) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Viper", c_unitCreateIgnorePlacement, EventPlayer(), UnitGetPosition(EventUnit()));
+    auto1B7A6D85_g = gv_evil;
+    auto1B7A6D85_var = -1;
+    while (true) {
+        auto1B7A6D85_var = PlayerGroupNextPlayer(auto1B7A6D85_g, auto1B7A6D85_var);
+        if (auto1B7A6D85_var < 0) { break; }
+        libNtve_gf_SetUpgradeLevelForPlayer(auto1B7A6D85_var, "RenTheUnclean", 1);
+    }
+    SoundPlayForPlayer(SoundLink("Eventtriggering", -1), c_maxPlayers, PlayerGroupAll(), 75.0, 0.0);
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/B6D32DD0"));
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_RenTheUnclean_Init () {
+    gt_RenTheUnclean = TriggerCreate("gt_RenTheUnclean_Func");
+    TriggerAddEventUnitResearchProgress(gt_RenTheUnclean, null, c_unitProgressStageComplete);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -22332,6 +22720,178 @@ void gt_EvilMinhiarth_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Anardur
+//--------------------------------------------------------------------------------------------------
+bool gt_Anardur_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TechTreeUpgradeCount(UnitGetOwner(EventUnit()), "Anandr", c_techCountCompleteOnly) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "AnardrLordofMinasDuath", c_unitCreateIgnorePlacement, EventPlayer(), PointFromId(1008533696));
+    SoundPlayForPlayer(SoundLink("Eventtriggering", -1), c_maxPlayers, PlayerGroupAll(), 75.0, 0.0);
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/54045A15"));
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_Anardur_Init () {
+    gt_Anardur = TriggerCreate("gt_Anardur_Func");
+    TriggerAddEventUnitResearchProgress(gt_Anardur, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Turn Minas Duath Beacon On
+//--------------------------------------------------------------------------------------------------
+bool gt_TurnMinasDuathBeaconOn_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "MinasDuath", c_unitCreateIgnorePlacement, 0, PointFromId(1283306089));
+    gv_minasDuathBeacon = UnitLastCreated();
+    TriggerEnable(gt_ActivateMinasDuath, true);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_TurnMinasDuathBeaconOn_Init () {
+    gt_TurnMinasDuathBeaconOn = TriggerCreate("gt_TurnMinasDuathBeaconOn_Func");
+    TriggerAddEventUnitDied(gt_TurnMinasDuathBeaconOn, UnitRefFromUnit(UnitFromId(1325808467)));
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Activate Minas Duath
+//--------------------------------------------------------------------------------------------------
+bool gt_ActivateMinasDuath_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_index;
+
+    // Automatic Variable Declarations
+    const int auto6371E407_ae = 28;
+    const int auto6371E407_ai = 1;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((PlayerGetPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals) >= 5000))) {
+            return false;
+        }
+
+        if (!(((UnitGetType(EventUnit()) == "Maar") || (UnitGetType(EventUnit()) == "Stetmann")))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_UnitInRegion(EventUnit(), RegionFromId(89)) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    gf_ClearRegionOfStatic(RegionFromId(90));
+    PlayerModifyPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals, c_playerPropOperSubtract, 5000);
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Spire", c_unitCreateIgnorePlacement, EventPlayer(), PointFromId(123495966));
+    gv_minasDuath = UnitLastCreated();
+    lv_index = 1;
+    for ( ; ( (auto6371E407_ai >= 0 && lv_index <= auto6371E407_ae) || (auto6371E407_ai < 0 && lv_index >= auto6371E407_ae) ) ; lv_index += auto6371E407_ai ) {
+        gf_CreateCannon(UnitGetOwner(EventUnit()), PointFromName(("MinasDuathCannon" + IntToString(lv_index))));
+    }
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/4E55063F"));
+    SoundPlayForPlayer(SoundLink("Eventtriggering", -1), c_maxPlayers, PlayerGroupAll(), 75.0, 0.0);
+    UnitKill(gv_minasDuathBeacon);
+    TriggerEnable(gt_MinasDuath, true);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_ActivateMinasDuath_Init () {
+    gt_ActivateMinasDuath = TriggerCreate("gt_ActivateMinasDuath_Func");
+    TriggerEnable(gt_ActivateMinasDuath, false);
+    TriggerAddEventUnitBehaviorChange(gt_ActivateMinasDuath, null, "EventCooldown", c_unitBehaviorChangeDestroy);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Minas Duath
+//--------------------------------------------------------------------------------------------------
+bool gt_MinasDuath_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_spawner;
+    point lv_point;
+    string lv_research;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_spawner = gv_minasDuath;
+    lv_point = PointFromId(1008533696);
+    lv_research = "MinasDuathUpgradeSpawn";
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitIsAlive(lv_spawner) == true))) {
+            return false;
+        }
+
+        if (!((PlayerGetPropertyInt(UnitGetOwner(lv_spawner), c_playerPropSuppliesUsed) <= PlayerGetPropertyInt(UnitGetOwner(lv_spawner), c_playerPropSuppliesMade)))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(lv_spawner) != 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.25, c_timeGame);
+    gf_Createunit(4, "InfestedCivilian", lv_spawner, lv_point);
+    gf_Createunit(1, "HybridDestroyer", lv_spawner, lv_point);
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 3)) {
+        gf_Createunit(4, "InfestedCivilian", lv_spawner, lv_point);
+        gf_Createunit(2, "HybridDestroyer", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 2)) {
+        gf_Createunit(4, "InfestedCivilian", lv_spawner, lv_point);
+        gf_Createunit(1, "HybridDestroyer", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 1)) {
+        gf_Createunit(4, "InfestedCivilian", lv_spawner, lv_point);
+        gf_Createunit(1, "HybridDestroyer", lv_spawner, lv_point);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_MinasDuath_Init () {
+    gt_MinasDuath = TriggerCreate("gt_MinasDuath_Func");
+    TriggerEnable(gt_MinasDuath, false);
+    TriggerAddEventTimePeriodic(gt_MinasDuath, 90.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Serants Of Mordor Activate
 //--------------------------------------------------------------------------------------------------
 bool gt_SerantsOfMordorActivate_Func (bool testConds, bool runActions) {
@@ -23091,6 +23651,190 @@ void gt_Dolguldurdestroyed_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Southron Elites
+//--------------------------------------------------------------------------------------------------
+bool gt_SouthronElites_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_southronEmbassy;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_southronEmbassy = gv_southronEmbassy;
+
+    // Conditions
+    if (testConds) {
+        if (!((TechTreeUpgradeCount(UnitGetOwner(lv_southronEmbassy), "SouthronElites", c_techCountCompleteOnly) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    PlayerModifyPropertyInt(EventPlayer(), c_playerPropSuppliesLimit, c_playerPropOperSetTo, 30);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_SouthronElites_Init () {
+    gt_SouthronElites = TriggerCreate("gt_SouthronElites_Func");
+    TriggerAddEventUnitResearchProgress(gt_SouthronElites, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Turn Southron Embassy Beacon On
+//--------------------------------------------------------------------------------------------------
+bool gt_TurnSouthronEmbassyBeaconOn_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "SouthronEmbassy2", c_unitCreateIgnorePlacement, 0, PointFromId(1772795224));
+    gv_southronEmbassyBeacon = UnitLastCreated();
+    TriggerEnable(gt_ActivateSouthronEncampment, true);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_TurnSouthronEmbassyBeaconOn_Init () {
+    gt_TurnSouthronEmbassyBeaconOn = TriggerCreate("gt_TurnSouthronEmbassyBeaconOn_Func");
+    TriggerAddEventUnitDied(gt_TurnSouthronEmbassyBeaconOn, UnitRefFromUnit(UnitFromId(1767098372)));
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Activate Southron Encampment
+//--------------------------------------------------------------------------------------------------
+bool gt_ActivateSouthronEncampment_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_index;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((PlayerGetPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals) >= 1250))) {
+            return false;
+        }
+
+        if (!(((UnitGetType(EventUnit()) == "KerriganGhostLab") || (UnitGetType(EventUnit()) == "MercHellion")))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_UnitInRegion(EventUnit(), RegionFromId(91)) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    PlayerModifyPropertyInt(UnitGetOwner(EventUnit()), c_playerPropMinerals, c_playerPropOperSubtract, 1250);
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "SouthronEmbassy", c_unitCreateIgnorePlacement, EventPlayer(), PointFromId(1147072501));
+    gv_southronEmbassy = UnitLastCreated();
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/CA4E7B57"));
+    SoundPlayForPlayer(SoundLink("Eventtriggering", -1), c_maxPlayers, PlayerGroupAll(), 75.0, 0.0);
+    UnitKill(gv_southronEmbassyBeacon);
+    TriggerEnable(gt_SouthronEncampment, true);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_ActivateSouthronEncampment_Init () {
+    gt_ActivateSouthronEncampment = TriggerCreate("gt_ActivateSouthronEncampment_Func");
+    TriggerEnable(gt_ActivateSouthronEncampment, false);
+    TriggerAddEventUnitBehaviorChange(gt_ActivateSouthronEncampment, null, "EventCooldown", c_unitBehaviorChangeDestroy);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Southron Encampment
+//--------------------------------------------------------------------------------------------------
+bool gt_SouthronEncampment_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_spawner;
+    point lv_point;
+    string lv_research;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_spawner = gv_southronEmbassy;
+    lv_point = PointFromId(1772795224);
+    lv_research = "SouthronEmbassyUpgradeSpawn";
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitIsAlive(lv_spawner) == true))) {
+            return false;
+        }
+
+        if (!((PlayerGetPropertyInt(UnitGetOwner(lv_spawner), c_playerPropSuppliesUsed) <= PlayerGetPropertyInt(UnitGetOwner(lv_spawner), c_playerPropSuppliesMade)))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(lv_spawner) != 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.25, c_timeGame);
+    gf_Createunit(1, "DarkTemplarShakuras", lv_spawner, lv_point);
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 8)) {
+        gf_Createunit(1, "HotSNoxious", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 7)) {
+        gf_Createunit(1, "MengskHellion", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 6)) {
+        gf_Createunit(1, "DarkTemplarShakuras", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 5)) {
+        gf_Createunit(1, "StalkerShakuras", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 4)) {
+        gf_Createunit(1, "DarkTemplarShakuras", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 3)) {
+        gf_Createunit(1, "MengskHellion", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 2)) {
+        gf_Createunit(1, "MengskHellion", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), lv_research, c_techCountCompleteOnly) >= 1)) {
+        gf_Createunit(1, "StalkerShakuras", lv_spawner, lv_point);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_SouthronEncampment_Init () {
+    gt_SouthronEncampment = TriggerCreate("gt_SouthronEncampment_Func");
+    TriggerEnable(gt_SouthronEncampment, false);
+    TriggerAddEventTimePeriodic(gt_SouthronEncampment, 90.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Hounds Of Rhun
 //--------------------------------------------------------------------------------------------------
 bool gt_HoundsOfRhun_Func (bool testConds, bool runActions) {
@@ -23720,7 +24464,7 @@ bool gt_ActivateCorsairLefnuiSpawn_Func (bool testConds, bool runActions) {
     }
 
     gv_corsairTriggeringUnitOwner = UnitGetOwner(EventUnit());
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "CorsairEncampmentLefnui2", c_unitCreateIgnorePlacement, 0, PointFromId(2139553930));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "CorsairEncampment", c_unitCreateIgnorePlacement, 0, PointFromId(2139553930));
     UnitIssueOrder(UnitLastCreated(), OrderTargetingPoint(AbilityCommand("move", 0), PointFromId(1011198778)), c_orderQueueReplace);
     gv_corsairLefnui = UnitLastCreated();
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/F8E6A0D2"));
@@ -23754,7 +24498,7 @@ bool gt_ActivateCorsairLefnuiship_Func (bool testConds, bool runActions) {
 
     // Conditions
     if (testConds) {
-        if (!((UnitGetType(EventUnit()) == "CorsairEncampmentLefnui2"))) {
+        if (!((UnitGetType(EventUnit()) == "CorsairEncampment"))) {
             return false;
         }
     }
@@ -23891,7 +24635,7 @@ bool gt_ActivateCorsairLondDaerSpawn_Func (bool testConds, bool runActions) {
     }
 
     gv_corsairTriggeringUnitOwner = UnitGetOwner(EventUnit());
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "CorsairEncampmentLefnui2", c_unitCreateIgnorePlacement, 0, PointFromId(1491041399));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "CorsairEncampment", c_unitCreateIgnorePlacement, 0, PointFromId(1491041399));
     UnitIssueOrder(UnitLastCreated(), OrderTargetingPoint(AbilityCommand("move", 0), PointFromId(764104611)), c_orderQueueReplace);
     gv_corsairLondDaer = UnitLastCreated();
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/D0759498"));
@@ -23925,7 +24669,7 @@ bool gt_ActivateCorsairLondDaership_Func (bool testConds, bool runActions) {
 
     // Conditions
     if (testConds) {
-        if (!((UnitGetType(EventUnit()) == "CorsairEncampmentLefnui2"))) {
+        if (!((UnitGetType(EventUnit()) == "CorsairEncampment"))) {
             return false;
         }
     }
@@ -24019,6 +24763,167 @@ void gt_CorsairLondDaer_Init () {
     gt_CorsairLondDaer = TriggerCreate("gt_CorsairLondDaer_Func");
     TriggerEnable(gt_CorsairLondDaer, false);
     TriggerAddEventTimePeriodic(gt_CorsairLondDaer, 90.0, c_timeGame);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Enable Corsair Anduin
+//--------------------------------------------------------------------------------------------------
+bool gt_EnableCorsairAnduin_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_SetUpgradeLevelForPlayer(gv_itemSouthron, "OsgiliathDestroyed", 1);
+    libNtve_gf_SetUpgradeLevelForPlayer(gv_itemEasterlings, "OsgiliathDestroyed", 1);
+    TriggerEnable(gt_ActivateCorsairAnduinSpawn, true);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_EnableCorsairAnduin_Init () {
+    gt_EnableCorsairAnduin = TriggerCreate("gt_EnableCorsairAnduin_Func");
+    TriggerAddEventUnitDied(gt_EnableCorsairAnduin, UnitRefFromUnit(UnitFromId(1897128707)));
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Activate Corsair Anduin (Spawn )
+//--------------------------------------------------------------------------------------------------
+bool gt_ActivateCorsairAnduinSpawn_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((TechTreeUpgradeCount(UnitGetOwner(EventUnit()), "CorsairEncampmentAnduin", c_techCountCompleteOnly) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    gv_corsairTriggeringUnitOwner = UnitGetOwner(EventUnit());
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "CorsairEncampment", c_unitCreateIgnorePlacement, 0, PointFromId(158444020));
+    UnitIssueOrder(UnitLastCreated(), OrderTargetingPoint(AbilityCommand("move", 0), PointFromId(1376361899)), c_orderQueueReplace);
+    gv_corsairAnduin = UnitLastCreated();
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/7482E6E7"));
+    TriggerEnable(gt_ActivateCorsairAnduinship, true);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_ActivateCorsairAnduinSpawn_Init () {
+    gt_ActivateCorsairAnduinSpawn = TriggerCreate("gt_ActivateCorsairAnduinSpawn_Func");
+    TriggerEnable(gt_ActivateCorsairAnduinSpawn, false);
+    TriggerAddEventUnitResearchProgress(gt_ActivateCorsairAnduinSpawn, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Activate Corsair Anduin(ship)
+//--------------------------------------------------------------------------------------------------
+bool gt_ActivateCorsairAnduinship_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_index;
+
+    // Automatic Variable Declarations
+    const int autoC70F60DB_ae = 16;
+    const int autoC70F60DB_ai = 1;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "CorsairEncampment"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitIssueOrder(EventUnit(), OrderTargetingPoint(AbilityCommand("ColonistShipLand2", 0), PointFromId(1376361899)), c_orderQueueAddToEnd);
+    UnitWaitUntilIdle(EventUnit(), true);
+    SoundPlayForPlayer(SoundLink("Corsairsfromthesouth", -1), c_maxPlayers, PlayerGroupAll(), 75.0, 0.0);
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/EB2E2B01"));
+    libNtve_gf_RescueUnit(EventUnit(), gv_corsairTriggeringUnitOwner, true);
+    lv_index = 1;
+    for ( ; ( (autoC70F60DB_ai >= 0 && lv_index <= autoC70F60DB_ae) || (autoC70F60DB_ai < 0 && lv_index >= autoC70F60DB_ae) ) ; lv_index += autoC70F60DB_ai ) {
+        gf_CreateCannon(UnitGetOwner(UnitFromId(1767098372)), PointFromName(("CorsairAnduinCannon" + IntToString(lv_index))));
+    }
+    TriggerEnable(gt_CorsairAnduin, true);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_ActivateCorsairAnduinship_Init () {
+    gt_ActivateCorsairAnduinship = TriggerCreate("gt_ActivateCorsairAnduinship_Func");
+    TriggerEnable(gt_ActivateCorsairAnduinship, false);
+    TriggerAddEventUnitRegion(gt_ActivateCorsairAnduinship, null, RegionFromId(88), true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Corsair Anduin
+//--------------------------------------------------------------------------------------------------
+bool gt_CorsairAnduin_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_spawner;
+    point lv_point;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_spawner = gv_corsairAnduin;
+    lv_point = PointFromId(1408660112);
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitIsAlive(lv_spawner) == true))) {
+            return false;
+        }
+
+        if (!((PlayerGetPropertyInt(UnitGetOwner(lv_spawner), c_playerPropSuppliesUsed) <= PlayerGetPropertyInt(UnitGetOwner(lv_spawner), c_playerPropSuppliesMade)))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(lv_spawner) != 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.25, c_timeGame);
+    gf_Createunit(1, "StalkerPurifier", lv_spawner, lv_point);
+    gf_Createunit(2, "DarkTemplarShakuras", lv_spawner, lv_point);
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), "CorsairEncampmentUpgradespawn2", c_techCountCompleteOnly) == 1)) {
+        gf_Createunit(1, "CorsairMP", lv_spawner, lv_point);
+        gf_Createunit(2, "DarkTemplarShakuras", lv_spawner, lv_point);
+        gf_Createunit(2, "StalkerPurifier", lv_spawner, lv_point);
+    }
+
+    if ((TechTreeUpgradeCount(UnitGetOwner(lv_spawner), "CorsairEncampmentUpgradespawn", c_techCountCompleteOnly) == 1)) {
+        gf_Createunit(1, "MengskHellion", lv_spawner, lv_point);
+        gf_Createunit(2, "StalkerPurifier", lv_spawner, lv_point);
+        gf_Createunit(2, "DarkTemplarShakuras", lv_spawner, lv_point);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void gt_CorsairAnduin_Init () {
+    gt_CorsairAnduin = TriggerCreate("gt_CorsairAnduin_Func");
+    TriggerEnable(gt_CorsairAnduin, false);
+    TriggerAddEventTimePeriodic(gt_CorsairAnduin, 90.0, c_timeGame);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -25326,6 +26231,9 @@ void InitTriggers () {
     gt_BuzraDum_Init();
     gt_BuzraeventIncome_Init();
     gt_BuzraIncome_Init();
+    gt_TurnFramsburgBeaconOn_Init();
+    gt_ActivateFramsburg_Init();
+    gt_Framsburg_Init();
     gt_RangerCaptain_Init();
     gt_TurnNurnBeaconOn_Init();
     gt_ActivateNurn_Init();
@@ -25342,6 +26250,7 @@ void InitTriggers () {
     gt_SpawnDorwinion_Init();
     gt_ActivateDorwinion_Init();
     gt_GoodDorwinion_Init();
+    gt_FortifyRiverPriceReduction_Init();
     gt_FortifyRiver_Init();
     gt_ActivateAnorien_Init();
     gt_Anorien_Init();
@@ -25388,6 +26297,7 @@ void InitTriggers () {
     gt_FortifiedMinhiarth_Init();
     gt_FortifiedOuterRhuadur_Init();
     gt_FortifiedTharbad_Init();
+    gt_FortifiedEvendim_Init();
     gt_Centralize_Init();
     gt_UnlockCentralize_Init();
     gt_Eldacarcentralize_Init();
@@ -25396,11 +26306,13 @@ void InitTriggers () {
     gt_RetreatedMinhiarth_Init();
     gt_RetreatedOuterRhuadur_Init();
     gt_RetreatedTharbad_Init();
+    gt_RetreatedEvendim_Init();
     gt_FortifyOuterRhuadur_Init();
     gt_FortifyLastBridge_Init();
     gt_FortifyTharbad_Init();
     gt_FortifyMinhiarth_Init();
     gt_FortifyLondDaer_Init();
+    gt_FortifyEvendim_Init();
     gt_Guerillawarfare_Init();
     gt_PrinceOfDolAmroth_Init();
     gt_ChiefOfDruwaith_Init();
@@ -25417,6 +26329,7 @@ void InitTriggers () {
     gt_ValandilIncomeErech_Init();
     gt_ValandilIncomeDolamroth_Init();
     gt_ValandilIncomePinnathGaelin_Init();
+    gt_RenTheUnclean_Init();
     gt_SpawnAmonSulCaptured_Init();
     gt_ActivateAmonSulCaptured_Init();
     gt_AmonSulCaptured_Init();
@@ -25455,6 +26368,10 @@ void InitTriggers () {
     gt_SpawnEvilMinhiarth_Init();
     gt_ActivateEvilMinhiarth_Init();
     gt_EvilMinhiarth_Init();
+    gt_Anardur_Init();
+    gt_TurnMinasDuathBeaconOn_Init();
+    gt_ActivateMinasDuath_Init();
+    gt_MinasDuath_Init();
     gt_SerantsOfMordorActivate_Init();
     gt_MouthOfSauronSpawning_Init();
     gt_ActivateShelob_Init();
@@ -25473,6 +26390,10 @@ void InitTriggers () {
     gt_DolGuldur_Init();
     gt_Udundestroyed2_Init();
     gt_Dolguldurdestroyed_Init();
+    gt_SouthronElites_Init();
+    gt_TurnSouthronEmbassyBeaconOn_Init();
+    gt_ActivateSouthronEncampment_Init();
+    gt_SouthronEncampment_Init();
     gt_HoundsOfRhun_Init();
     gt_JiIndur_Init();
     gt_TurnDaleBeaconOn_Init();
@@ -25493,6 +26414,10 @@ void InitTriggers () {
     gt_ActivateCorsairLondDaerSpawn_Init();
     gt_ActivateCorsairLondDaership_Init();
     gt_CorsairLondDaer_Init();
+    gt_EnableCorsairAnduin_Init();
+    gt_ActivateCorsairAnduinSpawn_Init();
+    gt_ActivateCorsairAnduinship_Init();
+    gt_CorsairAnduin_Init();
     gt_Morgomir_Init();
     gt_ShatterMorgomir_Init();
     gt_RallyTheEasterlings_Init();

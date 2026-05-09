@@ -83,6 +83,24 @@
     <CEffectApplyBehavior id="ArtanisStasisFieldAB2">
         <Behavior value="HeroStasis"/>
     </CEffectApplyBehavior>
+    <CEffectDamage id="ArtanisVoidAirDamage2" parent="DU_WEAP">
+        <EditorCategories value="Race:Protoss"/>
+        <Amount value="65"/>
+        <SearchFilters value="-;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectDamage id="ArtanisVoidUlnarDamage2" parent="DU_WEAP">
+        <EditorCategories value="Race:Protoss"/>
+        <Amount value="65"/>
+        <SearchFilters value="-;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ArtanisVoidUlnarLM2">
+        <ImpactEffect value="ArtanisVoidAirDamage2"/>
+        <AmmoUnit value="ArtanisVoidUlnarWeapon2"/>
+        <Movers Link="MissileDefault"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="ArtanisVoidUlnarSet2">
+        <EffectArray value="ArtanisVoidUlnarLM2"/>
+    </CEffectSet>
     <CEffectSet id="AscendantWeapon2">
         <EffectArray value="AscendantWeaponDamage2"/>
     </CEffectSet>
@@ -174,6 +192,14 @@
     <CEffectDamage id="BileDuctsDamage">
         <Amount value="130"/>
     </CEffectDamage>
+    <CEffectSet id="BlackSerpentSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ParasiteSporeDamage2"/>
+        <EffectArray value="Pillaging"/>
+    </CEffectSet>
+    <CEffectEnumArea id="BlindingCloudSearch">
+        <SearchFilters value="Ground;Self,Neutral,Structure,Heroic,Missile,Dead"/>
+    </CEffectEnumArea>
     <CEffectCreateHealer id="BonesHeal">
         <DrainVital value="Life"/>
         <DrainVitalCostFactor value="1"/>
@@ -626,6 +652,9 @@
         <EffectArray value="KillRemove2"/>
         <EffectArray value="DigesterCreepSprayPersistCreatePersistent2"/>
     </CEffectSet>
+    <CEffectEnumArea id="DisablingCloudSearch">
+        <SearchFilters value="Ground;Self,Player,Ally,Neutral,Structure,Heroic,Missile,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
     <CEffectCreatePersistent id="DisruptionBeam2">
         <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetUnit"/>
@@ -2049,6 +2078,10 @@
     <CEffectDamage id="Nova">
         <Amount value="140"/>
     </CEffectDamage>
+    <CEffectTeleport id="NovaArmorBlinkSuitBlink">
+        <PlacementRange value="6"/>
+        <Range value="6"/>
+    </CEffectTeleport>
     <CEffectDamage id="NovaPlasmaPuddleDamage">
         <Amount value="5"/>
     </CEffectDamage>
@@ -2157,7 +2190,7 @@
     <CEffectLaunchMissile id="ParasiteSporeLaunchMissile2">
         <ValidatorArray index="0" value="ParasiteSporeInfestMissileTargetFilters"/>
         <EditorCategories value="Race:Zerg"/>
-        <ImpactEffect value="ParasiteSporeDamage2"/>
+        <ImpactEffect value="BlackSerpentSet"/>
         <AmmoUnit value="ParasiteSporeWeapon2"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="ParasiteSporeLaunchMissile22">
@@ -2186,6 +2219,13 @@
         <ImpactEffect value="StalkerEntropyLanceSearchSet3"/>
         <AmmoUnit value="StalkerWeapon"/>
     </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="ParticleDisruptors32">
+        <ValidatorArray index="0" value="StalkerTargetFilters"/>
+        <ValidatorArray value=""/>
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="StalkerEntropyLanceSearchSet32"/>
+        <AmmoUnit value="DuathMissile"/>
+    </CEffectLaunchMissile>
     <CEffectDamage id="ParticleDisruptorsU">
         <AttributeBonus index="Armored" value="0"/>
         <Amount value="16"/>
@@ -2194,9 +2234,13 @@
         <EditorCategories value="Race:Protoss"/>
         <Amount value="14"/>
     </CEffectDamage>
-    <CEffectDamage id="ParticleDisruptorsU3" parent="DU_WEAP_MISSILE">
+    <CEffectDamage id="BlackNumenoreanDamage" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:Protoss"/>
         <Amount value="25"/>
+    </CEffectDamage>
+    <CEffectDamage id="ParticleDisruptorsU32" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Protoss"/>
+        <Amount value="75"/>
     </CEffectDamage>
     <CEffectDamage id="PhaseDisruptors">
         <AttributeBonus index="Armored" value="0"/>
@@ -2365,6 +2409,13 @@
         <KindSplash value="Ranged"/>
         <Amount value="95"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="PsiStrike">
+        <InitialDelay value="0.25"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="PsiStrikeDamage">
+        <Amount value="100"/>
+        <!--ValidatorArray value="noMarkers"/-->
+    </CEffectDamage>
     <CEffectDamage id="PsionicLiftDamage">
         <Amount value="50"/>
     </CEffectDamage>
@@ -2521,8 +2572,12 @@
     </CEffectEnumArea>
     <CEffectSet id="StalkerEntropyLanceSearchSet3">
         <EditorCategories value=""/>
-        <EffectArray value="ParticleDisruptorsU3"/>
+        <EffectArray value="BlackNumenoreanDamage"/>
         <EffectArray value="StalkerEntropyLanceSearch3"/>
+    </CEffectSet>
+    <CEffectSet id="StalkerEntropyLanceSearchSet32">
+        <EditorCategories value=""/>
+        <EffectArray value="ParticleDisruptorsU32"/>
     </CEffectSet>
     <CEffectDamage id="StalkerEntropyLanceSecondaryDamage3">
         <EditorCategories value="Race:Protoss"/>
@@ -3238,6 +3293,9 @@
     <CEffectDamage id="UrunEnergyBeamDamage">
         <Amount value="45"/>
     </CEffectDamage>
+    <CEffectDamage id="ViperAirDamage">
+        <Amount value="80"/>
+    </CEffectDamage>
     <CEffectDamage id="ViperAirDamage2" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:Zerg"/>
         <AttributeBonus index="Armored" value="5"/>
@@ -3419,6 +3477,9 @@
     </CEffectDamage>
     <CEffectDamage id="WraithGU">
         <Amount value="25"/>
+    </CEffectDamage>
+    <CEffectDamage id="WreckingCrewAssault">
+        <Amount value="85"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="WreckingCrewFighterLM">
         <ValidatorArray value="DistanceLessThan10"/>
